@@ -5,8 +5,8 @@ layout: home
 
 Hi!
 
-Feel [Contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl)
+Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl)
 
 ----
 
-Is this text hidden?
+This is the footer.
