@@ -4,7 +4,9 @@ title: Imapsync
 has_children: false
 ---
 
-# Sync from G-suite to Rackspace
+# Imapsync
+
+## Sync from G-suite to Rackspace
 
 ```bash
 #!/bin/bash
@@ -22,10 +24,11 @@ echo -e "DestUser is $DESTUSER\n"
 echo -e "DestPass is $DESTPASS\n"
 
 # sync
-cd /tmp && imapsync --host1 imap.gmail.com -ssl1 --user1 $SOURCEUSER --password1 $SOURCEPASS --host2 secure.emailsrvr.com -ssl2 --sslargs2 "SSL_verify_mode=0" --user2 $DESTUSER --password2 $DESTPASS
+cd /tmp && imapsync --host1 imap.gmail.com -ssl1 --user1 $SOURCEUSER --password1 $SOURCEPASS \
+		    --host2 secure.emailsrvr.com -ssl2 --sslargs2 "SSL_verify_mode=0" --user2 $DESTUSER --password2 $DESTPASS
 ```
 
-# Install imapsync
+## Install imapsync
 
 [Link for Ubuntu](https://imapsync.lamiral.info/INSTALL.d/INSTALL.Ubuntu.txt)
 
