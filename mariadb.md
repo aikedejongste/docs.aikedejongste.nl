@@ -8,4 +8,8 @@ has_children: true
 
 # Mariadb
 
-jajaja
+## Access MariaDB console when installed with Bitnami Helm Chart
+
+```
+mysql -uroot -p$MARIADB_ROOT_PASSWORD
+```
