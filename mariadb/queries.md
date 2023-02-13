@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Queries
-#nav_order: 3
-#has_children: true
+parent: MariaDB
 #permalink: /docs/ui-component
 ---
 
