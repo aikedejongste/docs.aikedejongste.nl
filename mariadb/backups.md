@@ -14,12 +14,14 @@ parent: MariaDB
 [client]
 user = read-only-backup-user
 password = .....
+host = 192.168.1.3
 ```
+
+### The backup script:
 
 ```bash
 #!/bin/bash
 
-host = 192.168.1.3
 set -o errexit
 set -o nounset
 set -o pipefail
