@@ -10,6 +10,9 @@ has_children: false
 ## Disable IPv6 the evil way:
 
 ```
-rm -f /etc/sysctl.conf && echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf && echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf && echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf && sysctl -p
+rm -f /etc/sysctl.conf && echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf \
+  && echo "net.ipv6.conf.default.disable_ipv6 = 1" >> /etc/sysctl.conf \
+  && echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf \ 
+  && sysctl -p
 ```
 
