@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Playbook prompt
+title: Playbook with prompt
 parent: Ansible
 ---
 

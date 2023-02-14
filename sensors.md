@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Hardware & sensors
+title: Sensors
 has_children: false
 ---
 
