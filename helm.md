@@ -10,3 +10,13 @@ has_children: false
 ```bash
 helm show values bitnami/matomo
 ```
+
+## Rollout deployment with MultiAttach error fix
+
+```yaml
+updateStrategy:                                                                 
+  type: RollingUpdate                                                           
+  rollingUpdate:                                                                
+    maxSurge: 0                                                                 
+    maxUnavailable: 1 
+```
