@@ -32,7 +32,7 @@ The location block for / comes first, and then the more detailed ones.
     Require all granted
   </RequireAll>
   ProxyPreserveHost On
-  ProxyPass         balancer://to-the-real-server/
+  ProxyPass         balancer://to-the-real-server/matomo.js
 </Location>
 
 <Location /matomo.php>
@@ -40,7 +40,7 @@ The location block for / comes first, and then the more detailed ones.
     Require all granted
   </RequireAll>
   ProxyPreserveHost On
-  ProxyPass         balancer://to-the-real-server/
+  ProxyPass         balancer://to-the-real-server/matomo.php
 </Location>
 ```
 
@@ -53,7 +53,7 @@ Next time try a LocationMatch block:
     Require all granted
   </RequireAll>
   ProxyPreserveHost On
-  ProxyPass         balancer://to-the-real-server/
+  ProxyPass         balancer://to-the-real-server/here-is-the-problem.phpjs
 </LocationMatch>
 ```
 
