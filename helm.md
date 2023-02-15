@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Helm
-has_children: false
+has_children: true
 ---
 
 # Helm
