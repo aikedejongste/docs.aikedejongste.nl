@@ -21,11 +21,18 @@ alias genpw="tr -cd '[:alnum:]' < /dev/urandom | fold -w30 | head -n1"
 
 ## Add my public ssh key
 ```bash
-mkdir -p .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAsFMSthnrlRdXwvQMgDNZXXn9e3sfivmN7YcDtZAGnNHsfwxmfCzTfEO95Ee9dZTkyRODLYl/ivIUBLpkmi8QP9B8haSedZuNHc4yXM75iaCkel5yC1Xc4+Czq9yLTdFyJxB/kAKpjfkZKh5LmOm+7NbK1AjRM2KdobkhWG+BTCPP3c8EX7ztOLLzs23iIL85w5eKvXFjYftfnaDskUFiORU+W58KlcA+2TVc+v0MmdZ1pLmNZuaXFrHcSBj3/mk30vuvjsH5KTy5bGCwHIGID2xB2b5JaE2Wc7dEF/L4Z0Ybkty3mlkx0/raixrS1nGZN10kxZu72I+J+RgZhChAow== aike@boos" >> .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+mkdir -p .ssh && echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMJZhBxjBZgaU5JQWaS2smXC9IFS46jR5jVdDYHyq8DS" >> .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
 ```
 
 ## Reset machine id:
 rm -f /etc/machine-id /var/lib/dbus/machine-id && dbus-uuidgen --ensure=/etc/machine-id && dbus-uuidgen --ensure
 
 
+## Read input in a script:
+
+```bash
+echo "Enter something:
+read username
+echo "$username"
+```
 
