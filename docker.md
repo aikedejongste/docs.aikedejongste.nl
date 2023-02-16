@@ -8,4 +8,6 @@ has_children: false
 # Docker
 
 ## Remove all containers from a host:
-```docker rm -f $(docker ps -qa)```
+```bash
+docker rm -f $(docker ps -qa)
+```
