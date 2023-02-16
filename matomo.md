@@ -6,6 +6,10 @@ has_children: false
 
 # Matomo
 
+## Update config.ini.php when running on k8s
+
+This seems hacky to me, but couldn't find a better way with the Helm chart. [example on kubectl page](https://docs.aikedejongste.nl/kubectl.html#copy-file-from-local-to-pod)
+
 ## Protect login page from the internet
 
 For example when you use Apache as a reverse proxy. Or adjust to use it directly.
