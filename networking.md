@@ -6,4 +6,8 @@ has_children: true
 
 # Networking
 
-ping!
+## Disable cloud-init after changing network config
+
+```bash
+touch /etc/cloud/cloud-init.disabled
+```

@@ -26,3 +26,17 @@ APT::Periodic::Unattended-Upgrade "1";
 
 - configure with `/etc/apt/apt.conf.d/50unattended-upgrades`
 ... something
+
+
+## Purge uninstalled packages on Ubuntu
+
+```bash
+dpkg --list |grep "^rc" | cut -d " " -f 3 | xargs sudo dpkg --purge
+```
+
+## Sort installed Debian packages by size:
+
+```bash
+dpkg-query -W --showformat='${Installed-Size} ${Package}\n' | sort -n
+```
+
