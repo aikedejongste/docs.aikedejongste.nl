@@ -11,3 +11,11 @@ has_children: true
 ```bash
 touch /etc/cloud/cloud-init.disabled
 ```
+
+
+## Open Ngrok tunnel
+
+```bash
+ngrok http --region=eu --hostname=aike.eu.ngrok.io 4567
+```
+
