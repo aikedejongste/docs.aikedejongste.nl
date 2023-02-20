@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Bash
-has_children: false
+title: Linux
+has_children: true
 ---
 
 # Bash

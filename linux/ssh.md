@@ -2,6 +2,7 @@
 layout: default
 title: SSH
 has_children: false
+parent: Linux
 ---
 
 # SSH
