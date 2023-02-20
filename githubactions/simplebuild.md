@@ -18,6 +18,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
+  IMAGE: ${{ github.repository }}
 
 jobs:
   build-and-push-image:
@@ -41,7 +42,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@master
         with:
-          images: ${{ env.REGISTRY }}/${{ github.repository }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
