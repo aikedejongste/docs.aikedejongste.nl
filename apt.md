@@ -7,7 +7,7 @@ has_children: false
 
 # APT
 
-# Wait for apt-get to be available.
+## Wait for apt-get to be available.
 
 while ! apt-get -qq check; do sleep 1s; done
 

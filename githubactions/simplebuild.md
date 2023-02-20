@@ -6,7 +6,7 @@ parent: Github Actions
 
 # Simple container build
 
-```
+```yaml
 name: Build and publish container image
 
 on:
