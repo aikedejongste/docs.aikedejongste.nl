@@ -67,14 +67,16 @@ creation_rules:
     - path_regex: \.prod\.yaml$
       age: age1jv8xn7h37074lg
 
+```
+
 ## Encrypted_regex:
 
-```
+```yaml
   - path_regex: .*\.dev\.json$
     encrypted_regex: '^(date|stringData|user.*|pass.*|.*[Bb]earer.*|.*[Kk]ey|.*[Kk]eys|salt|sentry.*|.*[Tt]oken)$'
 ```
 or
-```
+```yaml
   - path_regex: .*\.dev\.json$
     encrypted_regex: '^(data|stringData)$'
 ```
