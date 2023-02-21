@@ -6,6 +6,12 @@ has_children: false
 
 # Encryption with Sops and Age
 
+## Config
+
+You need:
+* .sops.yaml in root of your repo
+* SOPS_AGE_KEY_FILE env var with location of your private key
+
 ## Installation on Ubuntu
 
 ```bash
@@ -45,10 +51,33 @@ Put a `.sops.yaml` in your repo with the public key:
 
 ```yaml
 creation_rules:
-    - age: age12uxavhlq08kn7h66dd5ejwrg4dj7uhkzj0ac9ylzaxapmae73y3qt44djh
+    - age: age12uxavhlq08kn7h66dd.........
 ```
 
 More advanced setups are possible, as well as system wide settings.
+
+```
+creation_rules:
+    - path_regex: .*/development/.*
+      age: age1cp3r9ehy729ecj............
+    - path_regex: .*/production/.*
+      age: age1jv8xn7h37074lg
+    - path_regex: \.dev\.yaml$
+      age: age1cp3r9ehy729ecj
+    - path_regex: \.prod\.yaml$
+      age: age1jv8xn7h37074lg
+
+## Encrypted_regex:
+
+```
+  - path_regex: .*\.dev\.json$
+    encrypted_regex: '^(date|stringData|user.*|pass.*|.*[Bb]earer.*|.*[Kk]ey|.*[Kk]eys|salt|sentry.*|.*[Tt]oken)$'
+```
+or
+```
+  - path_regex: .*\.dev\.json$
+    encrypted_regex: '^(data|stringData)$'
+```
 
 
 
