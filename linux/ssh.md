@@ -24,3 +24,15 @@ Host alias-name-you-ssh-to     # use with "ssh alias-name-you-ssh-to"
 ```bash
 ssh -A -W '[10.10.10.10]:22' real.hostname
 ```
+
+## Try ssh until it is ready 
+
+```bash
+until ssh 10.10.1.3; do sleep 1; done
+```
+or
+
+```bash
+ssh -o 'ConnectionAttempts 999' 10.10.1.3
+```
+

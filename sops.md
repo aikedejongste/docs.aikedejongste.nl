@@ -10,7 +10,6 @@ has_children: false
 
 You need:
 * .sops.yaml in root of your repo
-* SOPS_AGE_KEY_FILE env var with location of your private key
 
 ## Installation on Ubuntu
 
@@ -23,13 +22,13 @@ sudo dpkg -i /tmp/sops.deb && sudo apt install -y age
 ## Create a keypair in ~/.sops
 
 ```bash
-mkdir -p ~/.sops/ && age-keygen -o ~/.sops/age-key.txt && cat ~/.sops/age-key.txt
+mkdir -p ~/.sops/ && age-keygen -o ~/.sops/age/keys.txt && cat ~/.sops/age/keys.txt
 ```
 
 ## Use an existing key:
 
 ```bash
-mkdir -p ~/.sops/ && vim ~/.sops/age-key.txt
+mkdir -p ~/.sops/age && vim ~/.sops/age/keys.txt
 ```
 Fill it with:
 
@@ -42,7 +41,7 @@ AGE-SECRET-KEY-1Y9FH6J9YPG964SZP5DRFGDQZ5L4Vasdlfjasdlkfjasldjfaskdfja
 ## Configure sops:
 
 ```bash
-echo 'export SOPS_AGE_KEY_FILE=~/.sops/age-key.txt' >> ~/.bashrc
+echo 'export SOPS_AGE_KEY_FILE=~/.sops/age/keys.txt' >> ~/.bashrc
 ```
 
 ## Configure your repo or system
