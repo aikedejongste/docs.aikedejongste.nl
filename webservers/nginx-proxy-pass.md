@@ -4,7 +4,37 @@ title: Nginx ProxyPass
 parent: Webservers
 ---
 
-# Nginx ProxyPass
+# Nginx ProxyPass examples
+
+## Simple proxy pass
+
+```
+server {
+  listen 80;
+  server_name localhost;
+
+  location / {
+    proxy_pass http://frontend:3000/;
+  }
+  
+  location /api/ {
+    proxy_pass http://backend:3001/api/;
+  }
+
+  location /public {
+    root /data/;
+    index index.html index.htm index.php;
+  }
+
+  error_page 500 502 503 504 /50x.html;
+  location = /50x.html {
+    root /usr/share/nginx/html;
+  }
+} 
+```
+
+
+## Nginx ProxyPass Grafana with Websockets
 
 This example is port 80 only, use Certbot to enable 443 and related settings.
 

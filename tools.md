@@ -16,4 +16,12 @@ something
 something
 ```
 
+## Detect-secrets
+
+Link: [github repo](https://github.com/Yelp/detect-secrets)
+
+```bash
+pip install detect-secrets && echo -n "export PATH=\"~/.local/bin:$PATH\"" >> ~/.bashrc
+```
+
 
