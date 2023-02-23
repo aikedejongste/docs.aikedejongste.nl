@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Allow traffic from CloudFlare
+title: Allow from CloudFlare
 parent: Networking
 ---
 

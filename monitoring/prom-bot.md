@@ -21,7 +21,7 @@ send_only: true # use bot only to send messages.
 
 In template.tmpl
 
-```json
+```yaml
 Alertname: {{ .CommonLabels.alertname }}
 Status:  {{ .Status }}
 Instance: {{ .CommonLabels.instance }}
