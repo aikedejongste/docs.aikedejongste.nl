@@ -4,10 +4,25 @@ title: Netplan private ip
 parent: Networking
 ---
 
-# Netplan private ip
+# Netplan private ip only configs
 
-This works on:
-* Hetzner
+## General suggestions
+
+In some versions use this for IP address:
+```
+      addresses: [192.168.11.13/24]
+```
+
+In some versions you have to use default for the route:
+```
+      routes:
+        - to: default
+          via: 192.168.11.1
+```
+
+## Netplan Hetzner private only config
+
+This doesn't work for some reason. Suggestions welcome.
 
 ```yaml
 network:
@@ -28,14 +43,3 @@ network:
       dhcp6: no
 ```
 
-In some versions it is for IP address:
-```
-      addresses: [192.168.11.13/24]
-```
-
-In some versions you have to use default for the route:
-```
-      routes:
-        - to: default
-          via: 192.168.11.1
-```
