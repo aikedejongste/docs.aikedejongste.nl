@@ -24,6 +24,7 @@ Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl
 | [Hetzner](https://hetzner.cloud/?ref=Fp0GlpkddM38) | 20 eur credit |
 | [UptimeRobot](https://uptimerobot.com/?rid=9627671ef4601a) | none :( |
 | [Vultr](https://www.vultr.com/?ref=9210110) | 100 USD in credit |
+| [Tibber](https://invite.tibber.com/h3g14emf) | 50 EUR shop credit |
 
 ----
 
