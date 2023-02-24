@@ -17,12 +17,15 @@ Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl
 
 Or use one of my referral links to support me:
 
+
 | Service and link      | Benefit	           | 
 |:-------------|:------------------|
-|            |    |
 | [FastMail](https://ref.fm/u18937512) |  10% off your first year |
 | [DigitalOcean](https://m.do.co/c/c86b33c659ed) | 200 USD in credit |
 | [UpDown.io](https://updown.io/r/vw0un) | 100k additional free credits |
+| [Hetzner](https://hetzner.cloud/?ref=Fp0GlpkddM38) | 20 eur credit |
+| [UptimeRobot](https://uptimerobot.com/?rid=9627671ef4601a) | none :( |
+| [Vultr](https://www.vultr.com/?ref=9210110) | 100 USD in credit |
 
 ----
 
