@@ -18,3 +18,11 @@ Create a new Personal Access Token [here](https://github.com/settings/tokens/new
 ```bash
 echo "ghp_REPLACE_ME" | docker login ghcr.io --username doesnt@matter.com --password-stdin
 ```
+
+## Filter docker ps columns:
+
+Link: [docker docs](https://docs.docker.com/engine/reference/commandline/ps/#format)
+
+```bash
+docker ps -a --format="table {{.Names}}\t{{.Ports}}\t{{.CreatedAt}}\t{{.Status}}\t{{.Mounts}}"
+```
