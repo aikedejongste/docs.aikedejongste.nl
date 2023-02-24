@@ -13,9 +13,7 @@ Notion.so but this is much faster and has version control.
 
 Will this all be replaced with ChatGPT soon?
 
-Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl)
-
-Or use one of my referral links to support me:
+Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl) or use one of my referral links to support me:
 
 
 | Service and link      | Benefit	           | 
