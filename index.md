@@ -25,6 +25,7 @@ Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl
 | [UptimeRobot](https://uptimerobot.com/?rid=9627671ef4601a) | none :( |
 | [Vultr](https://www.vultr.com/?ref=9210110) | 100 USD in credit |
 | [Tibber](https://invite.tibber.com/h3g14emf) | 50 EUR shop credit |
+| [Wise](https://wise.com/invite/ath/jacobusd57) | fee-free transfers |
 
 ----
 

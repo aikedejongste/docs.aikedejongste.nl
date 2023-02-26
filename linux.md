@@ -36,3 +36,14 @@ read username
 echo "$username"
 ```
 
+## Bash for loop
+```bash
+for i in {1..5}; do COMMAND-HERE; done
+
+or
+
+for i in {1..5}; do COMMAND-HERE "$i"; done
+for i in {1..5}; do echo "Hi, $i"; done
+
+```
+
