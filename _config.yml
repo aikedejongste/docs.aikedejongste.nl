@@ -1,8 +1,17 @@
 title: Aikes Docs
 description: Scripts, commands, onliners and general sysadmin stuff
 theme: just-the-docs
-
 url: https://docs.aikedejongste.nl
 ga_tracking: G-FYZXW9XYER
 aux_links:
   About me: https://www.aikedejongste.nl
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+compress_html:
+  ignore:
+    envs: all
+
+
+

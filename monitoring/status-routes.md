@@ -12,6 +12,7 @@ This is a simple way to add very basic monitoring to a web app. As status route 
 ## Rails sidekiq check
 
 From: [RunRails.com](https://www.runrails.com/monitoring/monitoring-sidekiq-with-alerts/)
+Also interesting: [Sidekiq checks](https://pawelurbanek.com/rails-sidekiq-monitoring)
 
 ```ruby
 class Public::StatusController < Public::PublicController
