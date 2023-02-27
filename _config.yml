@@ -8,10 +8,10 @@ aux_links:
 kramdown:
   syntax_highlighter_opts:
     block:
-      line_numbers: true
-compress_html:
-  ignore:
-    envs: all
+      line_numbers: false
+#compress_html:
+#  ignore:
+#    envs: all
 
 
 
