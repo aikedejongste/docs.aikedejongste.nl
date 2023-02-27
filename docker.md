@@ -24,5 +24,7 @@ echo "ghp_REPLACE_ME" | docker login ghcr.io --username doesnt@matter.com --pass
 Link: [docker docs](https://docs.docker.com/engine/reference/commandline/ps/#format)
 
 ```bash
-docker ps -a --format=`"table {{.Names}}\t{{.Ports}}\t\{\{.CreatedAt\}\}\t{\{.Status\}\}\t\{\{.Mounts\}\}"`
+{% raw %}
+docker ps}} -a --format="table {{.Names}}\t{{.Ports}}\t{{.CreatedAt}}\t{{.Status}}\t{{.Mounts}}"
+{% endraw %}
 ```
