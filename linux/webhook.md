@@ -21,3 +21,15 @@ ExecStart=/usr/bin/webhook -nopanic -hooks /etc/webhook.conf -hotreload -verbose
 
 This works but use a nicer way to do this next time. Editing this file directly is not recommended.
 
+Here is a `/etc/webhook.conf` example:
+
+```json
+[
+  {
+    "id": "deploy-j5wnuY96pbtit",
+    "execute-command": "deploy.sh",
+    "command-working-directory": "/opt/app-name/"
+  }
+]
+```
+

@@ -12,6 +12,8 @@ something
 ```
 
 ## K9s (Kubernetes GUI)
+Bash
+
 ```bash
 wget https://github.com/derailed/k9s/releases/latest/download/k9s_Linux_amd64.tar.gz -O /tmp/k9s.gz
 gunzip /tmp/k9s.gz
