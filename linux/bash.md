@@ -2,6 +2,7 @@
 layout: default
 title: Bash
 has_children: false
+parent: Linux
 ---
 
 # Bash
