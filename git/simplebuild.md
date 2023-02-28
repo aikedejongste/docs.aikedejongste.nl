@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Simple container build
-parent: Git & Github Actions
+parent: Git and Github Actions
 ---
 
 # Simple container build

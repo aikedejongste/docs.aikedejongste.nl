@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Git & Github Actions
+title: Git and Github Actions
 has_children: false
 ---
 

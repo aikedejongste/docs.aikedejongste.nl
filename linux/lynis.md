@@ -2,6 +2,7 @@
 layout: default
 title: Lynis
 has_children: false
+parent: Linux
 ---
 
 # Lynis
