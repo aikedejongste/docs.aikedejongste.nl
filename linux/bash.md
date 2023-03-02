@@ -48,6 +48,11 @@ for i in {1..5}; do echo "Hi, $i"; done
 
 ```
 
+## Bash for loop over lines in a file
+```bash
+while read db; do  echo $db; done < /tmp/dbnames.txt
+```
+
 ## Bash history
 
 To immediately persist commands to your ~/.bash_history file and add a timestamp add this to ~/.bashrc:
@@ -61,6 +66,9 @@ PROMPT_COMMAND='history -a'
 ```
 
 
+## Convert heif/heic to jpg
 
-
-
+```bash
+apt-get install libheif-examples`
+for file in *.heic; do heif-convert "$file" "heic/${file/%.heic/.jpg}"; done
+```

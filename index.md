@@ -27,6 +27,15 @@ Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl
 | [Tibber](https://invite.tibber.com/h3g14emf) | 50 EUR shop credit |
 | [Wise](https://wise.com/invite/ath/jacobusd57) | fee-free transfers |
 
+## Useful tools 
+
+I keep forgetting about them and putting them here will hopefully remind me to use them more.
+
+| Service and link      | What/why	           | 
+|:-------------|:------------------|
+| [Pixlr](https://pixlr.com/nl/x/) |  Online image editor |
+| [Pixlr](https://pixlr.com/nl/x/) |  Online image editor |
+
 ----
 
 This is the footer.
