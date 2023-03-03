@@ -36,3 +36,7 @@ or
 ssh -o 'ConnectionAttempts 999' 10.10.1.3
 ```
 
+## Generate key
+
+ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "john@example.com"
+
