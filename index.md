@@ -26,7 +26,7 @@ Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl
 | [Vultr](https://www.vultr.com/?ref=9210110) | 100 USD in credit |
 | [Tibber](https://invite.tibber.com/h3g14emf) | 50 EUR shop credit |
 | [Wise](https://wise.com/invite/ath/jacobusd57) | fee-free transfers |
-| [NordVPN](https://ref.nordvpn.com/tqlufKNcyVM) | 3 months free |
+| [NordVPN](https://ref.nordvpn.com/DxpJQdbJXor) | 3 months free |
 
 ## Useful tools 
 
