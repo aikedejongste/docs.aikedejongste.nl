@@ -19,6 +19,8 @@ namespaces:
 
 Then in templates/secrets.tpl
 ```
+{% raw %} 
+
 {{- range .Values.namespaces }}
 ---
 apiVersion: v1
@@ -32,6 +34,7 @@ data:
   PASSWORD: asdfasdfasdfasdf
 {{- end }}
 
+{% endraw %}
 ```
 
 Will give the following output:

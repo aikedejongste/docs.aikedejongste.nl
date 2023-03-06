@@ -19,3 +19,14 @@ touch /etc/cloud/cloud-init.disabled
 ngrok http --region=eu --hostname=aike.eu.ngrok.io 4567
 ```
 
+## Show usage on Ubuntu
+
+* nload 
+* speedometer
+* iftop
+* nethogs
+* bmon
+* slurm
+* tcptrack
+* iptraf
+
