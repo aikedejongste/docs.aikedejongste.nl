@@ -33,3 +33,20 @@ Here is a `/etc/webhook.conf` example:
 ]
 ```
 
+## Firewall on Digital Ocean
+
+```bash
+# to get the Droplet ID
+doctl compute droplet  list
+# add firewall rule
+doctl compute firewall create --name "allow-webhook-from-all" --inbound-rules "protocol:tcp,ports:9000" --droplet-ids
+```
+
+## Github Actions line
+
+```yaml
+    - name: Trigger deploy webhook
+      run: curl -s -k http://host.name.com:9000/hooks/deploy-WFUEmasdfasdfasfdk
+```
+
+
