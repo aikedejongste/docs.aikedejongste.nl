@@ -19,7 +19,10 @@ The file `/lib/systemd/system/webhook.service` should contain this ExecStart com
 ExecStart=/usr/bin/webhook -nopanic -hooks /etc/webhook.conf -hotreload -verbose -port 8000
 ```
 
-This works but use a nicer way to do this next time. Editing this file directly is not recommended.
+```bash systemctl edit webhook```
+
+
+## Configuration
 
 Here is a `/etc/webhook.conf` example:
 
@@ -50,7 +53,7 @@ doctl compute firewall create --name "allow-webhook-from-all" --inbound-rules "p
 ```
 
 
-# Deploy script for containers
+## Deploy script for containers
 
 ```bash
 #!/bin/bash
