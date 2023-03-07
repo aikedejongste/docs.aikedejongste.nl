@@ -13,7 +13,7 @@ The Debian/Ubuntu package called `webhook` is very useful. Uses systemd to run b
 apt install webhook
 ```
 
-The file `/lib/systemd/system/webhook.service` should contain this ExecStart command: 
+The file `/lib/systemd/system/webhook.service` should contain this ExecStart command. The order of the options matters!
 
 ```
 ExecStart=/usr/bin/webhook -nopanic -hooks /etc/webhook.conf -hotreload -verbose -port 8000
