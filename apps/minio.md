@@ -51,6 +51,8 @@ services:
     environment:
       MINIO_ROOT_USER: user
       MINIO_ROOT_PASSWORD: password
+      #if running in subdir behind proxy
+      MINIO_BROWSER_REDIRECT_URL: https://minio.company.com/minio
     command: server --console-address ":9001" /data
 
 ```

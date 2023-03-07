@@ -33,3 +33,23 @@ Here is a `/etc/webhook.conf` example:
 ]
 ```
 
+# Deploy script for containers
+
+```bash
+#!/bin/bash
+#set -o errexit
+#set -o nounset
+#set -o pipefail
+
+# load file outside of git repo with your DOCKER_TOKEN (PAT)
+source ~/.env
+# login so we can pull the container
+echo $DOCKER_TOKEN | docker login ghcr.io --username doesnt@matter.com --password-stdin
+# actually pull container
+docker-compose pull backend
+
+# restart container
+# docker-compose restart backend # WARN: this seems to load an old image
+docker compose stop backend
+docker-compose up -d --force-recreate --renew-anon-volumes backend # https://stackoverflow.com/a/50059206/159086
+```
