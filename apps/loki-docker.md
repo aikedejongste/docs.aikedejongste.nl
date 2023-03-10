@@ -3,7 +3,6 @@ layout: default
 title: Loki on Docker
 has_children: false
 parent: Self Hosted Apps
-parent: Logging
 ---
 
 # Loki Docker
