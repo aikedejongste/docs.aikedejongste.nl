@@ -72,3 +72,6 @@ PROMPT_COMMAND='history -a'
 apt-get install libheif-examples`
 for file in *.heic; do heif-convert "$file" "heic/${file/%.heic/.jpg}"; done
 ```
+
+## Cleanup Systemd journal
+```bash journalctl --vacuum-time=1d```
