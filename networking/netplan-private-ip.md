@@ -43,3 +43,27 @@ network:
       dhcp6: no
 ```
 
+## Netplan private IP with Ansible
+
+```yaml
+- role: mrlesmithjr.netplan
+  #when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'jammy'
+  become: yes
+  netplan_enabled: true
+  netplan_config_file: /etc/netplan/01-netcfg.yaml
+  netplan_renderer: networkd
+  # Configuration defined bellow will be written to the file defined above in `netplan_config_file`.
+  netplan_configuration:
+    network:
+      version: 2
+      renderer: networkd
+      ethernets:
+        ens4:
+          optional: true
+          addresses: ["{{ hostvars[inventory_hostname].internal_ip }}/24"]
+          nameservers:
+            addresses: [8.8.8.8]
+          dhcp4: no
+          dhcp6: no
+```
+

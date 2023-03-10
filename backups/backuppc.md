@@ -58,3 +58,83 @@ reverse_proxy backuppc-app:80
 tls /config/cert.pem /config/cert.key
 ```
 
+
+## Configure hosts with Ansible
+
+```yaml
+    - name: Add the backuppc user
+      ansible.builtin.user:
+        name: backuppc
+        shell: /bin/bash
+        groups: sudo
+        append: yes
+
+    - name: backuppc sudo for rsync only
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers.d/backuppc
+        state: present
+        create: yes
+        line: "backuppc ALL=NOPASSWD: /usr/bin/rsync"
+        owner: root
+        group: root
+
+    - name: Set authorized key for backuppc
+      authorized_key:
+        user: backuppc
+        state: present
+        key: '{{ item }}'
+      with_file:
+        - keys/backuppc.pub
+```
+
+
+## Add hosts to known hosts and then to BackupPC config
+
+```yaml
+- name: BackupPC setup
+  hosts: all (not backuppc host)
+  tasks:
+    - name: Keep a record of SSH host keys because of reinstalls
+      delegate_to: localhost
+      lineinfile:
+        dest: mwp_known_hosts
+        create: yes
+        state: present
+        line: "{{ lookup('pipe', 'ssh-keyscan -trsa ' + inventory_hostname) }}"
+      ignore_errors: true
+
+    - name: Add this host to BackupPC config
+      delegate_to: localhost
+      lineinfile:
+        dest: backuppc-hosts
+        create: yes
+        state: present
+        line: "{{ inventory_hostname + '  ' + '0' + ' ' + 'backuppc' }}"
+```
+
+## Configure BackupPC
+
+```yaml
+- name: BackupPC setup
+  hosts: backuppc
+  tasks:
+    - name: Copy the known hosts to backuppc server so backuppc knows it connects to the right host
+      become: yes
+      ansible.builtin.copy:
+        src: mwp_known_hosts
+        dest: /opt/backuppc/conf/home/.ssh/known_hosts
+        owner: 10000
+        group: 10000
+        mode: '0600'
+        backup: yes
+
+    - name: Copy the target hosts list to backuppc server to make sure all hosts have backups
+      become: yes
+      ansible.builtin.copy:
+        src: backuppc-hosts
+        dest: /opt/backuppc/conf/etc/hosts
+        owner: 10000
+        group: 10000
+        mode: '0640'
+        backup: yes
+```
