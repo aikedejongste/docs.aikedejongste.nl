@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mail
-has_children: false
+has_children: true
 ---
 
 # Mail, SPF, DMARC, DKIM, etc
