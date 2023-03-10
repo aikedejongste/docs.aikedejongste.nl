@@ -6,6 +6,21 @@ parent: Networking
 
 # Netplan private ip only configs
 
+
+## Disable cloud-init network config
+
+### With Ansible:
+```
+- name: Disable cloud-init network config
+  copy:
+    dest: "/etc/cloud/cloud.cfg.d/99-disable-network-config.cfg"
+    content: |
+      network: {config: disabled}
+```
+
+### With CLI:
+```bash echo "network: {config: disabled}" > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg```
+
 ## General suggestions
 
 In some versions use this for IP address:
@@ -45,9 +60,23 @@ network:
 
 ## Netplan private IP with Ansible
 
+Useful vars:
+```
+tasks:
+  - debug: var=ansible_all_ipv4_addresses
+  - debug: var=ansible_default_ipv4.address
+
+hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+```
+
 ```yaml
+
+
 - role: mrlesmithjr.netplan
   #when: ansible_distribution == 'Ubuntu' and ansible_distribution_release == 'jammy'
+  # inventory must look like:
+  # [webservers]
+  # public.hostname.com ansible_user=root internal_ip=192.168.1.2
   become: yes
   netplan_enabled: true
   netplan_config_file: /etc/netplan/01-netcfg.yaml
