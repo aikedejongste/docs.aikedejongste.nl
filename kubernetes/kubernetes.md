@@ -6,6 +6,25 @@ has_children: true
 
 # Kubernetes
 
+
+## Install k3s SINGLE NODE
+
+```yaml
+curl -sfL https://get.k3s.io | sh - 
+k3s kubectl get node 
+```
+
+## Install k3s CLUSTER (3 nodes)
+
+```yaml
+# on node1
+curl -sfL https://get.k3s.io | K3S_TOKEN=SECRET sh -s - server --cluster-init
+# on the other 2 nodes
+curl -sfL https://get.k3s.io | K3S_TOKEN=SECRET sh -s - server --server https://<ip or hostname of server1>:6443
+
+k3s kubectl get node 
+```
+
 ## Copy file from local to pod:
 
 ```bash
