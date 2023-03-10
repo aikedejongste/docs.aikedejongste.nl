@@ -34,3 +34,13 @@ parent: Networking
     comment: Ansible NAT Masquerade
 ```
 
+## iptables-persistent to store current rules to file
+
+```yaml
+- name: Save current state of the firewall in system file
+  community.general.iptables_state:
+    ip_version: ipv4
+    state: saved
+    path: /etc/iptables/rules.v4
+```
+
