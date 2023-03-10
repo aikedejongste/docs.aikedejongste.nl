@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Backups
-parent: MariaDB
+title: MariaDB Backups
+parent: Databases
 ---
 
 # MariaDB Backups

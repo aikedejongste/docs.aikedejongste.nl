@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Postgres
+parent: Databases
 has_children: true
 ---
 
