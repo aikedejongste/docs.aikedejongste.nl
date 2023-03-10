@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Imapsync
+parent: Mail
 has_children: false
 ---
 
