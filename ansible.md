@@ -19,3 +19,13 @@ apt-get update && \
   pip3 install ansible
 ```
 
+## Display message
+
+```yaml
+    - name: Display PG instruction
+      command: echo "PGPASSWORD=blabbalbala psql -U postgres -h lb-ip-goes-here -p 5432"
+      register: instruction
+
+    - debug: msg="{{ instruction.stdout }}"
+```
+

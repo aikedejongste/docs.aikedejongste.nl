@@ -40,3 +40,13 @@ ssh -o 'ConnectionAttempts 999' 10.10.1.3
 
 ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "john@example.com"
 
+## AutoSSH
+
+Make a firewall host reachable over reverse SSH tunnel with AutoSSH:
+
+```bash
+autossh -nNT -R 2222:localhost:22 user@remote.box
+```
+so you can ssh to remote.box:2222.
+
+
