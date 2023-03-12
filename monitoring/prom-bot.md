@@ -1,9 +1,13 @@
 ---
 layout: default
-title: Prometheus bot
+title: Prometheus bots
 has_children: false
 parent: Monitoring
 ---
+
+# Notifications to Mattermost
+
+* [AlertManager plugin](https://github.com/cpanato/mattermost-plugin-alertmanager/blob/main/README.md)
 
 # Prometheus Telegram bot
 
@@ -12,7 +16,7 @@ In config.yaml
 ```yaml
 telegram_token: "123456789.........."
 # ONLY IF YOU USING DATA FORMATTING FUNCTION, NOTE for developer: important or test fail
-#time_outdata: "02/01/2006 15:04:05" 
+#time_outdata: "02/01/2006 15:04:05"
 template_path: "template.tmpl" # ONLY IF YOU USING TEMPLATE
 time_zone: "Europe/Amsterdam" # ONLY IF YOU USING TEMPLATE
 split_msg_byte: 4000

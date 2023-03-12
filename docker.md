@@ -26,3 +26,13 @@ Link: [docker docs](https://docs.docker.com/engine/reference/commandline/ps/#for
 ```bash
 {% raw %} docker ps -a --format="table {{.Names}}\t{{.Ports}}\t{{.CreatedAt}}\t{{.Status}}\t{{.Mounts}}" {% endraw %}
 ```
+
+## Watchdower for automatic updates
+
+```yaml
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.docker/config.json:/config.json
+```
