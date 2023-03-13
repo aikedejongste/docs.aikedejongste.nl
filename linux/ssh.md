@@ -50,3 +50,12 @@ autossh -nNT -R 2222:localhost:22 user@remote.box
 so you can ssh to remote.box:2222.
 
 
+## Ansible add ssh fingerprint to known hosts
+
+```yaml
+- name: update known hosts file
+  shell: ssh-keyscan -H "{{ item }}" >> ~/.ssh/known_hosts
+  loop:
+    - 10.10.1.2
+```
+
