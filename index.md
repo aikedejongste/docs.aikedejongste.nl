@@ -41,6 +41,14 @@ I keep forgetting about them and putting them here will hopefully remind me to u
 | [Pixlr](https://pixlr.com/nl/x/) |  Online image editor |
 | [Veed.io](https://veed.io) |  Online video editor |
 
+## Useful providers
+
+Providers I use or want to try:
+
+| Service and link      | What/why	           | 
+|:-------------|:------------------|
+| [WholeSale Internet](https://www.wholesaleinternet.net/dedicated/) | Cheap dedicated boxes |
+
 ----
 
 This is the footer.
