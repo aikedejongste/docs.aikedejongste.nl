@@ -9,11 +9,11 @@ has_children: false
 
 ## Wait for apt-get to be available.
 
-while ! apt-get -qq check; do sleep 1s; done
+```bash while ! apt-get -qq check; do sleep 1s; done```
 
 ## Enable automatic upgrades with cli:
 
-```apt install unattended-upgrades && dpkg-reconfigure -plow unattended-upgrades```
+```bash apt install unattended-upgrades && dpkg-reconfigure -plow unattended-upgrades```
 
 ## Enable automatic upgrades with config:
 

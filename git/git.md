@@ -6,6 +6,10 @@ has_children: true
 
 # Git
 
+## Usefull links:
+
+* [Git Hooks](https://www.atlassian.com/git/tutorials/git-hooks)
+
 ## Undo stage commit
 ```bash git reset HEAD README.md```
 
@@ -20,3 +24,7 @@ curl -H "Authorization: token PERSONAL_ACCESS_TOKEN_HERE" \
   http://github.com/you/reponame/zipball/main \
   -o output.zip
 ```
+
+## Set Git hooks directory to .githooks
+
+```bash git config core.hooksPath .githooks```

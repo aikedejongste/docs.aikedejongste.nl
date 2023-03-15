@@ -10,7 +10,7 @@ has_children: false
 
 [SSLs.com](https://ssls.sjv.io/vNzVeW)
 
-## Cert and bunlde order
+## Cert and bundle order
 
 * /etc/ssl/certs/star.${fqdn}.crt, paste in the crt, followed by the included CA bundle, include a newline!
 * /etc/ssl/private/star.${fqdn}.key, paste in the key
