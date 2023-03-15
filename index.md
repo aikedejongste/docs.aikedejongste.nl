@@ -30,6 +30,7 @@ Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl
 | [Wise](https://wise.com/invite/ath/jacobusd57) | fee-free transfers |
 | [NordVPN](https://ref.nordvpn.com/DxpJQdbJXor) | 3 months free |
 | [Dropbox](https://www.dropbox.com/referrals/AAAc1Ay24GYAfmsQUpFrBztSknXBkS1fWCc?src=global9) | a bit of free storage |
+| [SSLs.com](https://ssls.sjv.io/vNzVeW) |  Easiest SSL cert provider |
 
 ## Useful tools 
 
@@ -38,7 +39,7 @@ I keep forgetting about them and putting them here will hopefully remind me to u
 | Service and link      | What/why	           | 
 |:-------------|:------------------|
 | [Pixlr](https://pixlr.com/nl/x/) |  Online image editor |
-| [Pixlr](https://pixlr.com/nl/x/) |  Online image editor |
+| [Veed.io](https://veed.io) |  Online video editor |
 
 ----
 
