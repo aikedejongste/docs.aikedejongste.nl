@@ -40,6 +40,7 @@ I keep forgetting about them and putting them here will hopefully remind me to u
 |:-------------|:------------------|
 | [Pixlr](https://pixlr.com/nl/x/) |  Online image editor |
 | [Veed.io](https://veed.io) |  Online video editor |
+| [CPU Benchmarks](https://www.cpubenchmark.net/cpu_list.php) | Searchable list of cpu benchmark scores  |
 
 ## Useful providers
 
