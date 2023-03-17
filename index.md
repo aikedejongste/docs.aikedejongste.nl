@@ -6,9 +6,9 @@ nav_order: 1
 
 Hi!
 
-These are just my personal notes for day to day use. A lot of it is super obvious 
+These are just my personal notes for day to day use. A lot of it is super obvious
 but this saves me time and energy because I don't have to think about it and can
-just copy it. Also helps when StackOverflow is down. I used to have all this in 
+just copy it. Also helps when StackOverflow is down. I used to have all this in
 Notion.so but this is much faster and has version control.
 
 Will this all be replaced with ChatGPT soon?
@@ -18,7 +18,7 @@ Github Actions build status: [![Deploy Jekyll site to Pages](https://github.com/
 Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl) or use one of my referral links to support me:
 
 
-| Service and link      | Benefit	           | 
+| Service and link      | Benefit	           |
 |:-------------|:------------------|
 | [FastMail](https://ref.fm/u18937512) |  10% off your first year |
 | [DigitalOcean](https://m.do.co/c/c86b33c659ed) | 200 USD in credit |
@@ -32,21 +32,22 @@ Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl
 | [Dropbox](https://www.dropbox.com/referrals/AAAc1Ay24GYAfmsQUpFrBztSknXBkS1fWCc?src=global9) | a bit of free storage |
 | [SSLs.com](https://ssls.sjv.io/vNzVeW) |  Easiest SSL cert provider |
 
-## Useful tools 
+## Useful tools
 
 I keep forgetting about them and putting them here will hopefully remind me to use them more.
 
-| Service and link      | What/why	           | 
+| Service and link      | What/why	           |
 |:-------------|:------------------|
 | [Pixlr](https://pixlr.com/nl/x/) |  Online image editor |
 | [Veed.io](https://veed.io) |  Online video editor |
 | [CPU Benchmarks](https://www.cpubenchmark.net/cpu_list.php) | Searchable list of cpu benchmark scores  |
+| [Swappie.com](https://swappie.com/nl-en/) | Sell and buy phones second hand |
 
 ## Useful providers
 
 Providers I use or want to try:
 
-| Service and link      | What/why	           | 
+| Service and link      | What/why	           |
 |:-------------|:------------------|
 | [WholeSale Internet](https://www.wholesaleinternet.net/dedicated/) | Cheap dedicated boxes |
 
