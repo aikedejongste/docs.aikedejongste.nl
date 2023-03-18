@@ -36,6 +36,33 @@ Here is a `/etc/webhook.conf` example:
 ]
 ```
 
+
+## Webhook with Parameters: 
+
+```yaml
+[
+  {
+    "id": "deploy-123456789",
+    "execute-command": "/opt/deploy.sh",
+    "pass-arguments-to-command":
+       [
+         {
+           "source": "url",
+           "name": "var1"
+         },
+         {
+           "source": "url",
+           "name": "var2"
+         },
+         {
+           "source": "url",
+           "name": "var3"
+         }
+       ]
+  }
+]
+```
+
 ## Firewall on Digital Ocean
 
 ```bash
