@@ -25,4 +25,13 @@ openssl s_client -connect k3s.company.com:6443 -showcerts < /dev/null 2>&1 | ope
 [SSL labs](https://ssllabs.com/ssltest/analyze.html)
 ```
 
+## Base64 enc for k8s secret
+
+`-w 0` will prevent base64 from adding newlines
+
+```bash
+cat star.company.com.crt | base64 -w 0 > star.company.com.crt.enc
+cat star.company.com.key | base64 -w 0 > star.company.com.key.enc
+```
+
 
