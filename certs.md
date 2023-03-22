@@ -26,3 +26,20 @@ openssl s_client -connect k3s.company.com:6443 -showcerts < /dev/null 2>&1 | ope
 ```
 
 
+## Export private key from pfx
+
+```bash
+openssl pkcs12 -in filename.pfx -nocerts -nodes -out key.pem
+```
+
+## Export certificate from pfx
+
+
+```bash
+openssl pkcs12 -in filename.pfx -clcerts -nokeys -out cert.pem
+```
+
+
+
+
+
