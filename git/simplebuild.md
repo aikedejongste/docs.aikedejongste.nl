@@ -7,6 +7,8 @@ parent: Git and Github Actions
 # Simple container build
 
 ```yaml
+{% raw %}
+
 name: Build and publish container image
 
 on:
@@ -51,4 +53,6 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+{% endraw %}
+
 ```
