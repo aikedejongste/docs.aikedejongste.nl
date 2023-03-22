@@ -25,4 +25,27 @@ openssl s_client -connect k3s.company.com:6443 -showcerts < /dev/null 2>&1 | ope
 [SSL labs](https://ssllabs.com/ssltest/analyze.html)
 ```
 
+## Base64 enc for k8s secret
+
+`-w 0` will prevent base64 from adding newlines
+
+```bash
+cat star.company.com.crt | base64 -w 0 > star.company.com.crt.enc
+cat star.company.com.key | base64 -w 0 > star.company.com.key.enc
+```
+
+## Check for new expire date
+
+### Online
+
+```bash
+export SITE_URL="company.com"
+export SITE_SSL_PORT="443"
+openssl s_client -connect ${SITE_URL}:${SITE_SSL_PORT} \
+  -servername ${SITE_URL} 2> /dev/null |  openssl x509 -noout  -dates
+```
+
+### File
+
+```bash openssl x509 -enddate -noout -in *.crt```
 
