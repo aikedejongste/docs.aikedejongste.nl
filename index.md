@@ -50,5 +50,6 @@ Providers I use or want to try:
 | Service and link      | What/why	           |
 |:-------------|:------------------|
 | [WholeSale Internet](https://www.wholesaleinternet.net/dedicated/) | Cheap dedicated boxes |
+| [V6 node](https://v6node.com/) | Cheap IPv6 only virtual machines |
 | [PCMagnaat](https://pcmagnaat.nl/product-categorie/computers/desktops/) | Cheap mini pc's |
 

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: APT
-#nav_order: 3
 has_children: false
+parent: Linux
 ---
 
 # APT
