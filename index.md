@@ -43,14 +43,12 @@ I keep forgetting about them and putting them here will hopefully remind me to u
 | [CPU Benchmarks](https://www.cpubenchmark.net/cpu_list.php) | Searchable list of cpu benchmark scores  |
 | [Swappie.com](https://swappie.com/nl-en/) | Sell and buy phones second hand |
 
-## Useful providers
+## Useful providers and services
 
 Providers I use or want to try:
 
 | Service and link      | What/why	           |
 |:-------------|:------------------|
 | [WholeSale Internet](https://www.wholesaleinternet.net/dedicated/) | Cheap dedicated boxes |
+| [PCMagnaat](https://pcmagnaat.nl/product-categorie/computers/desktops/) | Cheap mini pc's |
 
-----
-
-This is the footer.
