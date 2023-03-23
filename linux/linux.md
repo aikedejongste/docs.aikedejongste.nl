@@ -19,3 +19,15 @@ gpg2 --verify SHA256SUMS.gpg SHA256SUMS
 sha256sum -c SHA256SUMS 2>&1 | grep OK
 ```
 
+
+## Updates and upgrades
+
+```
+cat <<EOF > /etc/apt/apt.conf.d/10periodic
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Download-Upgradeable-Packages "1";
+APT::Periodic::AutocleanInterval "1";
+APT::Periodic::Unattended-Upgrade "1";
+EOF
+```
+
