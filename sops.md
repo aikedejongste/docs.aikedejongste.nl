@@ -22,7 +22,7 @@ sudo dpkg -i /tmp/sops.deb && sudo apt install -y age
 ## Create a keypair in ~/.sops
 
 ```bash
-mkdir -p ~/.sops/ && age-keygen -o ~/.sops/age/keys.txt && cat ~/.sops/age/keys.txt
+mkdir -p ~/.sops/age/ && age-keygen -o ~/.sops/age/keys.txt && cat ~/.sops/age/keys.txt
 ```
 
 ## Use an existing key:
