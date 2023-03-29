@@ -28,3 +28,18 @@ curl -H "Authorization: token PERSONAL_ACCESS_TOKEN_HERE" \
 ## Set Git hooks directory to .githooks
 
 ```bash git config core.hooksPath .githooks```
+
+
+## Clone or push over https with Fine Grained PAT
+
+```bash
+export GITHUB_USER=your-username
+export GITHUB_TOKEN=github_pat_1234..........
+export GITHUB_REPO=org/repo
+git clone https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}
+
+OR
+
+git remote add origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}
+git push --set-upstream origin master
+```
