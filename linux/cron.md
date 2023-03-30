@@ -2,6 +2,7 @@
 layout: default
 title: CRON
 has_children: false
+parent: Linux
 ---
 
 # CRON
