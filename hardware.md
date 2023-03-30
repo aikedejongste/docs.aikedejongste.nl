@@ -8,14 +8,22 @@ has_children: false
 
 To do good work you need good tools. This is my list of recommendations:
 
-## Laptop Windows / Linux:
+## Laptop Linux:
+
+### [Lenovo X1 Carbon](https://www.lenovo.com/nl/nl/laptops/thinkpad/thinkpad-x1/ThinkPad-X1-Carbon-Gen-11/p/LEN101T0049) 
+* Currently 11th Generation
+* I have the 7th and the 10th Generation and they both work flawlessly with Linux
+* Make sure to select the on-site next business day support when buying
+* Much better build quality and warranty than a Framework laptop
+
+
+## Laptop Windows:
 
 ### [HP EliteBook 840 G9 (5Z6D3EA)](https://tweakers.net/pricewatch/1850722/hp-elitebook-840-g9-5z6d3ea.html) 
 * Or another model from the same series and generation.
 * Make sure to buy the separate on-site next business day support
 * This has a 400 nits screen!
 * You can upgrade the memory to 64GB later! It is user replaceable! 
-
 
 ## Portable Display:
 
