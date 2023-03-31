@@ -9,10 +9,13 @@ parent: Helm
 
 In deployment.tpl:
 ```yaml
+{% raw %}
+
       {{- range $key, $val := .Values.env }}
         - name: {{ $key }}
           value: {{ $val | quote }}
       {{- end }}
+{% endraw %}
 ```
 
 and in values.yaml
@@ -33,8 +36,14 @@ envvars:
 
 
 and
+
+```yaml
+{% raw %}
+
           env:                                                                  
           {{- range .Values.envvars }}                                          
           - name: {{ .name }}                                                   
             value: {{ .value }}                                                 
           {{- end }}  
+{% endraw %}
+```
