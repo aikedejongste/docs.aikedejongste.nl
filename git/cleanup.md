@@ -9,6 +9,7 @@ parent: Git and Github Actions
 ## With an Action
 
 ```yaml
+{% raw %}
 - name: Delete old container images
   uses: snok/container-retention-policy@v2.0.0
   with:
@@ -19,7 +20,8 @@ parent: Git and Github Actions
     keep-at-least: 25
     skip-tags: latest
     untagged-only: false
-    token: ${{ secrets.GITHUB_TOKEN }}
+    token: ${{ secrets.PAT }}
+{% endraw %}
 ```
 
 At the moment the GITHUB_TOKEN does not have enough permissions, so you'll need a PAT.... 
