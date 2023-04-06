@@ -34,3 +34,7 @@ table pg_hba_file_rules;
 
 SELECT pg_reload_conf();
 
+
+## Users and roles
+
+In PostgreSQL you can create a new user using the CREATE USER or the CREATE ROLE command. The difference between these two options is that CREATE USER sets the LOGIN privilege directly while CREATE ROLE will set this attribute to NOLOGIN.

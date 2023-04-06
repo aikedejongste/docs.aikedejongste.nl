@@ -25,6 +25,12 @@ To do good work you need good tools. This is my list of recommendations:
 * This has a 400 nits screen!
 * You can upgrade the memory to 64GB later! It is user replaceable! 
 
+## Laptop Apple:
+
+### [Apple Macbook Air M2](https://www.apple.com/nl/shop/buy-mac/macbook-air/middernacht-apple-m2-chip-met-8-core-cpu-en-8-core-gpu-256gb)
+* Upgrade to 16GB or 24GB memory is required!
+* Maximum effective resolution is 1710x1112
+
 ## Portable Display:
 
 ### [HP E14 G4](https://tweakers.net/pricewatch/1672978/hp-e14-g4-wit.html)
