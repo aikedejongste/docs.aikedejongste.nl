@@ -7,6 +7,10 @@ parent: Linux
 
 # APT
 
+## Fun fact:
+
+.deb packages are just ar files with a funky header (d.e.b) and some pre/post scripts. Ar files are also .o files after compilation but before linking, what!?! Also, tar is based on Ar, WHAT!?! Elf files, the whole thing is standardized!!
+
 ## Wait for apt-get to be available.
 
 ```bash while ! apt-get -qq check; do sleep 1s; done```

@@ -32,6 +32,16 @@ Use \040 (octal) for mounts with spaces in the name
 10.0.0.1:/mnt/data         /mnt/here           nfs defaults  0 0
 ```
 
+### Mount in docker-composeo
+
+```yaml
+volumes:
+  private:
+    driver_opts:
+      type: "nfs"
+      o: "addr=10.1.1.1,ro"
+      device: ":/mnt/data"
+```
 
 ## NFS Server
 
@@ -71,10 +81,15 @@ Use quotes for dirs with spaces, escaping with \ does not seem to work.
 
 Available options explained:
 * no_all_squash / all_squash :
+
 a) no_all_squash : does not change the mapping of remote users.
+
 b) all_squash : to squash all remote users including root.
+
 * root_squash / no_root_squash :
+
 a) root_squash : prevent root users connected remotely from having root access. Effectively squashing remote root privileges.
+
 b) no_root_squash : disable root squashing.
 
 

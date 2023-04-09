@@ -63,6 +63,19 @@ openssl pkcs12 -in filename.pfx -clcerts -nokeys -out cert.pem
 ```
 
 
+## See PEM file contents
+
+```bah
+openssl x509 -in company.com.pem -text
+
+OR
+
+openssl x509 -in company.com.pem -text | grep Issuer
+```
+
+To see if this is a CA inspect the Issuer CN.
+
+
 
 
 

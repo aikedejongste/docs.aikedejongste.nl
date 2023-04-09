@@ -39,6 +39,7 @@ I keep forgetting about them and putting them here will hopefully remind me to u
 | Service and link      | What/why	           |
 |:-------------|:------------------|
 | [Pixlr](https://pixlr.com/nl/x/) |  Online image editor |
+| [APT Browse](https://www.apt-browse.org/) |  Browse contents of APT packages |
 | [Veed.io](https://veed.io) |  Online video editor |
 | [CPU Benchmarks](https://www.cpubenchmark.net/cpu_list.php) | Searchable list of cpu benchmark scores  |
 | [Swappie.com](https://swappie.com/nl-en/) | Sell and buy phones second hand |

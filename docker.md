@@ -36,3 +36,7 @@ Link: [docker docs](https://docs.docker.com/engine/reference/commandline/ps/#for
       - /var/run/docker.sock:/var/run/docker.sock
       - /root/.docker/config.json:/config.json
 ```
+
+## Mount NFS in docker-compose file
+
+Go to [NFS page](linux/nfs.html)
