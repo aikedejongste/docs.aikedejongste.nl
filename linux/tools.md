@@ -2,6 +2,7 @@
 layout: default
 title: CLI Tools
 has_children: false
+parent: Linux
 ---
 
 # CLI Tools
