@@ -8,6 +8,19 @@ parent: Ansible
 
 For servers that are kind of like snowflakes but you want some structure and still keep changes in git. 
 
+
+## Inventory:
+
+```yaml
+all:
+  hosts:
+    name-of-the-host:
+      ansible_user: ubuntu
+      ansible_host: 1.2.3.4
+```
+
+## Taks:
+
 ```yaml
 ---
 - name: Update apt-get repo and cache

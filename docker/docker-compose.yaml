@@ -1,0 +1,31 @@
+---
+layout: default
+title: Docker
+has_children: false
+parent: Docker
+---
+
+# Docker Compose
+
+## Watchdower for automatic updates
+
+```yaml
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/.docker/config.json:/config.json
+```
+
+## Mount NFS in docker-compose file
+
+Go to [NFS page](linux/nfs.html)
+
+
+## Docker-compose
+
+```yaml
+networks:
+  frontend:
+  backend:
+```

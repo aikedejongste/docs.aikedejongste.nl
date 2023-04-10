@@ -33,7 +33,9 @@ You can add `conv=sparse` to dd command on the receiving machine.
 
 ## Make a backup of a filesytem over ssh
 
+```bash
 sudo tar zc / | ssh user@host cat - \> /path/to/tarball.tar.gz
+```
 
 
 

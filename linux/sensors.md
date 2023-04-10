@@ -2,6 +2,7 @@
 layout: default
 title: Sensors
 has_children: false
+parent: Linux
 ---
 
 # Hardware and sensors
