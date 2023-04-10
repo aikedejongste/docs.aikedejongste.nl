@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MariaDB Replication
+title: MariaDB - Replication
 has_children: false
 parent: Databases
 ---

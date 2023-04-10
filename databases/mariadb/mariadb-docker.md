@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MariaDB Docker
+title: MariaDB - Docker
 has_children: false
 parent: Databases
 ---

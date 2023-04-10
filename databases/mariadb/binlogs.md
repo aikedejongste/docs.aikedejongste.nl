@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Binlogs
+title: MariaDB - Binlogs
 parent: Databases
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Connections
+title: MariaDB - Connections
 parent: Databases
 ---
 
