@@ -25,6 +25,7 @@ parent: Ansible
 ## Tasks:
 
 ```yaml
+{% raw %}
 ---
 - name: Extract unique groups
   set_fact:
@@ -59,5 +60,5 @@ parent: Ansible
     key: "{{ lookup('file', item.name + '.pub') }}"
   with_items: "{{ users }}"
 
-
+{% endraw %}
 ```
