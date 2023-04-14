@@ -24,6 +24,7 @@ To do good work you need good tools. This is my list of recommendations:
 * Make sure to buy the separate on-site next business day support
 * This has a 400 nits screen!
 * You can upgrade the memory to 64GB later! It is user replaceable! 
+* Used versions available [here](https://www.estunt.nl/product/hp-elitebook-840-g8/)
 
 ## Laptop Apple:
 
