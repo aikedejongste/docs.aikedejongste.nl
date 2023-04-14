@@ -9,7 +9,7 @@ title: Windows
 ## Download links
 
 [Wireguard](https://download.wireguard.com/windows-client/)
-[Firefox](https://www.microsoft.com/store/productId/9NZVDKPMR9RD))
+[Firefox](https://www.microsoft.com/store/productId/9NZVDKPMR9RD)
 
 ## Disable sleeping when locked:
 
