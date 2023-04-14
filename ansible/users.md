@@ -37,12 +37,12 @@ parent: Ansible
     state: present
   loop: "{{ unique_groups }}"
 
-- name: Ensure deploy group has sudo privileges
+- name: Ensure sudo group has sudo privileges
   lineinfile:
     dest: /etc/sudoers
     state: present
-    regexp: "^%deploy"
-    line: "%deploy ALL=(ALL) NOPASSWD:ALL"
+    regexp: "^%sudo"
+    line: "%sudo ALL=(ALL) NOPASSWD:ALL"
     validate: "/usr/sbin/visudo -cf %s"
 
 - name: Add users
