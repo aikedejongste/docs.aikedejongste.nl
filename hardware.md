@@ -58,6 +58,7 @@ To do good work you need good tools. This is my list of recommendations:
 * 65W charger with 2 USB-C ports
 * Really small and light
 * Cheaper than [Anker 735 GanPrime 65W](https://www.anker.com/eu-en/products/a2668?ref=naviMenu&variant=42129568661694)
+* For travel I have the [Anker Travel Charger](https://www.coolblue.nl/en/product/876384/anker-power-delivery-charger-with-usb-c-port-65w.html)
 
 ## Opinions:
 
