@@ -40,7 +40,7 @@ To do good work you need good tools. This is my list of recommendations:
 
 ## Office display:
 
-### [LG 247UP850N-W](https://tweakers.net/pricewatch/1874726/lg-27up850n-w-zilver-zwart.html)
+### [LG 27UP850N-W](https://tweakers.net/pricewatch/1874726/lg-27up850n-w-zilver-zwart.html)
 * There are many different versions of this monitor that are almost the same
 * Make sure it has the USB-C power delivery to charge a laptop
 * Make sure it is height adjustable
@@ -67,6 +67,7 @@ To do good work you need good tools. This is my list of recommendations:
 * Displays should have USB-C power delivery to charge a laptop.
 * Most important property of a Smartphone is how long the software support is. iPhones do really well on this.
 * Smaller is better for a Smartphone
+* Always buy the most recent model of Apple laptops and computers because most get only 7 years of updates.
 
 
 ---
