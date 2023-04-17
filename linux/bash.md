@@ -7,6 +7,18 @@ parent: Linux
 
 # Bash
 
+## Every bash script:
+
+* e -> exit on error
+* u -> exit on unset variable referenced
+* x -> show commands / activate debug out
+
+```bash
+#!/bin/bash
+set -eu -o pipefail
+set +x
+```
+
 ## Generate a password
 
 ```bash
