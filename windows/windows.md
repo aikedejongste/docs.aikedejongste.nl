@@ -39,3 +39,19 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
 "Scancode Map"=hex:00,00,00,00,00,00,00,00,03,00,00,00,3a,00,46,00,01,00,3a,00,00,00,00,00
 ```
+
+
+## Mount LUKS encrypted ext4 drive
+
+In Powershell:
+```bash
+wmic diskdrive list brief
+wsl --mount \\.\PHYSICALDRIVE1 --bare
+```
+
+In WSL2:
+```bash
+sudo blkid
+sudo cryptsetup luksOpen /dev/sdd1 disk-name
+sudo mount /dev/mapper/disk-name /mnt/somewhere
+```
