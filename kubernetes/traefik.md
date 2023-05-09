@@ -13,7 +13,7 @@ Dont forget to replace the hostname in the yaml below
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: dashboard
+  name: traefik-dashboard
   namespace: kube-system
 spec:
   entryPoints:

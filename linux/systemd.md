@@ -11,3 +11,13 @@ parent: Linux
 ```bash 
 journalctl --vacuum-time=1d
 ```
+
+## Failed units
+
+```bash
+systemctl list-units --state=failed
+```
+
+``bash
+systemctl reset-failed
+```

@@ -45,3 +45,9 @@ k3sup join --user ubuntu --server-ip server_ip --ip agent_ip
 * [https://github.com/StarpTech/k-andy](https://github.com/StarpTech/k-andy)
 * [https://github.com/cicdteam/terraform-hcloud-k3s](https://github.com/cicdteam/terraform-hcloud-k3s)
 
+
+## Run something simple
+
+``bash
+kubectl run httpbin --image kennethreitz/httpbin --port 80 && kubectl expose pod httpbin --port 80
+```
