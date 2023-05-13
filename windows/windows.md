@@ -55,3 +55,13 @@ sudo blkid
 sudo cryptsetup luksOpen /dev/sdd1 disk-name
 sudo mount /dev/mapper/disk-name /mnt/somewhere
 ```
+
+## Disable recent files in start menu
+
+* Open Settings.
+* Click on Personalization.
+* Click on Start.
+* Turn off "Show recently opened items in Jump Lists on Start....." 
+
+Quick tip: If you want to reset the view, turn the toggle switch off and on again.
+
