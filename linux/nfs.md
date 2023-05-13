@@ -92,7 +92,13 @@ a) root_squash : prevent root users connected remotely from having root access. 
 
 b) no_root_squash : disable root squashing.
 
+## Give new files uid/guid 33 (www-data)
 
+So even if root or another user creates a file, the new owner will be 33:33.
+
+```
+"/opt/whatever" 10.1.2.3(rw,sync,no_subtree_check,all_squash,anonuid=33,anongid=33)
+```
 
 ## Configure firewall
 
