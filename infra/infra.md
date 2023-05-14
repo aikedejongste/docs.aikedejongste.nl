@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Providers
+title: Cloud Infrastructure
 has_children: true
 ---
 

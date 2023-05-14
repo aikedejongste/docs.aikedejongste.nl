@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Kubegres k8s operator
-parent: Postgres
-grand_parent: Databases
+title: Postgres - Kubegres
+#parent: Postgres
+parent: Databases
 ---
 
 # Kubegres

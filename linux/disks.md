@@ -7,7 +7,18 @@ parent: Linux
 
 # Storage
 
-Alert script for disk usage
+## Resize partition
+
+```bash
+apt install gdisk cloud-guest-utils
+growpart --dry-run /dev/sda 1
+growpart /dev/sda 1
+e2fsck -f /dev/sda1
+resize2fs /dev/sda1
+```
+
+
+## Alert script for disk usage
 
 ```bash
 #!/bin/bash 
