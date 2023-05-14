@@ -7,4 +7,10 @@ grand_parent: Databases
 
 # Queries
 
-kweeries
+## Show schemas
+
+`\dn`
+
+## Show databases
+
+`\l`
