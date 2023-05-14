@@ -2,10 +2,18 @@
 layout: default
 title: Postgres
 parent: Databases
-has_children: true
+has_children: false
 ---
 
 # Postgres
+
+## Show schemas
+
+`\dn`
+
+## Show databases
+
+`\l`
 
 ## Backup options
 

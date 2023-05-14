@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Postgres - Kubegres k8s operator
+title: Postgres - Kubegres
 #parent: Postgres
 parent: Databases
 ---
