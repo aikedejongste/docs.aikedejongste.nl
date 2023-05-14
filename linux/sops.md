@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Sops and Age
+parent: Linux
 has_children: false
 ---
 
