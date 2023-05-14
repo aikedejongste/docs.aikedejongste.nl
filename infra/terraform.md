@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Terraform
+parent: Cloud Infrastructure
 has_children: true
-parent: Infrastructure
 ---
 
 # Terraform

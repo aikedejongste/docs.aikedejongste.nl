@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cloud-Init
-parent: Infrastructure
+parent: Cloud Infrastructure
 ---
 
 # cloud-init
