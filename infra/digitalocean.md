@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Digital Ocean
-parent: Providers
+parent: Infrastructure
 ---
 
 # Digital Ocean
