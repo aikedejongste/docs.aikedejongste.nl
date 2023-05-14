@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Docker
+title: Docker-compose
 has_children: false
 parent: Docker
 ---
