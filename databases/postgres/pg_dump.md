@@ -1,8 +1,8 @@
 ---
 layout: default
-title: pg_dump
-parent: Postgres
-grand_parent: Databases
+title: Postgres - pg_dump
+#parent: Postgres
+parent: Databases
 ---
 
 # pg_dump

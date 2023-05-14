@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Timescaledb
-parent: Postgres
-grand_parent: Databases
+title: Postgres - Timescaledb
+parent: Databases
 ---
 
 # Timescaledb

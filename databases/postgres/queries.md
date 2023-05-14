@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Queries
-parent: Postgres
-grand_parent: Databases
+title: Postgres - Queries
+parent: Databases
 ---
 
 # Queries

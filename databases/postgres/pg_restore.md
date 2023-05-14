@@ -1,8 +1,7 @@
 ---
 layout: default
-title: pg_restore
-parent: Postgres
-grand_parent: Databases
+title: Postgres - pg_restore
+parent: Databases
 ---
 
 # pg_restore
