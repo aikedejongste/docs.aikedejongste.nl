@@ -20,16 +20,20 @@ wget $(curl -s https://api.github.com/repos/mozilla/sops/releases/latest | jq -r
 sudo dpkg -i /tmp/sops.deb && sudo apt install -y age
 ```
 
+## Key location
+
+Default is `~/.config/sops/age/keys.txt`
+
 ## Create a keypair in ~/.sops
 
 ```bash
-mkdir -p ~/.sops/age/ && age-keygen -o ~/.sops/age/keys.txt && cat ~/.sops/age/keys.txt
+mkdir -p ~/.config/sops/age/ && age-keygen -o ~/.config/sops/age/keys.txt && cat ~/.config/sops/age/keys.txt
 ```
 
 ## Use an existing key:
 
 ```bash
-mkdir -p ~/.sops/age && vim ~/.sops/age/keys.txt
+mkdir -p ~/.config/sops/age && vim ~/.config/sops/age/keys.txt
 ```
 Fill it with:
 
