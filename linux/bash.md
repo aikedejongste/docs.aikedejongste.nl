@@ -19,6 +19,12 @@ set -eu -o pipefail
 set +x
 ```
 
+## Find and delete old files
+
+```bash
+/usr/bin/find /var/backups/* -mtime +100 -name starts-with-* -type f -prune -exec rm -rf {} \;
+```
+
 ## Generate a password
 
 ```bash

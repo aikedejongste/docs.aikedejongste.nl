@@ -65,3 +65,18 @@ sudo mount /dev/mapper/disk-name /mnt/somewhere
 
 Quick tip: If you want to reset the view, turn the toggle switch off and on again.
 
+
+## Disable automatic reboot after updates
+
+Prevent Windows Update Automatic Restart using Registry Editor
+Open the Registry Editor and navigate to the following key:
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU`
+
+If you don’t see it, create one. You may have to create \WindowsUpdate\AU.
+Now under this key, create a new 32-bit DWORD called `NoAutoRebootWithLoggedOnUsers` and give it a hexadecimal value data of 1. 
+
+This will prevent automatic reboot while users are logged on.
+
+
+
