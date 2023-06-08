@@ -20,6 +20,7 @@ Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl
 
 | Service and link      | Benefit	           |
 |:-------------|:------------------|
+| [Airalo](https://ref.airalo.com/wzkR) |  3 USD credit for eSim data packages |
 | [FastMail](https://ref.fm/u18937512) |  10% off your first year |
 | [DigitalOcean](https://m.do.co/c/c86b33c659ed) | 200 USD in credit |
 | [UpDown.io](https://updown.io/r/vw0un) | 100k additional free credits |
