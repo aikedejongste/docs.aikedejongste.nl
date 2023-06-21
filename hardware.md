@@ -10,7 +10,7 @@ To do good work you need good tools. This is my list of recommendations:
 
 ## Laptop Linux:
 
-### [Lenovo X1 Carbon](https://www.lenovo.com/nl/nl/laptops/thinkpad/thinkpad-x1/ThinkPad-X1-Carbon-Gen-11/p/LEN101T0049) 
+### [Lenovo X1 Carbon](https://www.lenovo.com/nl/nl/laptops/thinkpad/thinkpad-x1/ThinkPad-X1-Carbon-Gen-11/p/LEN101T0049)
 * Currently 11th Generation
 * I have the 7th and the 10th Generation and they both work flawlessly with Linux
 * Make sure to select the on-site next business day support when buying
@@ -19,11 +19,11 @@ To do good work you need good tools. This is my list of recommendations:
 
 ## Laptop Windows:
 
-### [HP EliteBook 840 G9 (5Z6D3EA)](https://tweakers.net/pricewatch/1850722/hp-elitebook-840-g9-5z6d3ea.html) 
+### [HP EliteBook 840 G9 (5Z6D3EA)](https://tweakers.net/pricewatch/1850722/hp-elitebook-840-g9-5z6d3ea.html)
 * Or another model from the same series and generation.
 * Make sure to buy the separate on-site next business day support
 * This has a 400 nits screen!
-* You can upgrade the memory to 64GB later! It is user replaceable! 
+* You can upgrade the memory to 64GB later! It is user replaceable!
 * Used versions available [here](https://www.estunt.nl/product/hp-elitebook-840-g8/)
 
 ## Laptop Apple:
@@ -54,11 +54,11 @@ To do good work you need good tools. This is my list of recommendations:
 
 ## Other:
 
-### [Belkin BoostCharge Pro](https://tweakers.net/pricewatch/1909410/belkin-boostcharge-pro.html)
-* 65W charger with 2 USB-C ports
+### [Anker 735 GanPrime 65W](https://www.anker.com/eu-en/products/a2668?ref=naviMenu&variant=42129568661694)
+* 65W charger with 2 USB-C ports and smart switching and balancing
 * Really small and light
-* Cheaper than [Anker 735 GanPrime 65W](https://www.anker.com/eu-en/products/a2668?ref=naviMenu&variant=42129568661694)
-* For travel I have the [Anker Travel Charger](https://www.coolblue.nl/en/product/876384/anker-power-delivery-charger-with-usb-c-port-65w.html)
+* For travel I will buy this [Lenovo Travel Charger](https://tweakers.net/pricewatch/1645136/lenovo-40aw0065ww.html)
+* The [Belkin BoostCharge Pro](https://tweakers.net/pricewatch/1909410/belkin-boostcharge-pro.html) has problems keeping laptops charged. Don't buy.
 
 ## Opinions:
 
@@ -74,5 +74,3 @@ To do good work you need good tools. This is my list of recommendations:
 
 ---
 [Changelog](https://github.com/AikedeJongste/docs.aikedejongste.nl/commits/main/hardware.md)
-
-
