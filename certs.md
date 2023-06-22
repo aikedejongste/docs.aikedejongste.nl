@@ -10,6 +10,19 @@ has_children: false
 
 [SSLs.com](https://ssls.sjv.io/vNzVeW)
 
+
+## Wildcard cert with Letsencrypt and DNS challenge
+
+1. Install an authenticator, for example: `pip install certbot-dns-hetzner`
+2. Put `dns_hetzner_api_token = I49N1....` in `hetzner.sops.ini`
+3. Run:
+```bash
+certbot certonly --no-eff-email --agree-tos -m certbot@yourdomain.nl \\
+                 --authenticator dns-hetzner --dns-hetzner-credentials hetzner.sops.ini \\
+                 -d '*.yourdomain.nl' --work-dir . \\
+                 --logs-dir . --config-dir .
+```
+
 ## Cert and bundle order
 
 * /etc/ssl/certs/star.${fqdn}.crt, paste in the crt, followed by the included CA bundle, include a newline!
