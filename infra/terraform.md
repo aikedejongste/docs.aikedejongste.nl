@@ -37,3 +37,20 @@ resource "null_resource" "ansible_inventory" {
 }
 ```
 
+
+## Use a floating IP address
+
+Command for importing the floating IP: `terraform import hcloud_floating_ip.dev-feuerfest 101241234`
+
+```json
+resource "hcloud_floating_ip_assignment" "dev-aike" {
+  floating_ip_id = hcloud_floating_ip.dev-aike.id
+  server_id      = hcloud_server.master.id
+}
+```
+
+```json
+resource "hcloud_floating_ip" "dev-aike" {
+  type      = "ipv4"
+}
+```

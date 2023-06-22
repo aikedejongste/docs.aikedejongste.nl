@@ -6,6 +6,12 @@ parent: Git and Github Actions
 
 # Github Actions tricks
 
+
+## How to make a container image public:
+
+* Got to the url with the settings of the containre: https://github.com/orgs/<org-name>/packages/container/<name>/settings
+* Choose Public and apply.
+
 ## Only run a workflow when there are changes in a specified directory
 
 ```yaml
