@@ -2,13 +2,12 @@
 layout: default
 title: SOP - webapp online
 parent: SOPs
-has_children: true
 ---
 
 # Webapp Online
 
 {: .highlight }
-This is just for the infra part of the business. 
+This is just for the infra part of the business.
 
 ## External checks
 
@@ -33,6 +32,6 @@ This is just for the infra part of the business.
 ## Monitoring checks
 - [ ] disk usage monitor
 - [ ] memory usage monitor
-- [ ] Lynis -> health checks 
+- [ ] Lynis -> health checks
 
- 
+
