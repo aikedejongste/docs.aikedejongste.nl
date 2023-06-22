@@ -17,9 +17,9 @@ has_children: false
 2. Put `dns_hetzner_api_token = I49N1....` in `hetzner.sops.ini`
 3. Run:
 ```bash
-certbot certonly --no-eff-email --agree-tos -m certbot@yourdomain.nl \\
-                 --authenticator dns-hetzner --dns-hetzner-credentials hetzner.sops.ini \\
-                 -d '*.yourdomain.nl' --work-dir . \\
+certbot certonly --no-eff-email --agree-tos -m certbot@yourdomain.nl \
+                 --authenticator dns-hetzner --dns-hetzner-credentials hetzner.sops.ini \
+                 -d '*.yourdomain.nl' --work-dir . \
                  --logs-dir . --config-dir .
 ```
 

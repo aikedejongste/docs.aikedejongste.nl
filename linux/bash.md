@@ -25,6 +25,11 @@ set +x
 /usr/bin/find /var/backups/* -mtime +100 -name starts-with-* -type f -prune -exec rm -rf {} \;
 ```
 
+## Find oldest directory (-d) or file (-f)
+```bash
+find /home/aike -type f -printf '%T+ %p\n' | sort | head -n 1
+```
+
 ## Generate a password
 
 ```bash

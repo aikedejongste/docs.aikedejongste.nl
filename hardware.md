@@ -52,12 +52,12 @@ To do good work you need good tools. This is my list of recommendations:
 * 5 year security updates
 * S23 is better but not worth twice the price
 
-## Other:
+## Chargers:
 
 ### [Anker 735 GanPrime 65W](https://www.anker.com/eu-en/products/a2668?ref=naviMenu&variant=42129568661694)
 * 65W charger with 2 USB-C ports and smart switching and balancing
 * Really small and light
-* For travel I will buy this [Lenovo Travel Charger](https://tweakers.net/pricewatch/1645136/lenovo-40aw0065ww.html)
+* For travel I will buy the [Lenovo Travel Charger](https://tweakers.net/pricewatch/1645136/lenovo-40aw0065ww.html)
 * The [Belkin BoostCharge Pro](https://tweakers.net/pricewatch/1909410/belkin-boostcharge-pro.html) has problems keeping laptops charged. Don't buy.
 
 ## Opinions:
