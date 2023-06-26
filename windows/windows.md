@@ -11,13 +11,14 @@ title: Windows
 * [Wireguard](https://download.wireguard.com/windows-client/)
 * [Firefox](https://www.microsoft.com/store/productId/9NZVDKPMR9RD)
 * [Signal](https://signal.org/download/windows/)
+* [Microsoft Office](https://setup.office.com/)
 
 ## Disable sleeping when locked:
 
 Edit and set attributes = 2
 
 ```
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8-0AAD-41ED-83F4-97BE242C8F20\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0 
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8-0AAD-41ED-83F4-97BE242C8F20\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0
 ```
 
 ## Avoid space for quote
@@ -61,7 +62,7 @@ sudo mount /dev/mapper/disk-name /mnt/somewhere
 * Open Settings.
 * Click on Personalization.
 * Click on Start.
-* Turn off "Show recently opened items in Jump Lists on Start....." 
+* Turn off "Show recently opened items in Jump Lists on Start....."
 
 Quick tip: If you want to reset the view, turn the toggle switch off and on again.
 
@@ -74,7 +75,7 @@ Open the Registry Editor and navigate to the following key:
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU`
 
 If you don’t see it, create one. You may have to create \WindowsUpdate\AU.
-Now under this key, create a new 32-bit DWORD called `NoAutoRebootWithLoggedOnUsers` and give it a hexadecimal value data of 1. 
+Now under this key, create a new 32-bit DWORD called `NoAutoRebootWithLoggedOnUsers` and give it a hexadecimal value data of 1.
 
 This will prevent automatic reboot while users are logged on.
 
