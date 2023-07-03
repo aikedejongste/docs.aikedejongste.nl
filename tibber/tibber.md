@@ -27,7 +27,7 @@ check_price () {
 # Start your task if the price is negative
 if check_price; then
     echo "Price is $PRICE. That is negative. Starting the task!!!"
-    docker run --rm -d \
+    docker run --pull --rm -d \
                --name=foldingathome \
                -p 7396:7396 \
                -v ~/fah:/config \
@@ -44,5 +44,5 @@ fi
 TIBBER_API_KEY=YVAEVQ..............
 
 # m h  dom mon dow   command
-0 * * * * /root/burn.sh >> /root/burn.log
+0 * * * * /root/burn.sh
 ```
