@@ -46,3 +46,9 @@ TIBBER_API_KEY=YVAEVQ..............
 # m h  dom mon dow   command
 0 * * * * /root/burn.sh
 ```
+
+## Requirements
+
+```bash
+apt install docker.io jq bc
+```
