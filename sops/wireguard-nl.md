@@ -19,8 +19,7 @@ Je hoeft het niet te openen. De QR-code die bij de e-mail zit mag je negeren.
 
 ## 3. Open de Wireguard client en klik op “import tunnels”
 
-![Wireguard leeg](https://dump.aikedejongste.nl/docs/wireguard-leeg.png)
-
+![Wireguard Leeg](/docs/assets/images/wireguard-leeg.png)
 
 ## 4. Selecteer het wg0.conf of jouw-naam.conf bestandje
 
@@ -30,14 +29,13 @@ Je hoeft het niet te openen. De QR-code die bij de e-mail zit mag je negeren.
 
 Hiermee start de verbinding, dit doe je elke keer als toegang wilt krijgen. Je hoeft de verbinding niet te verbreken als je klaar bent.
 
-< plaatje >
-
+![Wireguard Activate](/docs/assets/images/wireguard-activate.png)
 
 ## 6. Als de verbinding actief is ziet dat er zo uit
 
 Je kunt dit venster nu sluiten of minimaliseren
 
-< plaatje >
+![Wireguard Actief](/docs/assets/images/wireguard-actief.png)
 
 
 
