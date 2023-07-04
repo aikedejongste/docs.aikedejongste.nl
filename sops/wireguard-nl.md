@@ -24,8 +24,7 @@ Je hoeft het niet te openen. De QR-code die bij de e-mail zit mag je negeren.
 
 ## 4. Selecteer het wg0.conf of jouw-naam.conf bestandje
 
-
-< plaatje >
+![Wireguard Open](/docs/assets/images/wireguard-open.png)
 
 ## 5. Activeer de tunnel
 
