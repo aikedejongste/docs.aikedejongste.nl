@@ -7,6 +7,24 @@ parent: Linux
 
 # Bash
 
+## Ask for yes or no
+
+```bash
+
+< some commands >
+
+while true; do
+    read -p "Do you wish to delete this directory? [Y/n] " yn
+    case $yn in
+        [Yy]* ) break;;  # if 'y' or 'Y' is entered, break the loop and continue with the rest of the script
+        [Nn]* ) exit;;   # if 'n' or 'N' is entered, exit the script immediately
+        * ) echo "Please answer yes or no.";;  # if anything else is entered, ask again
+    esac
+done
+
+< more commands >
+```
+
 ## Bash script template
 
 ```bash
