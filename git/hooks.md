@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Hooks
-parent: Git and Github Actions
+parent: Git and Github
 ---
 
 # Hooks

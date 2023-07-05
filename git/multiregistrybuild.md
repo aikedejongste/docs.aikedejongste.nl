@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Multiple registry build
-parent: Git and Github Actions
+parent: Git and Github
 ---
 
 # Multiple registry build
 
 ```yaml
 {% raw %}
-name: Build and publish 
+name: Build and publish
 
 on:
   push:
@@ -41,7 +41,7 @@ jobs:
           registry: ${{ env.REGISTRY1 }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Log in to the DIGITAL OCEAN Container registry
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
         with:

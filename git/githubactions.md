@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Github Actions tricks
-parent: Git and Github Actions
+parent: Git and Github
 ---
 
 # Github Actions tricks

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Cleanup
-parent: Git and Github Actions
+parent: Git and Github
 ---
 
 # Cleanup
@@ -24,4 +24,4 @@ parent: Git and Github Actions
 {% endraw %}
 ```
 
-At the moment the GITHUB_TOKEN does not have enough permissions, so you'll need a PAT.... 
+At the moment the GITHUB_TOKEN does not have enough permissions, so you'll need a PAT....
