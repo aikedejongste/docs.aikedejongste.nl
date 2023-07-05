@@ -37,9 +37,13 @@ Je kunt dit venster nu sluiten of minimaliseren
 
 ![Wireguard Actief](/docs/assets/images/wireguard-actief.png)
 
+## 7. Bewaren VPN configuratie
 
+Bewaar de inhoud van het `wg0.conf` of `jouw-naam.conf` bestandje op een veilige locatie.
+Bijvoorbeeld in een password manager. In je mailbox of in de chat is geen veilige plaats.
+De VPN configuratie is uniek voor jou en is lastig te resetten. Dus bewaar hem goed!
 
+Laat het ook *direct* weten als je VPN configuratie is uitgelekt. Dan kunnen we de juiste
+beveiligingsmaatregelen nemen.
 
-
-
-
+Klik hier voor uitleg over het bewaren: [VPN config in Password Manager](/sops/wireguard-pm-nl.html).
