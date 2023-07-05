@@ -49,3 +49,9 @@ networks:
   frontend:
   backend:
 ```
+
+## Run sleep in a container that won't start
+
+```bash
+docker run --rm --entrypoint sh ubuntu:latest -c "sleep infinity"
+```
