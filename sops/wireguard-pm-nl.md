@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SOP - Wireguard config bewaren
+title: SOP - Wireguard bewaren
 parent: SOPs
 ---
 
@@ -8,7 +8,8 @@ parent: SOPs
 
 Bewaar de inhoud van het `wg0.conf` of `jouw-naam.conf` bestandje op een veilige locatie.
 Bijvoorbeeld in een password manager. In je mailbox of in de chat is geen veilige plaats.
-De VPN configuratie is uniek voor jou en is lastig te resetten. Dus bewaar hem goed!
+De VPN configuratie is uniek voor jou en is lastig te resetten. Dus bewaar hem goed zodat
+we geen nieuwe VPN config hoeven te maken als je een nieuwe computer hebt!
 
 Laat het ook *direct* weten als je VPN configuratie is uitgelekt. Dan kunnen we de juiste
 beveiligingsmaatregelen nemen.
@@ -29,7 +30,7 @@ mee te openen. Kies `Notepad` / `Kladblok`.
 ![Wireguard Leeg](/docs/assets/images/wireguard-notepad.png)
 
 
-## 3. Kopieer te inhoud
+## 3. Kopieer de inhoud
 
 Selecteer alle text en kopier het naar je klembord.
 
@@ -51,7 +52,7 @@ verwijder ook het bestandje uit je Downloads map.
 ## 6. Herstellen
 
 Als je een nieuwe computer hebt of om een andere reden je VPN configuratie wilt
-herstellen voer je bovenstaande actie uit maar dan met de laatste eerst. Dus:
+herstellen voer je bovenstaande acties uit maar dan met de laatste eerst. Dus:
 
 1. ga naar je password manager en kopieer de inhoud van de notitie
 
