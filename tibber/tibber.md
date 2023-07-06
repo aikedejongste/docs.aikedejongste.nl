@@ -25,16 +25,19 @@ check_price () {
 }
 
 # Start your task if the price is negative
+# Still trying to find the best way to use multiple cores
 if check_price; then
     echo "Price is $PRICE. That is negative. Starting the task!!!"
     docker run --pull --rm -d \
                --name=foldingathome \
                -p 7396:7396 \
+               -e POWER=full \
+               -e ENABLE_SMP=true \
                -v ~/fah:/config \
                lscr.io/linuxserver/foldingathome:latest
 else
     echo "Price is $PRICE. That is positive. Stopping task if running."
-    docker stop foldingathome
+    docker stop foldingathome; docker rm foldingathome
 fi
 ```
 
