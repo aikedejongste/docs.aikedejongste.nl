@@ -1,6 +1,6 @@
 ---
 layout: default
-title: SOP - vast IP-adres voor medewerker
+title: SOP - vast IP-adres medewerker
 parent: SOPs
 ---
 
