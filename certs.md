@@ -25,18 +25,27 @@ certbot certonly --no-eff-email --agree-tos -m certbot@yourdomain.nl \
 
 ## Cert and bundle order
 
-* /etc/ssl/certs/star.${fqdn}.crt, paste in the crt, followed by the included CA bundle, include a newline!
-* /etc/ssl/private/star.${fqdn}.key, paste in the key
+1. cert.pem is cert first then ca bundle
+2. cert.key is just the key
+
+or
+
+1. /etc/ssl/certs/star.${fqdn}.crt, paste in the crt, followed by the included CA bundle, include a newline!
+2. /etc/ssl/private/star.${fqdn}.key, paste in the key
+
+or
+
+1. alltogether is ....
 
 ## Check k3s cert expiration date
 
 ```bash
 openssl s_client -connect k3s.company.com:6443 -showcerts < /dev/null 2>&1 | openssl x509 -noout -enddate
+```
 
 ## Check config at SSL Labs:
 
 [SSL labs](https://ssllabs.com/ssltest/analyze.html)
-```
 
 ## Base64 enc for k8s secret
 
@@ -87,8 +96,3 @@ openssl x509 -in company.com.pem -text | grep Issuer
 ```
 
 To see if this is a CA inspect the Issuer CN.
-
-
-
-
-

@@ -16,6 +16,13 @@ docker rm -f $(docker ps -qa)
 Create a new Personal Access Token [here](https://github.com/settings/tokens/new).
 
 ```bash
+export PAT=.....
+echo $PAT | docker login ghcr.io --username doesnt@matter.com --password-stdin
+```
+
+or
+
+```bash
 echo "ghp_REPLACE_ME" | docker login ghcr.io --username doesnt@matter.com --password-stdin
 ```
 
