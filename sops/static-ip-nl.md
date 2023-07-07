@@ -15,7 +15,7 @@ zowel het VPN zelf als het vaste IP-adres goedkoper. Je kunt het vaste IP-adres
 toevoegen aan een bestaand NordVPN abonnement en ook bij het afsluiten van een
 nieuw abonnement kiezen. Bij een nieuw abonnement kies je dit op de pagina waar
 je de betaalmethode kiest. De optie staat aan de rechterkant van de pagina. Deze
-optie kunnen medewerkers zelf en dus zonder mijn input uitvoeren.
+optie kunnen medewerkers zelf, en dus zonder mijn input uitvoeren.
 
 ## Optie 1b: Shurfhark
 
@@ -28,6 +28,9 @@ daarop Wireguard VPN software voorgeinstalleerd. Op het moment van schrijven kos
 dit minder dan 4 euro ex btw per maand. Om deze klaar te maken voor gebruik heb ik
 1 uur nodig. Daarnaast is er een DNS-wijziging nodig om een nette hostname aan de
 server te koppelen. Bijvoorbeeld vpn.bedrijfsnaam.nl.
+
+Tot wel 50 medewerkers kunnen van 1 VPS gebruik maken, ze krijgen dan allemaal
+hetzelfde vaste IP-adres. Erg goedkoop per medewerker dus.
 
 
 ## Optie 3: Een computer met Windows op afstand
