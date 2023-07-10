@@ -32,6 +32,7 @@ Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl
 | [NordVPN](https://ref.nordvpn.com/DxpJQdbJXor) | 3 months free |
 | [Dropbox](https://www.dropbox.com/referrals/AAAc1Ay24GYAfmsQUpFrBztSknXBkS1fWCc?src=global9) | storage and a password manager|
 | [SSLs.com](https://ssls.sjv.io/vNzVeW) |  Easiest SSL cert provider |
+| [Moneybird](https://www.moneybird.nl/aanmelden?referrer=3d9a9f00bc) | 2 extra months free |
 
 ## Useful tools
 
