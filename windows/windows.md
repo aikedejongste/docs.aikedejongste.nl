@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Windows
-#parent: Terraform
 ---
 
 # Windows
@@ -13,11 +12,11 @@ title: Windows
 * [Signal](https://signal.org/download/windows/)
 * [Microsoft Office](https://setup.office.com/)
 
-## Disable sleeping when locked:
+## Disable sleeping when locked
 
 Edit and set attributes = 2
 
-```
+```text
 HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8-0AAD-41ED-83F4-97BE242C8F20\7bc4a2f9-d8fc-4469-b07b-33eb785aaca0
 ```
 
@@ -28,13 +27,14 @@ Go to language settings and remove "US international" keyboard map and add "US Q
 ## Enable WSL
 
 Open a PowerShell terminal with Administrator rights and paste this:
-```
+
+```powershell
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
 ## Map CapssLock to ESC on Windows 7,8 and 10
 
-```
+```text
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
@@ -45,12 +45,14 @@ Windows Registry Editor Version 5.00
 ## Mount LUKS encrypted ext4 drive
 
 In Powershell:
+
 ```bash
 wmic diskdrive list brief
 wsl --mount \\.\PHYSICALDRIVE1 --bare
 ```
 
 In WSL2:
+
 ```bash
 sudo blkid
 sudo cryptsetup luksOpen /dev/sdd1 disk-name
