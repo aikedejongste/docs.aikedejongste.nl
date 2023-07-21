@@ -25,7 +25,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Build job
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: markdownlint-cli
+        uses: nosborn/github-action-markdown-cli@v3.3.0
+        with:
+          files: index.md
+          config_file: .markdownlint.yaml
+          dot: true
+          #ignore_files: examples/ignore/*
+          #ignore_path: examples/.markdownlintignore
+          #rules: examples/rules/custom.js
   build:
     runs-on: ubuntu-latest
     steps:
@@ -48,8 +61,6 @@ jobs:
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
-
-  # Deployment job
   deploy:
     environment:
       name: github-pages
