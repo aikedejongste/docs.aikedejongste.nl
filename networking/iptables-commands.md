@@ -6,6 +6,12 @@ parent: Networking
 
 # IPtables commands
 
+## Order of the rules
+
+In UFW, the order of the rules matters. The rules are evaluated in the order they are created. So if you have a rule that allows traffic to port 80 from anywhere, and it's placed before your deny rule for a specific IP, the allow rule will take precedence.
+
+Unfortunately, UFW does not have a built-in way to reorder existing rules. If you need to change the order of your rules, you have to delete and recreate them in the order you want them to be evaluated.
+
 ## Useful links
 
 * https://phoenixnap.com/kb/iptables-port-forwarding#ftoc-heading-8
@@ -45,7 +51,7 @@ iptables -S
 iptables -F; iptables -t nat -F; iptables -t mangle -F
 ```
 
-## Route/NAT/Masquerade 
+## Route/NAT/Masquerade
 
 Just this should do it. But it is insecure.
 
@@ -75,7 +81,7 @@ Connection tracking stores connections in a table, which allows administrators t
 * INVALID — A packet that is not part of any connections in the connection tracking table.
 
 ```bash
-iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT 
+iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 ```
 
 ## Add default route
@@ -97,3 +103,8 @@ PRT=9000
 /sbin/iptables -A PREROUTING -t nat -i ens3 -p tcp --dport $PRT -j DNAT --to $DST:$PRT
 ```
 
+## Bock all traffic from 1 ip address
+
+```bash
+sudo iptables -A INPUT -s 1.2.3.4 -j DROP
+```

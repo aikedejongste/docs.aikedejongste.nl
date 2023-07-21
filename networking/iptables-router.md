@@ -10,16 +10,37 @@ parent: Networking
 
 ```bash
 #!/bin/bash
-INT=eth1
+set -x
+
+# Public Interface
 EXT=eth0
+# Private Interface
+INT=ens10
+
+# DST is usually internal IP in local lan
+DST=10.10.1.2
+# SRC is usually public IP on the internet
+SRC=60.70.80.90
+
+# Source Port on Public interface
+SPT=2222
+# Destination Port on internal network
+DPT=32222
 
 echo "1" > /proc/sys/net/ipv4/ip_forward
 
+# open a port, not required
 iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -i $EXT -o $INT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 iptables -A POSTROUTING -t nat -o $EXT -j MASQUERADE
+
+# forward port to internal host
+iptables -t nat -A PREROUTING -i $EXT -p tcp --dport $SPT -j DNAT --to-destination $DST:$DPT
+iptables -A FORWARD -i $EXT -o $INT -p tcp --dport $SPT -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+
 ```
 
 

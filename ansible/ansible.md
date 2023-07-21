@@ -29,3 +29,34 @@ apt-get update && \
     - debug: msg="{{ instruction.stdout }}"
 ```
 
+## Read file on local machine
+
+```yaml
+    - name: Read file contents
+      set_fact:
+        file_content: "{{ lookup('file', '/path/to/your/file') }}"
+
+    - name: Display file contents
+      debug:
+        var: file_content
+```
+
+
+## Read file on remote machine
+
+```yaml
+    - name: Get file content from remote host
+      slurp:
+        src: /path/to/your/file
+      register: file_content
+
+    - name: Decode file content
+      set_fact:
+        file_content: "{{ file_content['content'] | b64decode }}"
+
+    - name: Display file content
+      debug:
+        var: file_content
+```
+
+

@@ -13,14 +13,16 @@ has_children: false
 
 ## Wildcard cert with Letsencrypt and DNS challenge
 
+0. Install python and pip: `apt install python3-pip`
 1. Install an authenticator, for example: `pip install certbot-dns-hetzner`
 2. Put `dns_hetzner_api_token = I49N1....` in `hetzner.sops.ini`
 3. Run:
 ```bash
-certbot certonly --no-eff-email --agree-tos -m certbot@yourdomain.nl \
+chmod 600 hetzner.sops.ini
+certbot certonly --no-eff-email --agree-tos -m 'certbot@yourdomain.nl' \
                  --authenticator dns-hetzner --dns-hetzner-credentials hetzner.sops.ini \
                  -d '*.yourdomain.nl' --work-dir . \
-                 --logs-dir . --config-dir .
+                 --logs-dir .
 ```
 
 ## Cert and bundle order

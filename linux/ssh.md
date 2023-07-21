@@ -9,14 +9,14 @@ parent: Linux
 
 ## Use SSH to proxy SSH to other machine with config
 
-Put this in .ssh/config 
+Put this in .ssh/config
 
 ```
 Host alias-name-you-ssh-to     # use with "ssh alias-name-you-ssh-to"
   Hostname 10.10.10.10         # actual IP of destination host
   ProxyJump real.hostname.com  # actual hostname of the server you want to jump through
-  User aike                    # optional username on jump host 
-  Port 2222                    # optional port on jump host 
+  User aike                    # optional username on jump host
+  Port 2222                    # optional port on jump host
 ```
 
 ## Use SSH to proxy SSH to other machine cli
@@ -25,7 +25,7 @@ Host alias-name-you-ssh-to     # use with "ssh alias-name-you-ssh-to"
 ssh -A -W '[10.10.10.10]:22' real.hostname
 ```
 
-## Try ssh until it is ready 
+## Try ssh until it is ready
 
 ```bash
 until ssh 10.10.1.3; do sleep 1; done
@@ -38,7 +38,9 @@ ssh -o 'ConnectionAttempts 999' 10.10.1.3
 
 ## Generate key
 
+```bash
 ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "john@example.com"
+```
 
 ## AutoSSH
 

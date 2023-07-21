@@ -98,3 +98,10 @@ for file in *.heic; do heif-convert "$file" "heic/${file/%.heic/.jpg}"; done
 
 ## Cleanup Systemd journal
 ```bash journalctl --vacuum-time=1d```
+
+## Yesterday
+
+```bash
+YESTERDAY=`date -d "yesterday 13:00" '+%Y-%m-%d'`
+
+```

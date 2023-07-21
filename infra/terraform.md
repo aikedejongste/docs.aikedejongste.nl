@@ -37,6 +37,22 @@ resource "null_resource" "ansible_inventory" {
 }
 ```
 
+## Remove something from state
+
+```bash
+terraform state rm hcloud_floating_ip.dezemagweg`
+```
+
+## Import a floaring IP address
+
+```bash
+# when using Hetzner get the id:
+hcloud floating-ip list
+
+# us the ID to import
+terraform import hcloud_floating_ip.doedezemaar 123456
+```
+
 
 ## Use a floating IP address
 
