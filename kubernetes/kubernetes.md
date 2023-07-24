@@ -10,8 +10,8 @@ has_children: true
 ## Install k3s SINGLE NODE
 
 ```yaml
-curl -sfL https://get.k3s.io | sh - 
-k3s kubectl get node 
+curl -sfL https://get.k3s.io | sh -
+k3s kubectl get node
 ```
 
 ## Install k3s CLUSTER (3 nodes)
@@ -22,7 +22,7 @@ curl -sfL https://get.k3s.io | K3S_TOKEN=SECRET sh -s - server --cluster-init
 # on the other 2 nodes
 curl -sfL https://get.k3s.io | K3S_TOKEN=SECRET sh -s - server --server https://<ip or hostname of server1>:6443
 
-k3s kubectl get node 
+k3s kubectl get node
 ```
 
 ## Copy file from local to pod:
@@ -50,4 +50,24 @@ k3sup join --user ubuntu --server-ip server_ip --ip agent_ip
 
 ``bash
 kubectl run httpbin --image kennethreitz/httpbin --port 80 && kubectl expose pod httpbin --port 80
+```
+
+## Quick Ubuntu pod
+
+``bash
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu
+  labels:
+    app: ubuntu
+spec:
+  containers:
+  - name: ubuntu
+    image: ubuntu:latest
+    command: ["/bin/sleep", "1d"]
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+EOF
 ```
