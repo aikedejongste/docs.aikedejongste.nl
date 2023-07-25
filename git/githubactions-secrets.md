@@ -14,6 +14,7 @@ parent: Git and Github
   run: |
     if [ -z "${{ env.DLD_TEMPLATES_RELEASE }}" ]; then
       echo "ENV DLD_TEMPLATES_RELEASE is NOT set"
+      exit 1
     else
       echo "ENV DLD_TEMPLATES_RELEASE is set"
     fi
@@ -22,6 +23,7 @@ parent: Git and Github
   run: |
     if [ -z "${{ secrets.DLD_TEMPLATES_RELEASE }}" ]; then
       echo "DLD_TEMPLATES_RELEASE is NOT set"
+      exit 1
     else
       echo "DLD_TEMPLATES_RELEASE is set"
     fi
@@ -30,6 +32,7 @@ parent: Git and Github
   run: |
     if [ -z "${{ secrets.GITHUB_TOKEN }}" ]; then
       echo "GITHUB_TOKEN is NOT set"
+      exit 1
     else
       echo "GITHUB_TOKEN is set"
     fi
