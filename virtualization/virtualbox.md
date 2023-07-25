@@ -38,8 +38,7 @@ sudo tar zc / | ssh user@host cat - \> /path/to/tarball.tar.gz
 ```
 
 
-
-
+```bash
 #!/bin/bash
 VBoxManage unregistervm db01 --delete
 cd ~/VirtualBox\ VMs/ && rm -rf db01/
@@ -57,3 +56,4 @@ VBoxManage storagectl db01 --name "SATA" --add sata --controller IntelAHCI
 VBoxManage storageattach db01 --storagectl "SATA" --port 0 --device 0 --type hdd --medium ~/VirtualBox\ VMs/db01/bootdisk.vdi
 VBoxManage storageattach db01 --storagectl "SATA" --port 1 --device 0 --type hdd --medium ~/VirtualBox\ VMs/db01/datadisk.vdi
 VBoxManage storageattach db01 --storagectl "SATA" --port 2 --device 0 --type hdd --medium ~/VirtualBox\ VMs/db01/datadisk2.vdi
+```
