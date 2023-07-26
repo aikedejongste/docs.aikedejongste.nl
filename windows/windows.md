@@ -35,8 +35,6 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 ## Map CapssLock to ESC on Windows 7,8 and 10
 
 ```bash
-#!/bin/bash
-
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]

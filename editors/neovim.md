@@ -2,7 +2,7 @@
 layout: default
 title: Neovim
 parent: Editors
-has_children: true
+has_children: false
 ---
 
 # Neovim

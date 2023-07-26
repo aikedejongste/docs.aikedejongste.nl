@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Authenication
+title: Authentication
 has_children: false
 ---
 
