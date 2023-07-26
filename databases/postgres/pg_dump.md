@@ -10,6 +10,13 @@ parent: Databases
 
 ## Step by step
 
+## Need pg_dump?
+
+It is part of this package:
+
+```bash
+apt install postgresql-client-14
+```
 
 
 
@@ -60,10 +67,25 @@ The formats -Fd and -Fc have the same compression, but -Fd is 3 times faster to 
 
 ```pg_dump dbname --format=custom --no-privileges --disable-triggers -Fd -j4 -U username -f data.pgdump```
 
-takes 7 minutes  
+takes 7 minutes
 
 ```pg_dump dbname --format=custom --no-privileges --disable-triggers -Fp -U username | pigz > data.pigz```
 
 takes 11 minutes
 
 The disk usage is the same. Directory format is hard to transfer.
+
+## Example script
+
+```bash
+#!/bin/bash
+PGUSER=
+PGPASSWORD=
+PGSSLMODE=
+PGHOST=
+PGPORT=
+PGDATABASE=
+
+pg_dump --format=custom --no-privileges --disable-triggers -Fp | pigz > data.pigz
+```
+

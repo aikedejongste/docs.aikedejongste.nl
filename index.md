@@ -47,7 +47,6 @@ I keep forgetting about them and putting them here will hopefully remind me to u
 | [CPU Benchmarks](https://www.cpubenchmark.net/cpu_list.php) | Searchable list of cpu benchmark scores  |
 | [Swappie.com](https://swappie.com/nl-en/) | Sell and buy phones second hand |
 | [Markdownlint](https://dlaa.me/markdownlint/) | Web based markdown linter |
-https://tmuxcheatsheet.com/
 
 ## Useful providers and services
 

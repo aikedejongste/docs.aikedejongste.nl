@@ -7,4 +7,4 @@ has_children: false
 
 # Tmux
 
-https://tmuxcheatsheet.com/
+[CheatSheet](https://tmuxcheatsheet.com/)
