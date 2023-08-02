@@ -6,6 +6,12 @@ has_children: true
 
 # Helm
 
+## Debug with a dry run
+
+```bash
+helm install --generate-name ../helm-chart/ --dry-run --debug
+```
+
 ## Install Helm with APT
 
 ```bash
@@ -41,14 +47,14 @@ sudo apt-get update && sudo apt-get install helm
     update_cache: yes
 ```
 
-## Useful repos:
+## Useful repos
 
 ```bash
 helm repo add jetstack https://charts.jetstack.io  # for cert-manager
 ```
 
-
 ## Get values from a chart in a repo
+
 ```bash
 helm show values bitnami/matomo
 ```

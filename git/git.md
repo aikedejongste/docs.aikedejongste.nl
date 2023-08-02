@@ -11,7 +11,15 @@ has_children: true
 * [Git Hooks](https://www.atlassian.com/git/tutorials/git-hooks)
 
 ## Undo stage commit
-```bash git reset HEAD README.md```
+```bash 
+git reset HEAD README.md
+
+or just
+
+git reset -- README
+```
+
+
 
 ## Set my git config
 ```bash
