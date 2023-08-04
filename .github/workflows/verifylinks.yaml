@@ -1,0 +1,25 @@
+---
+name: Verify Links
+on:  # yamllint disable-line rule:truthy
+  # Schedule check each day at 8 UTC
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+    paths:
+      - '*.md'
+
+jobs:
+  markdown-link-check:
+    name: Markdown link check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Check markdown links
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'no'
+#          config-file: './mlc_config.json'
