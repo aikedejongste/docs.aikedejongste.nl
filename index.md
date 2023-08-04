@@ -13,7 +13,11 @@ Notion.so but this is much faster and has version control.
 
 Will this all be replaced with ChatGPT soon?
 
-Github Actions build status: [![Deploy Jekyll site to Pages](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/pages.yml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/pages.yml)
+Github Actions build status: 
+
+- [![Deploy Jekyll site to Pages](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/pages.yml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/pages.yml)
+
+- [![Verify Links](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/verifylinks.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/verifylinks.yaml)
 
 Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl)
 or use one of my referral links to support me:

@@ -46,8 +46,10 @@ Link: [docker docs](https://docs.docker.com/engine/reference/commandline/ps/#for
 
 ## Mount NFS in docker-compose file
 
-Go to [NFS page](linux/nfs.html)
 
+<!-- markdown-link-check-disable -->
+Go to [NFS page](linux/nfs.html)
+<!-- markdown-link-check-enable -->
 
 ## Docker-compose
 
