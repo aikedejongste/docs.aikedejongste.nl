@@ -19,6 +19,8 @@ Github Actions build status:
 
 - [![Verify Links](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/verifylinks.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/verifylinks.yaml)
 
+- [![Markdownlint](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/markdownlint.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/markdownlint.yaml)
+
 Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl)
 or use one of my referral links to support me:
 
@@ -36,7 +38,8 @@ or use one of my referral links to support me:
 | [Tibber](https://invite.tibber.com/h3g14emf) | 50 EUR shop credit |
 | [Wise](https://wise.com/invite/ath/jacobusd57) | fee-free transfers |
 | [NordVPN](https://ref.nordvpn.com/DxpJQdbJXor) | 3 months free |
-| [Dropbox](https://www.dropbox.com/referrals/AAAc1Ay24GYAfmsQUpFrBztSknXBkS1fWCc?src=global9) | storage and a password manager|
+| [Dropbox](https://www.dropbox.com/referrals/AAAc1Ay24GYAfmsQUpFrBztSknXBkS1fWCc?src=global9) |
+storage and a password manager|
 | [SSLs.com](https://ssls.sjv.io/vNzVeW) | Easiest SSL cert provider |
 | [Carrd.co](https://try.carrd.co/c1rk5rh4) | Simple website builder |
 | [Moneybird](https://www.moneybird.nl/aanmelden?referrer=3d9a9f00bc) | 2 extra months free |
