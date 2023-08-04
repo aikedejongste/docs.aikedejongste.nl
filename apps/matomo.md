@@ -9,7 +9,7 @@ parent: Self Hosted Apps
 
 ## Update config.ini.php when running on k8s
 
-This seems hacky to me, but couldn't find a better way with the Helm chart. [example on kubectl page](https://docs.aikedejongste.nl/kubectl.html#copy-file-from-local-to-pod)
+This seems hacky to me, but couldn't find a better way with the Helm chart. [example on kubectl page](https://docs.aikedejongste.nl/kubernetes/kubernetes.html#copy-file-from-local-to-pod)
 
 ## Protect login page from the internet
 

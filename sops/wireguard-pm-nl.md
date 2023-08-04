@@ -20,6 +20,7 @@ Ga naar je `Downloads` map of de locatie waar het `wg0.conf` of `jouw-naam.conf`
 bestandje is opgeslagen. Klik vervolgens rechts op het bestandje en kies
 `openen met / open with` of `openen met Kladblok`.
 
+<!-- markdown-link-check-disable -->
 ![Wireguard Leeg](/docs/assets/images/wireguard-open-with.png)
 
 ## 2. Eventueel programma kiezen
@@ -61,3 +62,4 @@ herstellen voer je bovenstaande acties uit maar dan met de laatste eerst. Dus:
 3. sla de tekst die nu in Kladblok staat op als `jouwnaam.conf`
 
 4. volg de normale stappen voor het instellen van Wireguard: [Wireguard instellen](/sops/wireguard-nl.html).
+<!-- markdown-link-check-enable -->

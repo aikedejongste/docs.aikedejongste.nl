@@ -18,7 +18,9 @@ parent: Docker
 
 ## Mount NFS in docker-compose file
 
+<!-- markdown-link-check-disable -->
 Go to [NFS page](linux/nfs.html)
+<!-- markdown-link-check-enable -->
 
 
 ## Docker-compose
