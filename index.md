@@ -32,9 +32,7 @@ or use one of my referral links to support me:
 | [UpDown.io](https://updown.io/r/vw0un) | 100k additional free credits |
 | [Hetzner](https://hetzner.cloud/?ref=Fp0GlpkddM38) | 20 EUR credit |
 | [UptimeRobot](https://uptimerobot.com/?rid=9627671ef4601a) | none, but it helps me |
-<!-- markdown-link-check-disable -->
-| [Vultr](https://www.vultr.com/?ref=9210110) | 100 USD in credit |
-<!-- markdown-link-check-enable -->
+| <!-- markdown-link-check-disable --> [Vultr](https://www.vultr.com/?ref=9210110) <!-- markdown-link-check-enable --> | 100 USD in credit |
 | [Tibber](https://invite.tibber.com/h3g14emf) | 50 EUR shop credit |
 | [Wise](https://wise.com/invite/ath/jacobusd57) | fee-free transfers |
 | [NordVPN](https://ref.nordvpn.com/DxpJQdbJXor) | 3 months free |
@@ -65,7 +63,7 @@ Providers I use or want to try:
 |:-------------|:------------------|
 | [WholeSale Internet](https://www.wholesaleinternet.net/dedicated/) | Cheap dedicated boxes |
 | [V6 node](https://v6node.com/) | Cheap IPv6 only virtual machines |
-<!-- markdown-link-check-disable -->
-| [PCMagnaat](https://pcmagnaat.nl/product-categorie/computers/desktops/) | Cheap mini pc's |
-<!-- markdown-link-check-enable -->
+| <!-- markdown-link-check-disable -->
+ [PCMagnaat](https://pcmagnaat.nl/product-categorie/computers/desktops/)
+<!-- markdown-link-check-enable --> | Cheap mini pc's |
 | [eStunt](https://www.estunt.nl/product-categorie/laptops/) | Cheap refurbished laptops |
