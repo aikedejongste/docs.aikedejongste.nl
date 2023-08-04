@@ -8,9 +8,10 @@ parent: Git and Github
 
 
 ## How to make a container image public:
-
+<!-- markdown-link-check-disable -->
 * Got to the url with the settings of the containre: https://github.com/orgs/<org-name>/packages/container/<name>/settings
 * Choose Public and apply.
+<!-- markdown-link-check-enable -->
 
 ## Only run a workflow when there are changes in a specified directory
 

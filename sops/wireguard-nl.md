@@ -7,6 +7,7 @@ parent: SOPs
 # Wireguard instellen als gebruiker
 
 ## 1. Download en installeer de Wireguard client
+<!-- markdown-link-check-disable -->
 
 Deze kun je vinden op [https://www.wireguard.com/install](https://www.wireguard.com/install/)
 
@@ -47,3 +48,4 @@ Laat het ook *direct* weten als je VPN configuratie is uitgelekt. Dan kunnen we 
 beveiligingsmaatregelen nemen.
 
 Klik hier voor uitleg over het bewaren: [VPN config in Password Manager](/sops/wireguard-pm-nl.html).
+<!-- markdown-link-check-enable -->
