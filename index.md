@@ -36,8 +36,7 @@ or use one of my referral links to support me:
 | [Tibber](https://invite.tibber.com/h3g14emf) | 50 EUR shop credit |
 | [Wise](https://wise.com/invite/ath/jacobusd57) | fee-free transfers |
 | [NordVPN](https://ref.nordvpn.com/DxpJQdbJXor) | 3 months free |
-| [Dropbox](https://www.dropbox.com/referrals/AAAc1Ay24GYAfmsQUpFrBztSknXBkS1fWCc?src=global9) |
-storage and a password manager|
+| [Dropbox](https://www.dropbox.com/referrals/AAAc1Ay24GYAfmsQUpFrBztSknXBkS1fWCc?src=global9) | storage and a password manager|
 | [SSLs.com](https://ssls.sjv.io/vNzVeW) | Easiest SSL cert provider |
 | [Carrd.co](https://try.carrd.co/c1rk5rh4) | Simple website builder |
 | [Moneybird](https://www.moneybird.nl/aanmelden?referrer=3d9a9f00bc) | 2 extra months free |
@@ -63,7 +62,5 @@ Providers I use or want to try:
 |:-------------|:------------------|
 | [WholeSale Internet](https://www.wholesaleinternet.net/dedicated/) | Cheap dedicated boxes |
 | [V6 node](https://v6node.com/) | Cheap IPv6 only virtual machines |
-| <!-- markdown-link-check-disable -->
- [PCMagnaat](https://pcmagnaat.nl/product-categorie/computers/desktops/)
-<!-- markdown-link-check-enable --> | Cheap mini pc's |
+| <!-- markdown-link-check-disable --> [PCMagnaat](https://pcmagnaat.nl/product-categorie/computers/desktops/) <!-- markdown-link-check-enable --> | Cheap mini pc's |
 | [eStunt](https://www.estunt.nl/product-categorie/laptops/) | Cheap refurbished laptops |
