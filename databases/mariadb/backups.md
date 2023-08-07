@@ -8,7 +8,7 @@ parent: Databases
 
 ## Backup script with health check for all dbs
 
-### Put MySQL credentials in ~/.my.cnf like this:
+### Put MySQL credentials in ~/.my.cnf like this
 
 ```
 [client]
@@ -17,7 +17,7 @@ password = .....
 host = 192.168.1.3
 ```
 
-### The backup script:
+### The backup script
 
 ```bash
 #!/bin/bash
