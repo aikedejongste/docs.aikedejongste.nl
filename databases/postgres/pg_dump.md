@@ -7,7 +7,6 @@ parent: Databases
 
 # pg_dump
 
-
 ## Step by step
 
 ## Need pg_dump?
@@ -18,8 +17,6 @@ It is part of this package:
 apt install postgresql-client-14
 ```
 
-
-
 ## WITH roles (good for backups)
 
 ## WITHOUT roles (good for migrations)
@@ -27,13 +24,11 @@ apt install postgresql-client-14
 * `--no-privileges`
 * `--no-owner`
 
-
 ## Options and examples
 
-- `-Fp` = format plain, this is fastest but produces normal sql
-- `-Fc` = format compressed, much smaller result, much slower
-- `-N 'plpsql'` = exclude an extension
-
+* `-Fp` = format plain, this is fastest but produces normal sql
+* `-Fc` = format compressed, much smaller result, much slower
+* `-N 'plpsql'` = exclude an extension
 
 --jobs=<NUMBER OF CORES> - This allows the dump to run multiple jobs. My recommendation is to set this equal to the number of cores available on the machine the dump is running on. You must either use the directory or custom output formats. Speaking of which:
 
@@ -47,24 +42,18 @@ apt install postgresql-client-14
 
 --table=<NAME OF TABLE> - This flag specifies which table to dump. Multiple --table flag may be used together.
 
-
-
-
 $ pg_dump -Z0 -j 10 -Fd database_name -f dumpdir
 $ tar -cf - dumpdir | pigz > dumpdir.tar.gz
 $ rm dumpdir
 
-
 pg_dump -Fc -Z 9  --file=file.dump myDb
 pg_restore -Fc -j 8  file.dump
-
 
 ## Performance and convenience
 
 ### Compression
 
 The formats -Fd and -Fc have the same compression, but -Fd is 3 times faster to dump.
-
 
 ```pg_dump dbname --format=custom --no-privileges --disable-triggers -Fd -j4 -U username -f data.pgdump```
 
@@ -89,4 +78,3 @@ PGDATABASE=
 
 pg_dump --format=custom --no-privileges --disable-triggers -Fp | pigz > data.pigz
 ```
-

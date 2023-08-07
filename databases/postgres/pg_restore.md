@@ -25,20 +25,15 @@ pg_restore doesn't provide a built-in option to rename the database
 during restoration. So you'll need to follow a two-step
 process: drop and create. Or only use --clean and don't add --create.
 
-
-
 ## Options you always need
 
 * `-d` - target database (can also be set with PGDATBASE env var)
 * `-U` - user/role (can also be set with PGUSER env var)
 * `-Fd / -Fc` - directory format or compressed single file
 
-
 ## Good options for backups
 
-
 ## Good options for migrations/bi/development
-
 
 * `--clean` - Used to drop database objects before recreating them.
 * `--create` - Used to create a database before restoring it.
@@ -46,7 +41,6 @@ process: drop and create. Or only use --clean and don't add --create.
 * `--exclude-schema` - Prevent restoration of a schema
 * `--no-owner` - makes whatever you put after -U the new owner
 * `-j4` - speed things up if using directory format (4 = number cores)
-
 
 ## Example restore script
 
