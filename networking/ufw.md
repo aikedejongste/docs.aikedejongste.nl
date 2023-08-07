@@ -7,12 +7,15 @@ parent: Networking
 # UFW
 
 ## UFW disable logging
+
 ```ufw logging off```
 
 ## UFW reset rules
+
 ```ufw reset```
 
 ## UFW disable logging with Ansible
+
 ```yaml
 - name: UFW disable logging
   community.general.ufw:

@@ -18,7 +18,7 @@ parent: Logging
 
 `su sysadmin sysadmin` is required when ...
 
-## Example config for a Rails app:
+## Example config for a Rails app
 
 ```bash
 /home/sysadmin/checkout/log/production.log {

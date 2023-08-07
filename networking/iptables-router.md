@@ -6,7 +6,7 @@ parent: Networking
 
 # IPtables routing
 
-## IPtables NAT:
+## IPtables NAT
 
 ```bash
 #!/bin/bash
@@ -43,7 +43,6 @@ iptables -A FORWARD -i $EXT -o $INT -p tcp --dport $SPT -m state --state NEW,EST
 
 ```
 
-
 ## Or like this
 
 ```bash
@@ -59,5 +58,3 @@ The first rule enables NAT (network address translation) for traffic from the in
 The second rule allows traffic that is related or established (i.e., responses to outgoing traffic) to pass through the firewall in both directions between the internal network (eth1) and the internet (eth0).
 
 The third rule allows all other traffic to pass through the firewall in both directions between the internal network (eth0) and the internet (eth1).
-
-

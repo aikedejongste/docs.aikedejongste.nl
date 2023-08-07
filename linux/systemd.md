@@ -8,7 +8,8 @@ parent: Linux
 # Systemd
 
 ## Cleanup Systemd journal
-```bash 
+
+```bash
 journalctl --vacuum-time=1d
 ```
 

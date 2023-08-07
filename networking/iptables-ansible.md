@@ -43,4 +43,3 @@ parent: Networking
     state: saved
     path: /etc/iptables/rules.v4
 ```
-

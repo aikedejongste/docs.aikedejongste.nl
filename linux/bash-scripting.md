@@ -48,7 +48,6 @@ else echo "Lock Exists: $lockfile owned by $(cat $lockfile)" exit=1 fi
 exit $exit
 ```
 
-
 ## Another template
 
 ```bash
@@ -78,4 +77,3 @@ main() {
 
 main "$@"
 ```
-

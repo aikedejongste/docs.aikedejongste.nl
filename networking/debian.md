@@ -7,6 +7,7 @@ parent: Networking
 # Debian private ip only
 
 This works on:
+
 * Tilaa
 
 ```
@@ -27,4 +28,3 @@ iface enp0s5  inet static
 ```bash
 systemctl restart networking
 ```
-

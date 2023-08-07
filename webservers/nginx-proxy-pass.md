@@ -37,12 +37,11 @@ server {
 } 
 ```
 
-
 ## Nginx ProxyPass Grafana with Websockets
 
 This example is port 80 only, use Certbot to enable 443 and related settings.
 
-The / at the end or a proxy_pass line is important! 
+The / at the end or a proxy_pass line is important!
 
 ```
 listen 80;
@@ -99,4 +98,3 @@ server {
 }
 
 ```
-

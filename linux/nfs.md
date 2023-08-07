@@ -11,16 +11,18 @@ parent: Linux
 
 ### Install dependencies
 
-```bash 
+```bash
 apt install nfs-common
 ```
 
 ### Check firewall on server from client
+
 ```bash
 rpcinfo -p 10.0.0.1
 ```
 
 ### Check available mounts on server from client
+
 ```bash
 showmount -e 10.0.0.1
 ```
@@ -28,6 +30,7 @@ showmount -e 10.0.0.1
 ### Mount with fstab
 
 Use \040 (octal) for mounts with spaces in the name
+
 ```
 10.0.0.1:/mnt/data         /mnt/here           nfs defaults  0 0
 ```
@@ -52,7 +55,9 @@ apt install nfs-kernel-server
 ```
 
 ### Show ports NFS is using
+
 Run this on the server:
+
 ```bash
 rpcinfo -p | awk '{print $3" "$4}' | sort -k2n | uniq
 ```
@@ -80,6 +85,7 @@ Use quotes for dirs with spaces, escaping with \ does not seem to work.
 ```
 
 Available options explained:
+
 * no_all_squash / all_squash :
 
 a) no_all_squash : does not change the mapping of remote users.
@@ -102,24 +108,25 @@ So even if root or another user creates a file, the new owner will be 33:33.
 
 ## Configure firewall
 
-### Manually: 
+### Manually
 
 ```bash
 sudo iptables -A INPUT -d 10.0.0.0/24 -s 10.0.0.0/24 -p tcp -m multiport --ports 111,2000,2001,2049 -j ACCEPT
 sudo iptables -A INPUT -d 10.0.0.0/24 -s 10.0.0.0/24 -p udp -m multiport --ports 111,2000,2001,2049 -j ACCEPT
 ```
 
-### With UFW (only port 2049):
+### With UFW (only port 2049)
+
 ```bash
 ufw allow from 10.0.0.0/24 to any port nfs
 more for the other ports?
 ```
 
-### With firewall-cmd:
+### With firewall-cmd
+
 ```bash
 firewall-cmd --permanent --add-service=nfs
 firewall-cmd --permanent --add-service=rpcbind
 firewall-cmd --permanent --add-service=mountd
 firewall-cmd --reload
 ```
-

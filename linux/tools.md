@@ -8,11 +8,13 @@ parent: Linux
 # CLI Tools
 
 ## Glow (Markdown reader)
+
 ```bash
 something
 ```
 
 ## K9s (Kubernetes GUI)
+
 Bash
 
 ```bash
@@ -21,6 +23,7 @@ cd /tmp && tar -zxvf /tmp/k9s.gz && mv /tmp/k9s /usr/local/bin/k9s && chmod +x /
 ```
 
 Ansible
+
 ```yaml
     - name: Download latest k9s binary
       get_url:
@@ -57,5 +60,3 @@ Link: [github repo](https://github.com/Yelp/detect-secrets)
 ```bash
 pip install detect-secrets && echo -n "export PATH=\"~/.local/bin:$PATH\"" >> ~/.bashrc
 ```
-
-

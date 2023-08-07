@@ -14,8 +14,8 @@ Unfortunately, UFW does not have a built-in way to reorder existing rules. If yo
 
 ## Useful links
 
-* https://phoenixnap.com/kb/iptables-port-forwarding#ftoc-heading-8
-* https://wiki.nftables.org/wiki-nftables/index.php/Main_Page
+* <https://phoenixnap.com/kb/iptables-port-forwarding#ftoc-heading-8>
+* <https://wiki.nftables.org/wiki-nftables/index.php/Main_Page>
 
 ## Check syntax
 
@@ -66,15 +66,17 @@ If eth1 is 192.168.1.2.
 ```
 iptables -t nat -A POSTROUTING -o eth1 -s 10.0.0.0/24  -j MASQUERADE
 ```
+
 ==
+
 ```
 iptables -t nat -A POSTROUTING -s 10.0.0.0/24 -o eth1 -j SNAT --to-source 192.168.1.2
 ```
 
-
 ## Connection tracking
 
 Connection tracking stores connections in a table, which allows administrators to allow or deny access based on the following connection states:
+
 * NEW — A packet requesting a new connection, such as an HTTP request.
 * ESTABLISHED — A packet that is part of an existing connection.
 * RELATED — A packet that is requesting a new connection but is part of an existing connection, such as passive FTP connections where the connection port is 20, but the transfer port can be any unused port 1024 or higher.
@@ -90,7 +92,7 @@ iptables -A FORWARD -m state --state ESTABLISHED,RELATED -j ACCEPT
 ip route add 0.0.0.0/0 via 10.118.0.2
 ```
 
-## IPtables NAT:
+## IPtables NAT
 
 ```bash
 # DST is usually internal IP in local lan

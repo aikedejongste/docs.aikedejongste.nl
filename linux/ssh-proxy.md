@@ -15,6 +15,7 @@ Looks like I have copied this from somewhere....
 The client has access to a server in an internet DMZ, which in turn can access the external server on the internet. Most Linux servers nowadays have Netcat installed, so this fairly trivial constellation works 95.4% of the time.
 
 ~/.ssh/config
+
 ```
 Host host.external
 ServerAliveInterval 10
@@ -26,6 +27,7 @@ ProxyCommand ssh host.dmz /usr/bin/nc -w 60 host.external 22
 It may not have Netcat, but it surely has an ssh client, which we use to run an instance of sshd in inetd mode on the destination server. This will be our ProxyCommand.
 
  ~/.ssh/config
+
 ```
 Host host.external
 ServerAliveInterval 10
@@ -37,6 +39,7 @@ ProxyCommand ssh -A host.dmz ssh host.external /usr/sbin/sshd -i
 Since OpenSSH 5.4, the ssh client has it’s own way of reproducing the Netcat behavior from scenario 1:
 
  ~/.ssh/config
+
 ```
 Host host.external
 ServerAliveInterval 10
@@ -56,6 +59,7 @@ ProxyCommand /usr/local/bin/corkscrew
    ~/.corkscrew/authfile
 username:password
 ```
+
 (Omit the authfile part, if the proxy does not require authentication.)
 
 ## Scenario 4: The client has access to a very restrictive proxy server
@@ -74,6 +78,7 @@ ProxyCommand /usr/local/bin/proxytunnel
 ```
 
 ~/.proxytunnel.auth
+
 ```
 proxy_user=username
 proxy_passwd=password
@@ -88,6 +93,3 @@ Mind you that although the connection is to a non-SSL service, it still is secur
 What we have here is a hand-crafted exploit against the know-it-all proxy’s configuration. Your mileage may vary.
 
 Super sensible discretion regarding the security of your internal network is advised. Don’t fuck up, don’t use this to bring in anything that will spoil the fun. Bypass all teh firewalls responsibly.
-
-
-

@@ -10,6 +10,7 @@ has_children: false
 ## Config
 
 You need:
+
 * .sops.yaml in root of your repo
 
 ## Installation on Ubuntu
@@ -30,11 +31,12 @@ Default is `~/.config/sops/age/keys.txt`
 mkdir -p ~/.config/sops/age/ && age-keygen -o ~/.config/sops/age/keys.txt && cat ~/.config/sops/age/keys.txt
 ```
 
-## Use an existing key:
+## Use an existing key
 
 ```bash
 mkdir -p ~/.config/sops/age && vim ~/.config/sops/age/keys.txt
 ```
+
 Fill it with:
 
 ```
@@ -43,7 +45,7 @@ Fill it with:
 AGE-SECRET-KEY-1Y9FH6J9YPG964SZP5DRFGDQZ5L4Vasdlfjasdlkfjasldjfaskdfja
 ```
 
-## Configure sops:
+## Configure sops
 
 ```bash
 echo 'export SOPS_AGE_KEY_FILE=~/.sops/age/keys.txt' >> ~/.bashrc
@@ -73,17 +75,16 @@ creation_rules:
 
 ```
 
-## Encrypted_regex:
+## Encrypted_regex
 
 ```yaml
   - path_regex: .*\.dev\.json$
     encrypted_regex: '^(date|stringData|user.*|pass.*|.*[Bb]earer.*|.*[Kk]ey|.*[Kk]eys|salt|sentry.*|.*[Tt]oken)$'
 ```
+
 or
+
 ```yaml
   - path_regex: .*\.dev\.json$
     encrypted_regex: '^(data|stringData)$'
 ```
-
-
-

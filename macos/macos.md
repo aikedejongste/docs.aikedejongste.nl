@@ -14,4 +14,3 @@ title: MacOS
 ```bash
 sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "When found please return me to Aike de Jongste or call +316......"
 ```
-

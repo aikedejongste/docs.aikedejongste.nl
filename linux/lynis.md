@@ -15,7 +15,7 @@ sudo apt install dirmngr apt-transport-https
 
 ```bash
 sudo apt-key adv --keyserver [keyserver.ubuntu.com](http://keyserver.ubuntu.com/) \
-		 --recv-keys 013baa07180c50a7101097ef9de922f1c2fde6c4
+   --recv-keys 013baa07180c50a7101097ef9de922f1c2fde6c4
 ```
 
 ```bash

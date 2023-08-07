@@ -21,4 +21,3 @@ root@hidden-box:~# cat /etc/knockd.conf
   cmd_timeout = 86400
   stop_command = iptables -D FORWARD -s %IP% -d 1.2.3.4./32 -p tcp -m tcp --dport 22 -j ACCEPT
 ```
-

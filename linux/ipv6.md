@@ -7,7 +7,7 @@ parent: Linux
 
 # IPv6
 
-## Disable IPv6 the evil way:
+## Disable IPv6 the evil way
 
 ```
 rm -f /etc/sysctl.conf && echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysctl.conf \
@@ -15,4 +15,3 @@ rm -f /etc/sysctl.conf && echo "net.ipv6.conf.all.disable_ipv6 = 1" >> /etc/sysc
   && echo "net.ipv6.conf.lo.disable_ipv6 = 1" >> /etc/sysctl.conf \ 
   && sysctl -p
 ```
-

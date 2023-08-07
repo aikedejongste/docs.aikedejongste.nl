@@ -81,5 +81,3 @@ scrape_configs:
       - __journal_syslog_identifier
       target_label: syslog_identifier
 ```
-
-

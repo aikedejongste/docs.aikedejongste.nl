@@ -6,7 +6,7 @@ parent: Logging
 
 # Graylog
 
-## Install graylog sidecar:
+## Install graylog sidecar
 
 ```bash
 wget https://packages.graylog2.org/repo/packages/graylog-sidecar-repository_1-2_all.deb

@@ -30,6 +30,7 @@ ssh -A -W '[10.10.10.10]:22' real.hostname
 ```bash
 until ssh 10.10.1.3; do sleep 1; done
 ```
+
 or
 
 ```bash
@@ -49,8 +50,8 @@ Make a firewall host reachable over reverse SSH tunnel with AutoSSH:
 ```bash
 autossh -nNT -R 2222:localhost:22 user@remote.box
 ```
-so you can ssh to remote.box:2222.
 
+so you can ssh to remote.box:2222.
 
 ## Ansible add ssh fingerprint to known hosts
 
@@ -60,4 +61,3 @@ so you can ssh to remote.box:2222.
   loop:
     - 10.10.1.2
 ```
-

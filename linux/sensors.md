@@ -19,7 +19,7 @@ cat /sys/class/power_supply/BAT0/power_now | awk '{print $1*10^-6 " W"}'
 upower -i /org/freedesktop/UPower/devices/battery_BAT0
 ```
 
-## Update current battery and charging info 
+## Update current battery and charging info
 
 ```bash
 busctl call org.freedesktop.UPower /org/freedesktop/UPower/devices/battery_BAT0 org.freedesktop.UPower.Device Refresh

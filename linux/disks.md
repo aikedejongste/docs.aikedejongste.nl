@@ -17,7 +17,6 @@ e2fsck -f /dev/sda1
 resize2fs /dev/sda1
 ```
 
-
 ## Alert script for disk usage
 
 ```bash

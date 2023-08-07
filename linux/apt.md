@@ -7,19 +7,19 @@ parent: Linux
 
 # APT
 
-## Fun fact:
+## Fun fact
 
 .deb packages are just ar files with a funky header (d.e.b) and some pre/post scripts. Ar files are also .o files after compilation but before linking, what!?! Also, tar is based on Ar, WHAT!?! Elf files, the whole thing is standardized!!
 
-## Wait for apt-get to be available.
+## Wait for apt-get to be available
 
 ```bash while ! apt-get -qq check; do sleep 1s; done```
 
-## Enable automatic upgrades with cli:
+## Enable automatic upgrades with cli
 
 ```bash apt install unattended-upgrades && dpkg-reconfigure -plow unattended-upgrades```
 
-## Enable automatic upgrades with config:
+## Enable automatic upgrades with config
 
 - `/etc/apt/apt.conf.d/20auto-upgrades` should contain 2 lines
 
@@ -31,16 +31,14 @@ APT::Periodic::Unattended-Upgrade "1";
 - configure with `/etc/apt/apt.conf.d/50unattended-upgrades`
 ... something
 
-
 ## Purge uninstalled packages on Ubuntu
 
 ```bash
 dpkg --list |grep "^rc" | cut -d " " -f 3 | xargs sudo dpkg --purge
 ```
 
-## Sort installed Debian packages by size:
+## Sort installed Debian packages by size
 
 ```bash
 dpkg-query -W --showformat='${Installed-Size} ${Package}\n' | sort -n
 ```
-

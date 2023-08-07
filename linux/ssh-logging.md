@@ -42,13 +42,11 @@ scriptreplay --timing=2023-05-17_08-17-44_aike.time 2023-05-17_08-17-44_aike.dat
 
 Relevant link: [Github](https://github.com/cloudposse/sudosh)
 This claims to be a continuation of the project: [sudosh2](https://github.com/squash/sudosh2)
-https://unix.stackexchange.com/questions/198936/how-to-log-all-things-that-happened-via-an-ssh-session
-
+<https://unix.stackexchange.com/questions/198936/how-to-log-all-things-that-happened-via-an-ssh-session>
 
 Defaults log_output
 Defaults!/usr/bin/sudoreplay !log_output
 Defaults!/sbin/reboot !log_output
-
 
 ## Option 3: containerSSH
 

@@ -7,6 +7,7 @@ parent: Networking
 # Netplan with public and private IP addresses
 
 This works on:
+
 * Digital Ocean
 
 ```yaml

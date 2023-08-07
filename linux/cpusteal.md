@@ -24,6 +24,7 @@ ps -ax -o comm,rss | grep signal-desktop | awk '{s+=$2} END {print s}'
 ```
 
 ### CPU active
+
 ```bash
 cpu_active_prev=$((user+system+nice+softirq+steal))
 ```
@@ -57,9 +58,3 @@ printf " Current CPU Utilization : %s\n" "$cpu_util"
 exit 0
 
 ```
-
-
-
-
-
-

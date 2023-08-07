@@ -33,6 +33,4 @@ Use `\040` for a space.
 //server/share         /mnt/here           cifs    uid=999,gid=1001,credentials=/root/.smb,iocharset=utf8,vers=2.1         0 0
 ```
 
-
-
 ## Server

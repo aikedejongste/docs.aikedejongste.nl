@@ -6,10 +6,10 @@ parent: Networking
 
 # Netplan private ip only configs
 
-
 ## Disable cloud-init network config
 
-### With Ansible:
+### With Ansible
+
 ```
 - name: Disable cloud-init network config
   copy:
@@ -18,17 +18,20 @@ parent: Networking
       network: {config: disabled}
 ```
 
-### With CLI:
+### With CLI
+
 ```bash echo "network: {config: disabled}" > /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg```
 
 ## General suggestions
 
 In some versions use this for IP address:
+
 ```
       addresses: [192.168.11.13/24]
 ```
 
 In some versions you have to use default for the route:
+
 ```
       routes:
         - to: default
@@ -61,6 +64,7 @@ network:
 ## Netplan private IP with Ansible
 
 Useful vars:
+
 ```
 tasks:
   - debug: var=ansible_all_ipv4_addresses
@@ -98,4 +102,3 @@ tasks:
               dhcp4: no
               dhcp6: no
 ```
-

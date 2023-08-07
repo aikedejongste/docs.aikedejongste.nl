@@ -7,27 +7,32 @@ parent: Networking
 # Firewalld
 
 ## Install on Ubuntu
+
 ```bash
 apt install firewalld 
 ```
 
 ## Show status
+
 ```bash
 firewall-cmd --state
 ```
 
 ## Show open ports
+
 ```bash
 firewall-cmd --list-ports
 ```
 
 ### Show configuration
+
 ```bash
 firewall-cmd --list-all
 ```
 
 ## Allow a named service or a port
-```bash 
+
+```bash
 firewall-cmd --permanent --add-service=nfs3
 
 OR
@@ -46,8 +51,8 @@ firewall-cmd --zone=mariadb-access --add-port=3306/tcp  --permanent
 firewall-cmd --reload
 ```
 
-
 ## Port forwarding
+
 ```bash
 # Enable masquerading
 firewall-cmd --add-masquerade --permanent

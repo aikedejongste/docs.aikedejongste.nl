@@ -6,7 +6,7 @@ has_children: false
 
 # Ruby on Rails
 
-## Dependencies on Ubuntu with MySQL:
+## Dependencies on Ubuntu with MySQL
 
 ```bash
 apt install curl ufw fail2ban git-core apt-transport-https ca-certificates \

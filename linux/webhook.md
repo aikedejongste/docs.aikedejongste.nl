@@ -21,7 +21,6 @@ ExecStart=/usr/bin/webhook -nopanic -hooks /etc/webhook.conf -hotreload -verbose
 
 ```bash systemctl edit webhook```
 
-
 ## Configuration
 
 Here is a `/etc/webhook.conf` example:
@@ -36,8 +35,7 @@ Here is a `/etc/webhook.conf` example:
 ]
 ```
 
-
-## Webhook with Parameters: 
+## Webhook with Parameters
 
 ```yaml
 [
@@ -78,7 +76,6 @@ doctl compute firewall create --name "allow-webhook-from-all" --inbound-rules "p
     - name: Trigger deploy webhook
       run: curl -s -k http://host.name.com:9000/hooks/deploy-WFUEmasdfasdfasfdk
 ```
-
 
 ## Deploy script for containers
 

@@ -24,7 +24,6 @@ has_children: false
 
 `dd status=progress if=output.raw bs=1M | ssh root@1.1.1.1 dd of=/dev/vda`
 
-
 ## Copy image over internet with ssh an dd to a file
 
 `dd status=progress if=/dev/vda bs=1M | ssh user@anderemachine dd of=/pad/naar/disk.raw`
@@ -36,7 +35,6 @@ You can add `conv=sparse` to dd command on the receiving machine.
 ```bash
 sudo tar zc / | ssh user@host cat - \> /path/to/tarball.tar.gz
 ```
-
 
 ```bash
 #!/bin/bash

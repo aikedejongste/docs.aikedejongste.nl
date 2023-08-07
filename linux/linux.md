@@ -6,7 +6,6 @@ has_children: true
 
 # Linux
 
-
 ## Download and verify iso
 
 ```bash
@@ -19,7 +18,6 @@ gpg2 --verify SHA256SUMS.gpg SHA256SUMS
 sha256sum -c SHA256SUMS 2>&1 | grep OK
 ```
 
-
 ## Updates and upgrades
 
 ```
@@ -30,4 +28,3 @@ APT::Periodic::AutocleanInterval "1";
 APT::Periodic::Unattended-Upgrade "1";
 EOF
 ```
-

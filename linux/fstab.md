@@ -7,7 +7,7 @@ parent: Linux
 
 # fstab
 
-## Find disk UUID:
+## Find disk UUID
 
 ```bash
 blkid | grep UUID

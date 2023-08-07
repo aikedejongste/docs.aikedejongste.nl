@@ -33,4 +33,3 @@ reverse_proxy backuppc-app:80
 
 tls /config/cert.pem /config/cert.key
 ```
-
