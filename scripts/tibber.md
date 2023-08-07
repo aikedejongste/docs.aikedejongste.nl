@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tibber
+parent: Various scripts
 has_children: false
 ---
 
