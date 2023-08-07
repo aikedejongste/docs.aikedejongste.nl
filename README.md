@@ -35,7 +35,6 @@ The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party 
 
 ----
 
-
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/
 [`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
 [`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag

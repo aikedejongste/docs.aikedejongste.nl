@@ -1,6 +1,4 @@
-
 ---
-
 layout: default
 title: Bridge
 parent: Networking
@@ -8,7 +6,7 @@ parent: Networking
 
 # Hetzner network bridge
 
-root@host #  cat /etc/network/interfaces
+cat /etc/network/interfaces
 
 ```bash
 auto lo

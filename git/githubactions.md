@@ -8,7 +8,7 @@ parent: Git and Github
 
 ## How to make a container image public
 <!-- markdown-link-check-disable -->
-* Got to the url with the settings of the containre: <https://github.com/orgs/><org-name>/packages/container/<name>/settings
+* Got to the url with the settings of the containre: <https://github.com/orgs/_org-name_/packages/container/_NAME_/settings>
 * Choose Public and apply.
 <!-- markdown-link-check-enable -->
 

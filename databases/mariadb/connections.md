@@ -6,7 +6,7 @@ parent: Databases
 
 # Connections
 
-### Show current connections
+## Show current connections
 
 ```show status where variable_name = 'threads_connected';```
 

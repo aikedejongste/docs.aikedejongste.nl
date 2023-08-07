@@ -56,3 +56,16 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ## Format json
 
 `:%!python -m json.tool`
+
+## Reformat text to line length
+
+First, set the text width to 100 by using the following command in Normal mode:
+
+`:set textwidth=100`
+
+After selecting the text in Visual mode, simply press gq, and Vim will reformat
+the selected text to the specified width.
+
+Or in Normal mode, you can use gq followed by a motion command to reformat a
+specific part of the text. For example, to reformat the current paragraph, you
+would use `gqap`.
