@@ -7,7 +7,7 @@ nav_order: 2
 
 # Self hosted apps
 
-## Just a list of static site generators for documentation:
+## Just a list of static site generators for documentation
 
 |  Name and link      | Comment                  |
 |:-------------|:------------------|

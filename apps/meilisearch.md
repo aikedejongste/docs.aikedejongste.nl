@@ -11,7 +11,7 @@ parent: Self Hosted Apps
 
 The Helm chart works well.
 
-## Configuration:
+## Configuration
 
 Here is a list of things you can an API key permission on. I could not easily find a complete list so that's why I'm posting it here.
 
@@ -59,7 +59,6 @@ Here is an example of a command that you can use to create an API key with full 
 ```bash
 curl -s -X POST https://search.company.com/keys   -H 'Content-Type: application/json'  -H 'Authorization: Bearer <snip> ' --data-binary '{ "description": "crud", "actions": ["search", "indexes.*", "documents.*", "settings.get", "stats.get"], "indexes": ["staging"], "expiresAt": "2030-01-01T00:00:00Z" }'  | jq
 ```
-
 
 ---
 

@@ -32,7 +32,6 @@ server te koppelen. Bijvoorbeeld vpn.bedrijfsnaam.nl.
 Tot wel 50 medewerkers kunnen van 1 VPS gebruik maken, ze krijgen dan allemaal
 hetzelfde vaste IP-adres. Erg goedkoop per medewerker dus.
 
-
 ## Optie 3: Een computer met Windows op afstand
 
 TODO: voorbeelden toevoegen.

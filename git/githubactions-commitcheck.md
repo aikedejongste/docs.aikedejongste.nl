@@ -6,7 +6,6 @@ parent: Git and Github
 
 # Github Actions Check Commits
 
-
 ## Check for conventional commits and project number
 
 ```yaml

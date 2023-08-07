@@ -21,8 +21,6 @@ To add an extra plugin, you need to add it in the `Gemfile` *and* in `_config.ym
 
 Note: If you are using a Jekyll version less than 3.5.0, use the `gems` key instead of `plugins`.
 
-
-
 ## Customization
 
 You're free to customize sites that you create with this template, however you like!
@@ -37,14 +35,8 @@ The deployment GitHub Actions workflow is heavily based on GitHub's mixed-party 
 
 ----
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
-[Jekyll]: https://jekyllrb.com
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[Bundler]: https://bundler.io
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
 [`jekyll-default-layout`]: https://github.com/benbalter/jekyll-default-layout
 [`jekyll-seo-tag`]: https://jekyll.github.io/jekyll-seo-tag
 [MIT License]: https://en.wikipedia.org/wiki/MIT_License

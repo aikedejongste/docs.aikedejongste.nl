@@ -8,7 +8,7 @@ parent: Helm
 
 ## Install
 
-* Download latest release: https://github.com/helmfile/helmfile/releases
+* Download latest release: <https://github.com/helmfile/helmfile/releases>
 * Extract and move to /usr/local/bin/helmfile
 
 ## Fixes

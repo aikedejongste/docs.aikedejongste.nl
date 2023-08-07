@@ -6,7 +6,6 @@ parent: Helm
 
 # YAML loop
 
-
 Template for secrets
 
 In values.yaml put:
@@ -18,6 +17,7 @@ namespaces:
 ```
 
 Then in templates/secrets.tpl
+
 ```
 {% raw %} 
 

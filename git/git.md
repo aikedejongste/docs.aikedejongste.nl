@@ -6,12 +6,13 @@ has_children: true
 
 # Git
 
-## Usefull links:
+## Usefull links
 
 * [Git Hooks](https://www.atlassian.com/git/tutorials/git-hooks)
 
 ## Undo stage commit
-```bash 
+
+```bash
 git reset HEAD README.md
 
 or just
@@ -19,12 +20,12 @@ or just
 git reset -- README
 ```
 
-
-
 ## Set my git config
+
 ```bash
 git config --global user.email "aikedejongste@gmail.com" && git config --global user.name "Aike de Jongste"
 ```
+
 ## Get a zip with a release from a private repo
 
 ```bash
@@ -36,7 +37,6 @@ curl -H "Authorization: token PERSONAL_ACCESS_TOKEN_HERE" \
 ## Set Git hooks directory to .githooks
 
 ```bash git config core.hooksPath .githooks```
-
 
 ## Clone or push over https with Fine Grained PAT
 

@@ -9,8 +9,8 @@ parent: Self Hosted Apps
 
 ## 2 installation methods
 
-* Helm Chart (https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-install-helm.html)
-* Yaml Manifests (https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-install-yaml-manifests.html)
+* Helm Chart (<https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-install-helm.html>)
+* Yaml Manifests (<https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-install-yaml-manifests.html>)
 
 ## Install Operator first
 
@@ -26,7 +26,6 @@ fleet-server.
 helm show values elastic/eck-stack
 
 helm install stekker elastic/eck-stack -n elastic-stack --create-namespace -f stack-values.yaml
-
 
 ## Install a stack with Manifests
 
@@ -73,6 +72,3 @@ Add the dashboard route
 kubectl create -f https://download.elastic.co/downloads/eck/2.8.0/crds.yaml
 kubectl apply -f https://download.elastic.co/downloads/eck/2.8.0/operator.yaml
 ```
-
-
-

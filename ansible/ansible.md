@@ -41,7 +41,6 @@ apt-get update && \
         var: file_content
 ```
 
-
 ## Read file on remote machine
 
 ```yaml
@@ -58,5 +57,3 @@ apt-get update && \
       debug:
         var: file_content
 ```
-
-

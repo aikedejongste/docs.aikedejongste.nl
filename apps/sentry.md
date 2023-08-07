@@ -7,8 +7,7 @@ parent: Self Hosted Apps
 
 # Sentry
 
-
-## Cleanup 
+## Cleanup
 
 ```bash
 /usr/bin/docker-compose --file /path/to/docker-compose.yml exec worker sentry cleanup --days 30
@@ -60,4 +59,3 @@ docker-compose stop snuba-consumer
 docker-compose stop symbolicator-cleanup                     
 docker-compose stop ingest-consumer
 ```
-

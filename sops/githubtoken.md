@@ -6,9 +6,9 @@ parent: SOPs
 
 # Github Token
 
-## Download container images:
+## Download container images
 
-If you log into Github and go to https://github.com/settings/tokens you can create a "classic" token there. Maybe this direct link will also work: https://github.com/settings/tokens/new
+If you log into Github and go to <https://github.com/settings/tokens> you can create a "classic" token there. Maybe this direct link will also work: <https://github.com/settings/tokens/new>
 
 You can choose the "note" yourself. And the end date can be, for example, the end of this year.
 

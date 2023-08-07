@@ -22,7 +22,7 @@ parent: Ansible
         groups: sudo,docker,deploy
 ```
 
-## Tasks:
+## Tasks
 
 ```yaml
 {% raw %}

@@ -52,12 +52,12 @@ networks:
 ```
 
 Caddyfile:
+
 ```
 backup.company.nl
 reverse_proxy backuppc-app:80
 tls /config/cert.pem /config/cert.key
 ```
-
 
 ## Configure hosts with Ansible
 
@@ -86,7 +86,6 @@ tls /config/cert.pem /config/cert.key
       with_file:
         - keys/backuppc.pub
 ```
-
 
 ## Add hosts to known hosts and then to BackupPC config
 

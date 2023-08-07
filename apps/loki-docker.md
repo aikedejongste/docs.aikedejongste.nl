@@ -96,9 +96,7 @@ limits_config:
   retention_period: 100d
 ```
 
-
 The Promtail config:
-
 
 ```yaml
 server:

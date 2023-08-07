@@ -17,7 +17,6 @@ Dit bestandje krijg je via e-mail of chat.
 
 Je hoeft het niet te openen. De QR-code die bij de e-mail zit mag je negeren.
 
-
 ## 3. Open de Wireguard client en klik op “import tunnels”
 
 ![Wireguard Leeg](/docs/assets/images/wireguard-leeg.png)

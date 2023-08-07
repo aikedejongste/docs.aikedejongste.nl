@@ -11,4 +11,3 @@ parent: Self Hosted Apps
 
 sudo add-apt-repository ppa:nextcloud-devs/client -y
 udo apt install nextcloud-client -y
-

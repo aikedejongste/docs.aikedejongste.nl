@@ -49,7 +49,6 @@ The location block for / comes first, and then the more detailed ones.
 </Location>
 ```
 
-
 Next time try a LocationMatch block:
 
 ```
@@ -61,4 +60,3 @@ Next time try a LocationMatch block:
   ProxyPass         balancer://to-the-real-server/here-is-the-problem.phpjs
 </LocationMatch>
 ```
-

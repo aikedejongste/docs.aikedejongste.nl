@@ -12,6 +12,4 @@ parent: Cloud Infrastructure
 hcloud floating-ip create --type ipv4 --home-location nbg1
 ```
 
-## Links:
-
-
+## Links

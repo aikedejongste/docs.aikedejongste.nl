@@ -6,11 +6,9 @@ parent: Cloud Infrastructure
 
 # Digital Ocean
 
-
-## Links:
+## Links
 
 Firewall: [here](https://docs.aikedejongste.nl/linux/webhook.html#firewall-on-digital-ocean)
-
 
 ## doctl installation
 
@@ -24,7 +22,5 @@ tar -zxvf /tmp/doctl.tgz && sudo mv /tmp/doctl /usr/local/bin/ && sudo chmod +x 
 ```
 doctl auth init
 ```
+
 Go to [https://cloud.digitalocean.com/account/api/tokens](https://cloud.digitalocean.com/account/api/tokens) and create a token.
-
-
-

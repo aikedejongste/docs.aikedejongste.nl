@@ -54,5 +54,3 @@ inhibit_rules:
       severity: 'warning'
     equal: ['alertname', 'dev', 'instance']
 ```
-
-

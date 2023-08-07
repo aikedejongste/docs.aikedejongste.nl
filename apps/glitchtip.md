@@ -6,4 +6,3 @@ parent: Self Hosted Apps
 ---
 
 # Glitchtip
-

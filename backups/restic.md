@@ -12,7 +12,7 @@ Run with:
 
 ```bash backup hetzner local```
 
-## SSH config for Hetzner:
+## SSH config for Hetzner
 
 in `~/.ssh/config`
 

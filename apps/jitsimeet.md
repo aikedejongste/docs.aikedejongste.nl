@@ -26,5 +26,3 @@ and
 .tile-view .videocontainer#largeVideoContainer { background-color: #ffffff !important; }
 .tile-view #largeVideoContainer
 ```
-
-

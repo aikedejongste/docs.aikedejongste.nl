@@ -6,7 +6,6 @@ has_children: true
 
 # Kubernetes
 
-
 ## Install k3s SINGLE NODE
 
 ```yaml
@@ -25,7 +24,7 @@ curl -sfL https://get.k3s.io | K3S_TOKEN=SECRET sh -s - server --server https://
 k3s kubectl get node
 ```
 
-## Copy file from local to pod:
+## Copy file from local to pod
 
 ```bash
 kubectl cp config.ini.php matomo/matomo-5b5c6c758d-9wdvm:/bitnami/matomo/config/config.ini.php
@@ -45,11 +44,11 @@ k3sup join --user ubuntu --server-ip server_ip --ip agent_ip
 * [https://github.com/StarpTech/k-andy](https://github.com/StarpTech/k-andy)
 * [https://github.com/cicdteam/terraform-hcloud-k3s](https://github.com/cicdteam/terraform-hcloud-k3s)
 
-
 ## Run something simple
 
 ``bash
 kubectl run httpbin --image kennethreitz/httpbin --port 80 && kubectl expose pod httpbin --port 80
+
 ```
 
 ## Quick Ubuntu pod
@@ -73,6 +72,7 @@ EOF
 ```
 
 ## K9s (Kubernetes GUI)
+
 Bash
 
 ```bash
@@ -81,6 +81,7 @@ cd /tmp && tar -zxvf /tmp/k9s.gz && mv /tmp/k9s /usr/local/bin/k9s && chmod +x /
 ```
 
 Ansible
+
 ```yaml
     - name: Download latest k9s binary
       get_url:
@@ -109,4 +110,3 @@ Ansible
         state: absent
       tags: [pre-reqs]
 ```
-

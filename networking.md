@@ -12,7 +12,6 @@ has_children: true
 touch /etc/cloud/cloud-init.disabled
 ```
 
-
 ## Open Ngrok tunnel
 
 ```bash
@@ -21,7 +20,7 @@ ngrok http --region=eu --hostname=aike.eu.ngrok.io 4567
 
 ## Show usage on Ubuntu
 
-* nload 
+* nload
 * speedometer
 * iftop
 * nethogs
@@ -29,4 +28,3 @@ ngrok http --region=eu --hostname=aike.eu.ngrok.io 4567
 * slurm
 * tcptrack
 * iptraf
-

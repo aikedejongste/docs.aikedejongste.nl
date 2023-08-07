@@ -22,7 +22,6 @@ parent: Docker
 Go to [NFS page](linux/nfs.html)
 <!-- markdown-link-check-enable -->
 
-
 ## Docker-compose
 
 ```yaml
@@ -31,8 +30,7 @@ networks:
   backend:
 ```
 
-
-## Docker bridge subnet:
+## Docker bridge subnet
 
 ```
 networks:

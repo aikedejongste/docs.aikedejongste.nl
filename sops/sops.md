@@ -5,4 +5,3 @@ has_children: true
 ---
 
 # Standard Operating Procedures
-

@@ -6,10 +6,9 @@ parent: Ansible
 
 # Playbook Basics
 
-For servers that are kind of like snowflakes but you want some structure and still keep changes in git. 
+For servers that are kind of like snowflakes but you want some structure and still keep changes in git.
 
-
-## Inventory:
+## Inventory
 
 ```yaml
 all:
@@ -19,7 +18,7 @@ all:
       ansible_host: 1.2.3.4
 ```
 
-## Taks:
+## Taks
 
 ```yaml
 ---

@@ -30,11 +30,9 @@ mee te openen. Kies `Notepad` / `Kladblok`.
 
 ![Wireguard Leeg](/docs/assets/images/wireguard-notepad.png)
 
-
 ## 3. Kopieer de inhoud
 
 Selecteer alle text en kopier het naar je klembord.
-
 
 ## 4. Maak notitie in je password manager
 
@@ -48,7 +46,6 @@ Plak de tekst die we net gekopieerd hebben en sla de notitie op.
 
 Verwijder nu de email of het chatbericht waarin je de VPN configuratie hebt ontvangen. En
 verwijder ook het bestandje uit je Downloads map.
-
 
 ## 6. Herstellen
 

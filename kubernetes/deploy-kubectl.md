@@ -9,7 +9,6 @@ parent: Kubernetes
 
 ## in Github Actions Workflow
 
-
 Create the K8SPRODCRET with:
 
 ```bash
@@ -29,4 +28,3 @@ cat kubeconfig | base64 -w 0
       - name: Shred k8s credentials
         run: shred $HOME/.kube/config
 ```
-

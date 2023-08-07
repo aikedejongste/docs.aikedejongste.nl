@@ -17,5 +17,3 @@ This is just for the infra part of the business.
 - [ ] Transfer email
 - [ ] Transfer password manager
 - [ ] Transfer backups
-
-

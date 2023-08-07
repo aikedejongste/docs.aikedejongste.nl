@@ -14,10 +14,8 @@ wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo tee /usr/
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install terraform
 ```
+
 ## Write Ansible inventory with TF template plugin
-
-
-
 
 ## Write Ansible inventory with TF inventory plugin
 
@@ -52,7 +50,6 @@ hcloud floating-ip list
 # us the ID to import
 terraform import hcloud_floating_ip.doedezemaar 123456
 ```
-
 
 ## Use a floating IP address
 

@@ -7,7 +7,6 @@ parent: Kubernetes
 
 # Digital Ocean Registry
 
-
 ## Cleanup / Garbage collection
 
 The cronjob:

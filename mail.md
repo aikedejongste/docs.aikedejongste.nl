@@ -10,10 +10,9 @@ has_children: true
 
 1. Check the current state of MX records: [Google Check](https://toolbox.googleapps.com/apps/checkmx/).
 
-
 ## Theory
 
-Link: https://www.courier.com/guides/dmarc-vs-spf-vs-dkim/
+Link: <https://www.courier.com/guides/dmarc-vs-spf-vs-dkim/>
 
 * SPF stands for Sender Policy Framework. It allows you to cache a list of authorized IP addresses that are allowed to send emails to your customers on your behalf.
 
@@ -40,5 +39,3 @@ Decide how you want to enforce SPF failures:
 ```
 
 Check your SPF record [here](https://mxtoolbox.com/SuperTool.aspx?action=spf).
-
-

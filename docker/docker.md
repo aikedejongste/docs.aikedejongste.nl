@@ -6,7 +6,8 @@ has_children: true
 
 # Docker
 
-## Remove all containers from a host:
+## Remove all containers from a host
+
 ```bash
 docker rm -f $(docker ps -qa)
 ```
@@ -26,7 +27,7 @@ or
 echo "ghp_REPLACE_ME" | docker login ghcr.io --username doesnt@matter.com --password-stdin
 ```
 
-## Filter docker ps columns:
+## Filter docker ps columns
 
 Link: [docker docs](https://docs.docker.com/engine/reference/commandline/ps/#format)
 
@@ -45,7 +46,6 @@ Link: [docker docs](https://docs.docker.com/engine/reference/commandline/ps/#for
 ```
 
 ## Mount NFS in docker-compose file
-
 
 <!-- markdown-link-check-disable -->
 Go to [NFS page](linux/nfs.html)

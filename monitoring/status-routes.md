@@ -37,4 +37,3 @@ class Public::StatusController < Public::PublicController
   end
 end
 ```
-

@@ -6,8 +6,8 @@ parent: Helm
 
 # Envvars from values.yaml
 
-
 In deployment.tpl:
+
 ```yaml
 {% raw %}
 {{- range $key, $val := .Values.env }}
@@ -26,7 +26,6 @@ env:
   PASWORD: "CHANGEME"
 ```
 
-
 OR
 
 ```yaml
@@ -34,7 +33,6 @@ envvars:
   - name: DEFAULT_LOCALE                                                        
     value: nl            
 ```
-
 
 and
 

@@ -46,7 +46,7 @@ spec:
 
 ## Traefik default certificate
 
-### Install CRDs:
+### Install CRDs
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/traefik/traefik/v2.10/docs/content/reference/dynamic-configuration/kubernetes-crd-definition-v1.yml
