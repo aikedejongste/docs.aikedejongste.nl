@@ -30,8 +30,9 @@ apt install postgresql-client-14
 
 ## Options and examples
 
-* `-Fp` = format plain, this is fastest but produces normal sql
-* `-Fc` = format compressed, much smaller result, much slower
+- `-Fp` = format plain, this is fastest but produces normal sql
+- `-Fc` = format compressed, much smaller result, much slower
+- `-N 'plpsql'` = exclude an extension
 
 
 --jobs=<NUMBER OF CORES> - This allows the dump to run multiple jobs. My recommendation is to set this equal to the number of cores available on the machine the dump is running on. You must either use the directory or custom output formats. Speaking of which:

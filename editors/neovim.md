@@ -48,3 +48,13 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 - https://github.com/pearofducks/ansible-vim
 
 - https://github.com/yaegassy/coc-ansible
+
+
+## XML lint
+
+`:%!xmllint --format %`
+
+## Format json
+
+`:%!python -m json.tool`
+

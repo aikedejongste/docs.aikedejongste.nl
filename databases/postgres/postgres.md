@@ -7,6 +7,10 @@ has_children: false
 
 # Postgres
 
+## Connect to database
+
+`\c`
+
 ## Show schemas
 
 `\dn`
@@ -14,6 +18,32 @@ has_children: false
 ## Show databases
 
 `\l`
+
+## Show tables
+
+`\dt or \dt+`
+
+## List roles
+
+`\du`
+
+## Change user password
+
+You can use double quotes for the role name but this is not required. You
+should use single quotes for the password. This is because in SQL syntax,
+double quotes are used to quote identifiers (such as table names, column names,
+and role names), while single quotes are used to quote string literals
+(such as values and passwords).
+
+`ALTER USER "role_name" WITH PASSWORD 'new_password';`
+
+and this should do the same:
+
+`ALTER ROLE role_name WITH PASSWORD 'new_password';`
+
+## Rename user or role
+
+`ALTER ROLE old_role_name RENAME TO new_role_name;`
 
 ## Backup options
 
@@ -33,11 +63,15 @@ apt install postgresql-client-15
 
 ## Connect with the client to a remote host
 
-```bash psql -h <REMOTE HOST> -p <REMOTE PORT> -U <DB_USER> <DB_NAME> -W```
+```bash
+psql -h <REMOTE HOST> -p <REMOTE PORT> -U <DB_USER> <DB_NAME> -W
+```
 
 Non interactive password:
 
-```bash PGPASSWORD=postgresSuperUserPsw psql -h localhost -U postgres```
+```bash
+PGPASSWORD=postgresSuperUserPsw psql -h localhost -U postgres
+```
 
 ## Config
 
@@ -51,3 +85,14 @@ SELECT pg_reload_conf();
 In PostgreSQL you can create a new user using the CREATE USER or the CREATE ROLE command.
 The difference between these two options is that CREATE USER sets the LOGIN privilege
 directly while CREATE ROLE will set this attribute to NOLOGIN.
+
+## Execute sql from a file
+
+```bash
+psql -U $DB_USER -d $DB_NAME -a -f $SQL_FILE
+```
+
+The -a option in the psql command prints all input lines to the standard output,
+so you'll see the SQL statements as they're executed. The -f option specifies the file to execute.
+
+
