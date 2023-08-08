@@ -7,6 +7,12 @@ parent: Linux
 
 # SSH
 
+## Add public key to server from Github
+
+```bash
+mkdir -p -m 700 ~/.ssh; echo "$(curl -s https://github.com/aikedejongste.keys) # Aike" >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys
+```
+
 ## Use SSH to proxy SSH to other machine with config
 
 Put this in .ssh/config
