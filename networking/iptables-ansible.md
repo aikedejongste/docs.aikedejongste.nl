@@ -21,17 +21,31 @@ parent: Networking
     reload: true
 ```
 
+The out_interface is usually the public interface!
+
 ```yaml
+- name: Get default route
+  shell: ip route | grep default | awk '{print $5}'
+  register: public_interface
+
+- name: Print public interface
+  debug:
+    msg: "Public interface is {{ public_interface.stdout }}"
+
 - name: Create Iptables NAT chain
   iptables:
     table: nat
     chain: POSTROUTING
-    out_interface: '{{ masquerade_out_interface }}'
+    out_interface: '{{ public_interface.stdout }}'
     source: '{{ masquerade_source }}'
     destination: '{{ masquerade_destination }}'
     jump: MASQUERADE
     protocol: '{{ masquerade_protocol }}'
     comment: Ansible NAT Masquerade
+  vars:
+    masquerade_source: '10.10.1.0/24'                                                                                                                                                                              masquerade_destination: '0.0.0.0/0'
+    masquerade_jump: MASQUERADE
+    masquerade_protocol: 'all'
 ```
 
 ## iptables-persistent to store current rules to file

@@ -9,8 +9,7 @@ has_children: false
 
 ## Resolve locked vm problem
 
-``bash
-
+```bash
 qm unlock 105
 
 rm /var/lock/qemu-server/lock-105.conf
