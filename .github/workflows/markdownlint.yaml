@@ -22,7 +22,7 @@ jobs:
       - name: markdownlint-cli
         uses: nosborn/github-action-markdown-cli@v3.3.0
         with:
-          #files: "*.md"
+          files: .
           config_file: .markdownlint.yaml
           dot: true
           #ignore_files: examples/ignore/*

@@ -15,6 +15,10 @@ has_children: false
 
 `\dn`
 
+## Show all tables in all schemas
+
+`\dn *.*`
+
 ## Show databases
 
 `\l`

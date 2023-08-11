@@ -5,8 +5,17 @@ has_children: false
 parent: Linux
 ---
 
-# pigz
+## Compression
+
+## pigz
 
 ```bash
 apt install pigz
 ```
+
+## gzip
+
+```bash
+tar -cvzf my_directory.tgz my_directory
+```
+

@@ -7,6 +7,15 @@ parent: Linux
 
 # LVM
 
+## When to use LVM
+
+- physical machines where you want to use LVM snapshots for backups
+- when you need disk encryption
+
+## Find LVM info on second disk
+
+`lvmdiskcan` or `lvmdiskscan -l`
+
 ## LVM Snapshot script
 
 I think this was written by Joris, thanks!
