@@ -92,4 +92,4 @@ It sends a hand-crafted request header to the intrusive proxy, which mimics the 
 Mind you that although the connection is to a non-SSL service, it still is secure, because encryption is being brought in by SSH.
 What we have here is a hand-crafted exploit against the know-it-all proxy’s configuration. Your mileage may vary.
 
-Super sensible discretion regarding the security of your internal network is advised. Don’t fuck up, don’t use this to bring in anything that will spoil the fun. Bypass all teh firewalls responsibly.
+Super sensible discretion regarding the security of your internal network is advised. Don’t fuck up, don’t use this to bring in anything that will spoil the fun. Bypass all the firewalls responsibly.

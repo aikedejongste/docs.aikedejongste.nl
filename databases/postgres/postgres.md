@@ -49,6 +49,12 @@ and this should do the same:
 
 `ALTER ROLE old_role_name RENAME TO new_role_name;`
 
+## Disable or enable login for role
+
+`psql -t -c "ALTER ROLE $READONLY_USERNAME WITH NOLOGIN;"`
+
+`psql -t -c "ALTER ROLE $READONLY_USERNAME WITH LOGIN;"`
+
 ## Backup options
 
 * [PG-Backup-local-container](https://github.com/prodrigestivill/docker-postgres-backup-local) - have not tried it yet

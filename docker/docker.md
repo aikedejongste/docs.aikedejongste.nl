@@ -6,12 +6,10 @@ has_children: true
 
 # Docker
 
-
 ## SSH in Dockerfile (ugly!)
 
 RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
 RUN ssh-agent sh -c 'echo "$SSH_KEY" | ssh-add - ; npm install --force'
-
 
 ## Remove all containers from a host
 

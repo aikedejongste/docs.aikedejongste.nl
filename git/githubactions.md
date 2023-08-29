@@ -18,9 +18,16 @@ parent: Git and Github
 on:
   push:
     branches: [ "main", "master"]
-    path: [ "name-of-dir"]
+    paths: [ "name-of-dir"]
   pull_request:
     branches: [ "main", "master" ]
-    path: [ "name-of-dir"]
+    paths: [ "name-of-dir"]
   workflow_dispatch:
 ```
+
+name: ansible-lint
+on:
+ workflow_dispatch:
+ push:
+   branches: ["*"]
+   paths: "ansible/**"

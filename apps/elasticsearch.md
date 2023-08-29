@@ -20,7 +20,7 @@ helm show values elastic/eck-operator
 
 ## Install a stack with Helm
 
-It looks to me like tihs doesn't work with the basic (free) license. Or at least not for
+It looks to me like this doesn't work with the basic (free) license. Or at least not for
 fleet-server.
 
 helm show values elastic/eck-stack

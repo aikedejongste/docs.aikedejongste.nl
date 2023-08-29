@@ -39,8 +39,7 @@ and the kind of updates we're doing. For container hosts
 this is not needed but for a complicated Ubuntu install
 it definately is.
 
-
-### 4. Update!
+### 4. Update
 
 On Ubuntu and Debian use the following command as root:
 
@@ -59,7 +58,6 @@ if you are waiting 5 minutes for it to come back you know
 something is wrong.
 
 Use `ssh -o 'ConnectionAttempts 999' <yourserver>` to reconnect automatically.
-
 
 ### 5. Final checks
 

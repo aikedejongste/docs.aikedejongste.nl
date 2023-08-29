@@ -49,4 +49,3 @@ or
 
 db.getCmdLineOpts()
 ```
-

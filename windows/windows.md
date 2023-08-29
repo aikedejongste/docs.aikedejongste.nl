@@ -79,3 +79,11 @@ Now under this key, create a new 32-bit DWORD called `NoAutoRebootWithLoggedOnUs
 and give it a hexadecimal value data of 1.
 
 This will prevent automatic reboot while users are logged on.
+
+## Share WSL files with Windows
+
+If you cannot see the files from a mount in WSL in the Windows Explorer this might help, but be careful!
+
+```bash
+C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f
+```

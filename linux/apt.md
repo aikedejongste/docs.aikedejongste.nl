@@ -11,6 +11,18 @@ parent: Linux
 
 .deb packages are just ar files with a funky header (d.e.b) and some pre/post scripts. Ar files are also .o files after compilation but before linking, what!?! Also, tar is based on Ar, WHAT!?! Elf files, the whole thing is standardized!!
 
+## Automatic updates and upgrades
+
+Full explanation here: [Debian Wiki](https://wiki.debian.org/UnattendedUpgrades)
+
+Run as root:
+
+```bash
+apt-get install unattended-upgrades apt-listchanges
+echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+dpkg-reconfigure -f noninteractive unattended-upgrades
+```
+
 ## Wait for apt-get to be available
 
 ```bash while ! apt-get -qq check; do sleep 1s; done```
