@@ -1,0 +1,10 @@
+name: Actionlint
+on: [pull_request, push, workflow_dispatch]
+
+jobs:
+  actionlint:
+    name: Github Actions Workflows
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: reviewdog/action-actionlint@v1
