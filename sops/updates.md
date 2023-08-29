@@ -62,6 +62,6 @@ Use `ssh -o 'ConnectionAttempts 999' <yourserver>` to reconnect automatically.
 ### 5. Final checks
 
 - [ ] check if the application or the server is still doing its job
-- [ ] check if [automatic security updates](../linux/apt.html) are enabled
+- [ ] check if [automatic security updates](https://docs.aikedejongste.nl/linux/apt.html) are enabled
 - [ ] check the load, usage and logs
 - [ ] register the update in the log for compliance

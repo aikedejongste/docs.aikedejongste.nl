@@ -2,6 +2,7 @@
 layout: default
 title: Dockerfile PHP
 has_children: true
+parent: Docker
 ---
 
 # Dockerfile PHP
