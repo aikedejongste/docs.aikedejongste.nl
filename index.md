@@ -21,9 +21,9 @@ Github Actions build status:
 
 - [![Markdownlint](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/markdownlint.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/markdownlint.yaml)
 
-[![Misspell](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/misspell.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/misspell.yaml)
+- [![Misspell](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/misspell.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/misspell.yaml)
 
-[![Actionlint](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/actionlint.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/actionlint.yaml)
+- [![Actionlint](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/actionlint.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/actionlint.yaml)
 
 Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl)
 or use one of my referral links to support me:

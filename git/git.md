@@ -6,9 +6,19 @@ has_children: true
 
 # Git
 
-## Usefull links
+## Useful links
 
 * [Git Hooks](https://www.atlassian.com/git/tutorials/git-hooks)
+
+## Commit (add) part of a file
+
+```bash
+git add --patch <filename>
+
+or for short:
+
+git add -p <filename>
+```
 
 ## Undo stage commit
 
