@@ -15,11 +15,15 @@ Will this all be replaced with ChatGPT soon?
 
 Github Actions build status:
 
-- [![Deploy Jekyll site to Pages](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/pages.yml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/pages.yml)
+- [![Deploy Jekyll site to Pages](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/pages.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/pages.yaml)
 
 - [![Verify Links](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/verifylinks.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/verifylinks.yaml)
 
 - [![Markdownlint](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/markdownlint.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/markdownlint.yaml)
+
+[![Misspell](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/misspell.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/misspell.yaml)
+
+[![Actionlint](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/actionlint.yaml/badge.svg)](https://github.com/AikedeJongste/docs.aikedejongste.nl/actions/workflows/actionlint.yaml)
 
 Feel free to [contribute](https://github.com/AikedeJongste/docs.aikedejongste.nl)
 or use one of my referral links to support me:
@@ -53,6 +57,7 @@ I keep forgetting about them and putting them here will hopefully remind me to u
 | [CPU Benchmarks](https://www.cpubenchmark.net/cpu_list.php) | Searchable list of cpu benchmark scores  |
 | [Swappie.com](https://swappie.com/nl-en/) | Sell and buy phones second hand |
 | [Markdownlint](https://dlaa.me/markdownlint/) | Web based markdown linter |
+| [PDFtool](https://www.pdftool.org/en) |  Online pdf editor |
 
 ## Useful providers and services
 

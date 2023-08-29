@@ -37,7 +37,7 @@ or
 
 or
 
-1. alltogether is ....
+1. altogether is ....
 
 ## Check k3s cert expiration date
 
