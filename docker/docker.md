@@ -6,6 +6,12 @@ has_children: true
 
 # Docker
 
+## Install
+
+```bash
+apt install -y apparmor-utils docker.io docker-compose
+```
+
 ## SSH in Dockerfile (ugly!)
 
 RUN mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts

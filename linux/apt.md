@@ -25,11 +25,15 @@ dpkg-reconfigure -f noninteractive unattended-upgrades
 
 ## Wait for apt-get to be available
 
-```bash while ! apt-get -qq check; do sleep 1s; done```
+```bash
+while ! apt-get -qq check; do sleep 1s; done
+```
 
 ## Enable automatic upgrades with cli
 
-```bash apt install unattended-upgrades && dpkg-reconfigure -plow unattended-upgrades```
+```bash
+apt install unattended-upgrades && dpkg-reconfigure -plow unattended-upgrades
+```
 
 ## Enable automatic upgrades with config
 
