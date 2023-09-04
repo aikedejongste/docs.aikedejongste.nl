@@ -1,8 +1,7 @@
 ---
 layout: default
 title: ODBC
-#nav_order: 50
-has_children: true
+has_children: false
 parent: Databases
 ---
 
@@ -36,3 +35,7 @@ SQLULEN Size.......: 8
 SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
+
+## Test
+
+Use `isql`.

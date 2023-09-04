@@ -87,3 +87,7 @@ If you cannot see the files from a mount in WSL in the Windows Explorer this mig
 ```bash
 C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v EnableLUA /t REG_DWORD /d 0 /f
 ```
+
+## Lenovo Vantage in MS store
+
+Direct [link](https://apps.microsoft.com/store/detail/lenovo-vantage/9WZDNCRFJ4MV?hl=en-us&gl=us)

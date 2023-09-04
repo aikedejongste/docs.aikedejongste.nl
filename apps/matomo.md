@@ -60,3 +60,44 @@ Next time try a LocationMatch block:
   ProxyPass         balancer://to-the-real-server/here-is-the-problem.phpjs
 </LocationMatch>
 ```
+
+
+version: '3.7'
+
+services:
+  web:
+    image: caddy:2
+    restart: always
+    command: caddy reverse-proxy --from $DOMAIN --to app:80
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./caddy_data:/data
+      - ./caddy_config:/config
+    depends_on:
+      - app
+
+  app:
+    image: matomo:latest
+    restart: always
+    volumes:
+      - ./matomo_data:/var/www/html
+    environment:
+      MATOMO_DATABASE_HOST: db
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10
+    command: --max-allowed-packet=64MB
+    restart: always
+    volumes:
+      - ./mysql_db:/var/lib/mysql
+    env_file:
+      - .env
+
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
