@@ -69,3 +69,10 @@ the selected text to the specified width.
 Or in Normal mode, you can use gq followed by a motion command to reformat a
 specific part of the text. For example, to reformat the current paragraph, you
 would use `gqap`.
+
+## Delete everything after space on the same line
+`:%s/\(\S\+\s\).*/\1`
+
+## Slash at end of every line
+`:%s/$/ \\/`
+

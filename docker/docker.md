@@ -9,7 +9,7 @@ has_children: true
 ## Install
 
 ```bash
-apt install -y apparmor-utils docker.io docker-compose
+apt install -y apparmor-utils docker.io docker-compose docker-compose-plugin
 ```
 
 ## SSH in Dockerfile (ugly!)

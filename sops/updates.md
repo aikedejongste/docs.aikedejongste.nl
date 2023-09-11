@@ -53,6 +53,12 @@ Or without the questions if you are comfortable with that:
 apt update && apt dist-upgrade -y && apt autoremove -y && apt clean && date && reboot
 ```
 
+Or with screen on unstable connections:
+
+```bash
+sudo screen sh -c "apt update && apt dist-upgrade && apt autoremove && apt clean && date && reboot"
+```
+
 The date is there so it outputs the time before the reboot,
 if you are waiting 5 minutes for it to come back you know
 something is wrong.

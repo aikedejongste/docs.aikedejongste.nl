@@ -41,3 +41,14 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 ```bash
 rbenv install 1.2.3 && rbenv local 1.2.3
 ```
+
+## Edit credentials
+
+```bash
+EDITOR="vim" bin/rails credentials:edit --environment staging
+```
+
+Check the result with:
+`Rails.configuration.database_configuration` on the Rails console.
+
+

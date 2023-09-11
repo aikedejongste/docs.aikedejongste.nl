@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sensors
+title: Sensors and power
 has_children: false
 parent: Linux
 ---
@@ -24,3 +24,26 @@ upower -i /org/freedesktop/UPower/devices/battery_BAT0
 ```bash
 busctl call org.freedesktop.UPower /org/freedesktop/UPower/devices/battery_BAT0 org.freedesktop.UPower.Device Refresh
 ```
+
+## Gnome power settings
+
+```bash
+gsettings get org.gnome.settings-daemon.plugins.power < schema >
+```
+
+Available schemas:
+
+- ambient-enabled
+- idle-dim
+- lid-close-battery-action
+- power-button-action
+- sleep-inactive-ac-timeout
+- sleep-inactive-battery-timeout
+- idle-brightness
+- lid-close-ac-action
+- lid-close-suspend-with-external-monitor
+- power-saver-profile-on-low-battery
+- sleep-inactive-ac-type
+- sleep-inactive-battery-type
+
+But usually Upower takes over, see: `/etc/UPower/UPower.conf`

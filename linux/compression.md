@@ -9,9 +9,33 @@ parent: Linux
 
 ## pigz
 
+### Install
+
 ```bash
 apt install pigz
 ```
+
+### Compress single file:
+
+```bash
+pigz filename.txt
+```
+
+### Compress directory:
+
+```bash
+tar --use-compress-program="pigz -k " -cf oldsystem.tgz OLDSYSTEM/
+```
+
+### Decompress single file:
+
+```bash
+pigz -dc data.pigz > data.out
+```
+
+### Decompress directory:
+
+
 
 ## gzip
 

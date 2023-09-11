@@ -7,6 +7,9 @@ parent: Docker
 
 # Dockerfile PHP
 
+
+## Normal Laravel container
+
 ```bash
 FROM php:8.1-apache
 
@@ -50,4 +53,18 @@ RUN composer update && \
     php artisan optimize && \
     php please cache:clear && \
     php please stache:refresh
+```
+
+## Run a scheduler
+
+Put this in a file called `docker-scheduler-entrypoint.sh` and copy it into the container with the Dockerfile:
+
+```bash
+COPY docker-scheduler-entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/docker-scheduler-entrypoint.sh
+```
+
+```bash
+!#/bin/bash
+while true; do php artisan schedule:run --verbose --no-interaction & sleep 60; done
 ```
