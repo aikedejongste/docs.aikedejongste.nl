@@ -9,5 +9,8 @@ parent: Self Hosted Apps
 
 ## Client on Ubuntu
 
+```bash
+sudo apt install -y python3-launchpadlib
 sudo add-apt-repository ppa:nextcloud-devs/client -y
-udo apt install nextcloud-client -y
+sudo apt install nextcloud-client -y
+```
