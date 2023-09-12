@@ -27,6 +27,9 @@ certbot certonly --no-eff-email --agree-tos -m 'certbot@yourdomain.nl' \
 
 ## Cert and bundle order
 
+If you order from Xolphin then `Apache-Nginx/star_stekker_app-fullchain.txt` is the cert + the chain in the
+correct order.
+
 1. cert.pem is cert first then ca bundle
 2. cert.key is just the key
 
