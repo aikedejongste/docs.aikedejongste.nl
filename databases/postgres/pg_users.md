@@ -119,3 +119,68 @@ EOF
 
 echo "Read-only user $READONLY_USERNAME created for database $PGDATABASE with password $READONLY_PASSWORD."
 ```
+
+
+## Create multiple read-only users
+
+```bash
+#!/bin/bash
+
+export PGDATABASE=bi-database
+export SCHEMA_NAME="public"
+
+READONLY_USERNAMES=("one" "two" "three")
+READONLY_PASSWORDS=("1234" "4567" "89101")
+
+for i in "${!READONLY_USERNAMES[@]}"; do
+      USERNAME=${READONLY_USERNAMES[$i]}
+      PASSWORD=${READONLY_PASSWORDS[$i]}
+
+  psql <<EOF
+    -- Create the read-only user with login privileges
+    CREATE USER $USERNAME WITH PASSWORD '$PASSWORD' LOGIN;
+
+    -- Connect to the target database
+    \c $PGDATABASE
+
+    -- Revoke all existing privileges for this user
+    REVOKE ALL ON DATABASE $PGDATABASE FROM $USERNAME;
+    REVOKE ALL ON ALL TABLES IN SCHEMA $SCHEMA_NAME FROM $USERNAME;
+    REVOKE ALL ON ALL SEQUENCES IN SCHEMA $SCHEMA_NAME FROM $USERNAME;
+
+    -- Grant connect permission to the database
+    GRANT CONNECT ON DATABASE $PGDATABASE TO $USERNAME;
+
+    -- Revoke all existing privileges for this user
+    DO
+    \$$
+    DECLARE
+        schema_name text;
+    BEGIN
+        FOR schema_name IN (SELECT schemata.schema_name FROM information_schema.schemata)
+        LOOP
+            EXECUTE 'REVOKE ALL ON ALL TABLES IN SCHEMA ' || schema_name || ' FROM ' || '$USERNAME';
+            EXECUTE 'REVOKE ALL ON ALL SEQUENCES IN SCHEMA ' || schema_name || ' FROM ' || '$USERNAME';
+        END LOOP;
+    END;
+    \$$;
+
+    -- Grant usage and select permission on all schemas
+    DO
+    \$$
+    DECLARE
+        schema_name text;
+    BEGIN
+        FOR schema_name IN (SELECT schemata.schema_name FROM information_schema.schemata)
+        LOOP
+            EXECUTE 'GRANT USAGE ON SCHEMA ' || schema_name || ' TO ' || '$USERNAME';
+            EXECUTE 'GRANT SELECT ON ALL TABLES IN SCHEMA ' || schema_name || ' TO ' || '$USERNAME';
+            EXECUTE 'ALTER DEFAULT PRIVILEGES IN SCHEMA ' || schema_name || ' GRANT SELECT ON TABLES TO ' || '$USERNAME';
+        END LOOP;
+    END;
+    \$$;
+EOF
+
+    echo "Read-only user $USERNAME created for database $PGDATABASE with password $PASSWORD."
+done
+```

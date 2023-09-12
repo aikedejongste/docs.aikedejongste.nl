@@ -7,6 +7,12 @@ parent: Databases
 
 # Mariadb
 
+## Install only the client
+
+```bash
+apt install mariadb-client
+```
+
 ## Access MariaDB console when installed with Bitnami Helm Chart
 
 ```

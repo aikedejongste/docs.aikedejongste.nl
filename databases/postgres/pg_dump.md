@@ -7,6 +7,10 @@ parent: Databases
 
 # pg_dump
 
+## Related:
+
+- [pghoard backups](https://github.com/Aiven-Open/pghoard)
+
 ## Step by step
 
 ## Need pg_dump?

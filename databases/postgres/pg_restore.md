@@ -31,7 +31,9 @@ process: drop and create. Or only use --clean and don't add --create.
 * `-U` - user/role (can also be set with PGUSER env var)
 * `-Fd / -Fc` - directory format or compressed single file
 
-## Good options for backups
+## Good options for restoring backups
+
+* `--disable-triggers` - disable triggers
 
 ## Good options for migrations/bi/development
 
@@ -87,3 +89,4 @@ EOF
 
 echo "Read-only permissions reapplied for user $READONLY_USERNAME on database $PGDATABASE"
 ```
+

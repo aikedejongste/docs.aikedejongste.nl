@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Prom - Apache
+title: Prometheus - Apache
 has_children: false
 parent: Monitoring
 ---

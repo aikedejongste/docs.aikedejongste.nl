@@ -21,6 +21,13 @@ docker pull timescale/timescaledb-ha:pg14-latest
 
 Enable with `CREATE EXTENSION IF NOT EXISTS timescaledb;`
 
+## Show installed version
+
+```bash
+SELECT default_version, installed_version FROM pg_available_extensions where name = 'timescaledb';
+```
+
+
 ## Troubleshooting
 
 `ERROR:  could not open extension control file "/usr/share/postgresql/13/extension/timescaledb.control":

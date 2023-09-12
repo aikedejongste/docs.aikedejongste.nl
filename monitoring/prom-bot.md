@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Prometheus bots
+title: Prometheus - Bot
 has_children: false
 parent: Monitoring
 ---

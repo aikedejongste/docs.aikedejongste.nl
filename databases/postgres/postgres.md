@@ -15,9 +15,6 @@ has_children: false
 
 `\dn`
 
-## Show all tables in all schemas
-
-`\dn *.*`
 
 ## Show databases
 
@@ -27,9 +24,20 @@ has_children: false
 
 `\dt or \dt+`
 
-## List roles
+## Show all tables in all schemas
+
+`\dt+ *.*`
+
+## List roles (users)
 
 `\du`
+
+## Check access for role
+
+`SELECT table_catalog, table_schema, table_name, privilege_type FROM information_schema.table_privileges WHERE  grantee = '< YOU >';`
+
+## Check if role can access a view
+
 
 ## Change user password
 

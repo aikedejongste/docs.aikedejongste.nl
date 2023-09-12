@@ -45,3 +45,9 @@ alertmanager:
   restart: never
 
 ```
+
+## Queries
+
+### Predict days untill disk full:
+
+`(-node_filesystem_free_bytes{mountpoint="/",instance="host.you.app:9100"} / deriv(node_filesystem_free_bytes{mountpoint="/"}[24h])) / 3600 / 24`
