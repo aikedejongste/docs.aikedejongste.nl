@@ -50,5 +50,3 @@ EDITOR="vim" bin/rails credentials:edit --environment staging
 
 Check the result with:
 `Rails.configuration.database_configuration` on the Rails console.
-
-

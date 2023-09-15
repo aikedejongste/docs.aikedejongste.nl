@@ -14,7 +14,6 @@ parent: Networking
 
 - [Wireguard UI](https://github.com/ngoduykhanh/wireguard-ui)
 
-
 ## Tailscale alternative
 
-I haven't tried it but was recommened to me: [innernet](https://github.com/tonarino/innernet)
+I haven't tried it but was recommended to me: [innernet](https://github.com/tonarino/innernet)

@@ -120,7 +120,6 @@ EOF
 echo "Read-only user $READONLY_USERNAME created for database $PGDATABASE with password $READONLY_PASSWORD."
 ```
 
-
 ## Create multiple read-only users
 
 ```bash

@@ -80,4 +80,3 @@ The first one only exports 1 metric.
       SENTRY_EXPORTER_ORG: "you"
       SENTRY_EXPORTER_PROJECTS: "you"
 ```
-

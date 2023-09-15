@@ -58,7 +58,7 @@ The out_interface is usually the public interface!
     path: /etc/iptables/rules.v4
 ```
 
-## Optional steps:
+## Optional steps
 
 ```yaml
 - name: Set ip forwarding on in /proc and in the sysctl file and reload if necessary

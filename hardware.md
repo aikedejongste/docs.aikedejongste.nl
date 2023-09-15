@@ -8,6 +8,10 @@ has_children: false
 
 To do good work you need good tools. This is my list of recommendations:
 
+## Laptop ChromeOS
+
+Filtered list at Tweakers.net: [link](https://tweakers.net/laptops/vergelijken/#filter:TY6xbsMwDET_hbMRSCQlS_6AAhk6eSwyGLbaCnBiw3aDoIH_vaTcIdPp-E5HPiE9-vFnSEP7Pc0rNB_BEVXWeOcvFeTbPS2bojaNqd_ydIPmsxvXVMHcfaU2_yZorDFil9yn9yxczFrSUjqn_jxoLRFjReSctK4yfcvjlhYhTxBiVG_TJkFAawkqsD64oMqslnwRjCbAZRcvVfrpqhuhPgWLTvi1e4iN_mSghBhfmm1NAbUyYjyU4rEiOqNK8lKVHBfOVhWpZuWIIXqdB2fNcYWPrAvu3VhOd6i9gQMVXNOBjyPJmP-zmP3LL8dUS3zf_wA)
+
 ## Laptop Linux
 
 ### [Lenovo X1 Carbon](https://www.lenovo.com/nl/nl/laptops/thinkpad/thinkpad-x1/ThinkPad-X1-Carbon-Gen-11/p/LEN101T0049)

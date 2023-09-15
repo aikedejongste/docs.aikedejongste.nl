@@ -17,4 +17,4 @@ jobs:
           level: info
           fail_on_error: true
           exclude: |
-            sops/*nl.md
+            ./sops/*

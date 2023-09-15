@@ -89,4 +89,3 @@ EOF
 
 echo "Read-only permissions reapplied for user $READONLY_USERNAME on database $PGDATABASE"
 ```
-

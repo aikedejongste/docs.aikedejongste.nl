@@ -91,3 +91,9 @@ C:\Windows\System32\cmd.exe /k %windir%\System32\reg.exe ADD HKLM\SOFTWARE\Micro
 ## Lenovo Vantage in MS store
 
 Direct [link](https://apps.microsoft.com/store/detail/lenovo-vantage/9WZDNCRFJ4MV?hl=en-us&gl=us)
+
+## Install without internet
+
+On the “Oops, you've lost internet connection” or “Let's connect you to a network” page,
+use the “Shift + F10” keyboard shortcut. In Command Prompt, type the OOBE\BYPASSNRO
+command to bypass network requirements on Windows 11 and press Enter.

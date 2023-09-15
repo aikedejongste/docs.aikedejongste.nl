@@ -7,7 +7,7 @@ parent: Databases
 
 # pg_dump
 
-## Related:
+## Related
 
 - [pghoard backups](https://github.com/Aiven-Open/pghoard)
 
@@ -25,14 +25,14 @@ apt install postgresql-client-14
 
 ## WITHOUT roles (good for migrations)
 
-* `--no-privileges`
-* `--no-owner`
+- `--no-privileges`
+- `--no-owner`
 
 ## Options and examples
 
-* `-Fp` = format plain, this is fastest but produces normal sql
-* `-Fc` = format compressed, much smaller result, much slower
-* `-N 'plpsql'` = exclude an extension
+- `-Fp` = format plain, this is fastest but produces normal sql
+- `-Fc` = format compressed, much smaller result, much slower
+- `-N 'plpsql'` = exclude an extension
 
 --jobs=NUMBER OF CORES - This allows the dump to run multiple jobs. My recommendation is to set this
 equal to the number of cores available on the machine the dump is running on. You must either use

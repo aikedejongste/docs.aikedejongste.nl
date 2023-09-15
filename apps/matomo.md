@@ -61,7 +61,6 @@ Next time try a LocationMatch block:
 </LocationMatch>
 ```
 
-
 version: '3.7'
 
 services:
