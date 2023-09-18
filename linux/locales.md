@@ -7,7 +7,6 @@ parent: Linux
 
 # Locales on Debian
 
-
 Sometimes: `apt-get install locales-all`
 
 ```

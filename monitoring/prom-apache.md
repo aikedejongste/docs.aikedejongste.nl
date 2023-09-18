@@ -51,7 +51,7 @@ There is a default status location block, just add your IP addresses.
 </Location>
 ```
 
-## Related:
+## Related
 
 ```conf
 <Location "/md-status">
@@ -59,4 +59,3 @@ There is a default status location block, just add your IP addresses.
   Require ip 127.0.0.1 1.2.3.4
 </Location>
 ```
-

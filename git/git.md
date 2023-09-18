@@ -61,3 +61,11 @@ OR
 git remote add origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}
 git push --set-upstream origin master
 ```
+
+## Get Team ids for Oauth
+
+```bash
+export PAT= ...
+export ORG= ...
+curl -s -H "Authorization: token $PAT"   -H "Accept: application/vnd.github.v3+json"   https://api.github.com/orgs/$ORG/teams | jq '.[] | .id,.name'
+```

@@ -7,7 +7,6 @@ parent: Docker
 
 # Dockerfile PHP
 
-
 ## Normal Laravel container
 
 ```bash

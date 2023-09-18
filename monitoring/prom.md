@@ -7,7 +7,6 @@ parent: Monitoring
 
 # Prometheus
 
-
 ```yaml
 
 version: "3"
@@ -48,6 +47,6 @@ alertmanager:
 
 ## Queries
 
-### Predict days until disk full:
+### Predict days until disk full
 
 `(-node_filesystem_free_bytes{mountpoint="/",instance="host.you.app:9100"} / deriv(node_filesystem_free_bytes{mountpoint="/"}[24h])) / 3600 / 24`
