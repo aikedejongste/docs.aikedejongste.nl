@@ -25,6 +25,21 @@ upower -i /org/freedesktop/UPower/devices/battery_BAT0
 busctl call org.freedesktop.UPower /org/freedesktop/UPower/devices/battery_BAT0 org.freedesktop.UPower.Device Refresh
 ```
 
+## Restrict charging to 90%
+
+Related link: [here](https://shallowsky.com/blog/linux/laptop/lenovo-charge-limiting.html)
+
+`charge_start_threshold` is the legacy API
+
+`charge_control_start_threshold` is the current API
+
+```bash
+apt install tlp
+
+echo 85 > /sys/class/power_supply/BAT0/charge_control_start_threshold
+echo 90 > /sys/class/power_supply/BAT0/charge_control_end_threshold
+```
+
 ## Gnome power settings
 
 ```bash
