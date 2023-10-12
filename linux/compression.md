@@ -15,27 +15,25 @@ parent: Linux
 apt install pigz
 ```
 
-### Compress single file:
+### Compress single file
 
 ```bash
 pigz filename.txt
 ```
 
-### Compress directory:
+### Compress directory
 
 ```bash
 tar --use-compress-program="pigz -k " -cf oldsystem.tgz OLDSYSTEM/
 ```
 
-### Decompress single file:
+### Decompress single file
 
 ```bash
 pigz -dc data.pigz > data.out
 ```
 
-### Decompress directory:
-
-
+### Decompress directory
 
 ## gzip
 

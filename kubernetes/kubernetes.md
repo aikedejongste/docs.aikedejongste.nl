@@ -6,6 +6,14 @@ has_children: true
 
 # Kubernetes
 
+## Install kubectl
+
+```bash
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.28/deb/Release.key | gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.28/deb/ /' | tee /etc/apt/sources.list.d/kubernetes.list
+```
+
 ## Install k3s SINGLE NODE
 
 ```yaml
@@ -110,3 +118,10 @@ Ansible
         state: absent
       tags: [pre-reqs]
 ```
+
+## Kubectl sort by time
+
+```bash
+kubectl get events -n <namespace> --sort-by=.metadata.creationTimestamp
+```
+

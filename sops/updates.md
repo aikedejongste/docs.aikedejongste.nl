@@ -37,7 +37,7 @@ backups. So that if something goes wrong we can easily
 go back to the way it was. This depends on the server
 and the kind of updates we're doing. For container hosts
 this is not needed but for a complicated Ubuntu install
-it definately is.
+it definitely is.
 
 ### 4. Update
 

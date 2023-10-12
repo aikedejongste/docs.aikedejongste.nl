@@ -17,9 +17,17 @@ apt install curl ufw fail2ban git-core apt-transport-https ca-certificates \
             libreadline-dev  libyaml-dev  libxml2-dev  libxslt1-dev  \
             libcurl4-openssl-dev libffi-dev dirmngr gnupg autoconf bison \
             libreadline6-dev libncurses5-dev libmysqlclient-dev mysql-server-5.7 \
-            rbenv ruby2.3 ruby2.3-dev bundler python3-certbot-apache
+            rbenv ruby2.3 ruby2.3-dev bundler python3-certbot-apache \
+
 ```
 
+## New list of dependencies
+
+```bash
+apt install libmagic-dev # for ruby-filemagic
+
+pip3 install -U numpy pandas
+```
 ## For PG gem
 
 ```bash

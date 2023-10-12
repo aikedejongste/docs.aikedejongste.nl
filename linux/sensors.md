@@ -12,6 +12,10 @@ parent: Linux
 ```bash
 cat /sys/class/power_supply/BAT0/power_now | awk '{print $1*10^-6 " W"}'
 ```
+or
+```bash
+while true; do cat /sys/class/power_supply/BAT0/power_now | awk '{print $1*10^-6 " W"}'; sleep 2; done
+```
 
 ## Get current battery info
 

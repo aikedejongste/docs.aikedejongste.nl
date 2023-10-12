@@ -80,7 +80,6 @@ parent: Webservers
    ProxyPassReverse / http://internal-ip:80/
 ```
 
-
 ## ProxyPass to invalid certificate
 
 ```
@@ -90,15 +89,16 @@ parent: Webservers
     SSLProxyCheckPeerName off
 ```
 
-
 ## Use variables for IP adresses
 
 In Apache config somewhere:
+
 ```
 Define ip_addr_vpn 1.2.3.4
 ```
 
 In vhost use:
+
 ```
   Require ip ${ip_addr_vpn}
 ```
@@ -120,7 +120,7 @@ There is a default status location block, just add your IP addresses.
 </Location>
 ```
 
-## Related:
+## Related
 
 ```conf
 <Location "/md-status">
@@ -129,4 +129,6 @@ There is a default status location block, just add your IP addresses.
 </Location>
 ```
 
+## Errors
 
+### AH03307: ap_proxy_transfer_between_connections: error on sock - ap_pass_brigade

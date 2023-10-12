@@ -34,6 +34,8 @@ certbot certonly --no-eff-email --agree-tos -m 'certbot@yourdomain.nl' \
 If you order from Xolphin then `Apache-Nginx/star_stekker_app-fullchain.txt` is the cert + the chain in the
 correct order.
 
+Otherwise the order is like this:
+
 1. cert.pem is cert first then ca bundle
 2. cert.key is just the key
 
@@ -44,7 +46,17 @@ or
 
 or
 
-1. altogether is ....
+1. Altogether is cert, chain, key
+
+For example for Haproxy:
+
+```bash
+export domain=yourdomain.nl
+cat /etc/letsencrypt/live/$domain/fullchain.pem /etc/letsencrypt/live/$domain/privkey.pem > fullchainkey.pem
+
+cat /etc/letsencrypt/live/$domain/fullchain.pem /etc/letsencrypt/live/$domain/privkey.pem | base64 -w 0 > fullchainkey.pem
+```
+
 
 ## Check k3s cert expiration date
 

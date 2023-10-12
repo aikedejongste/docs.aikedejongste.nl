@@ -31,6 +31,13 @@ set +x
 find /home/aike -type f -printf '%T+ %p\n' | sort | head -n 1
 ```
 
+## Find by date
+
+```bash
+find . -name "*.yaml" -newermt "2023-09-22" ! -newermt "2023-09-23"
+```
+
+
 ## Generate a password
 
 ```bash
