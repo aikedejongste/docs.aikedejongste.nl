@@ -6,6 +6,8 @@ parent: Databases
 
 # Postgres Users and Roles
 
+Usernames with underscores are preferred over usernames with dashes.
+
 ## Delete a user
 
 `DROP USER IF EXISTS readonly_user`

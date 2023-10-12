@@ -7,17 +7,18 @@ has_children: false
 
 # Postgres
 
-## Connect to database
+## 1. Show databases
+
+`\l`
+
+## 2. Connect to database
 
 `\c`
 
-## Show schemas
+## 3. Show schemas
 
 `\dn`
 
-## Show databases
-
-`\l`
 
 ## Show tables
 
@@ -87,6 +88,12 @@ Non interactive password:
 
 ```bash
 PGPASSWORD=postgresSuperUserPsw psql -h localhost -U postgres
+```
+
+## Show active connections
+
+```bash
+SELECT * FROM pg_stat_activity;
 ```
 
 ## Config

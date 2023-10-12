@@ -48,12 +48,19 @@ the directory or custom output formats. Speaking of which:
 
 --table=NAME OF TABLE - This flag specifies which table to dump. Multiple --table flag may be used together.
 
+## Other option
+
+```bash
 $ pg_dump -Z0 -j 10 -Fd database_name -f dumpdir
 $ tar -cf - dumpdir | pigz > dumpdir.tar.gz
 $ rm dumpdir
+```
 
+## Quick dump and restore
+```bash
 pg_dump -Fc -Z 9  --file=file.dump myDb
 pg_restore -Fc -j 8  file.dump
+```
 
 ## Performance and convenience
 
