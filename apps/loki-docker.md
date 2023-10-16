@@ -7,7 +7,11 @@ parent: Self Hosted Apps
 
 # Loki Docker
 
-With a docker-compose.yaml:
+## Tips
+
+- Chown data dirs to 10001:10001?
+
+## Run with a docker-compose.yaml:
 
 ```yaml
 version: "3"
@@ -16,16 +20,17 @@ networks:
   loki:
 
 services:
-  loki:
-    image: grafana/loki:latest
-    container_name: loki
-    restart: always
+  caddy:
+    image: caddy:latest
+    container_name: caddy
+    restart: unless-stopped
     ports:
-      - "3100:3100"
-    command: -config.file=/etc/loki/local-config.yaml
+      - "443:443"
+      - "443:443/udp"
     volumes:
-      - /opt/loki/loki-data:/loki
-      - /opt/loki/loki-config.yaml:/etc/loki/local-config.yaml
+      - /opt/Caddyfile:/etc/caddy/Caddyfile
+      - /opt/caddy_data:/data
+      - /opt/caddy_config:/config
     networks:
       - loki
   grafana:
@@ -36,8 +41,20 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./grafana-config.ini:/etc/grafana/grafana.ini
-      - ./grafana-data:/var/lib/grafana
+      - /opt/grafana_config/grafana.ini:/etc/grafana/grafana.ini
+      - /opt/grafana_data:/var/lib/grafana
+    networks:
+      - loki
+  loki:
+    image: grafana/loki:latest
+    command: -log.level=info -config.file=/etc/loki/local-config.yaml
+    container_name: loki
+    restart: always
+    ports:
+      - "3100:3100"
+    volumes:
+      - /opt/loki-data:/loki
+      - /opt/loki-config/local-config.yaml:/etc/loki/local-config.yaml
     networks:
       - loki
   promtail:
@@ -51,7 +68,43 @@ services:
       - loki
 ```
 
-The Loki config:
+
+## Very minimal Loki config:
+
+```yaml
+auth_enabled: false
+
+server:
+  http_listen_port: 3100
+
+common:
+  ring:
+    instance_addr: 127.0.0.1
+    kvstore:
+      store: inmemory
+  replication_factor: 1
+  path_prefix: /loki
+
+schema_config:
+  configs:
+  - from: 2020-05-15
+    store: boltdb-shipper
+    object_store: filesystem
+    schema: v11
+    index:
+      prefix: index_
+      period: 24h
+
+storage_config:
+  tsdb_shipper:
+    active_index_directory: /loki/index
+    cache_location: /loki/index_cache
+    shared_store: filesystem
+  filesystem:
+    directory: /loki/chunks
+```
+
+## Other working Loki config:
 
 ```yaml
 
@@ -96,7 +149,7 @@ limits_config:
   retention_period: 100d
 ```
 
-The Promtail config:
+## The Promtail config:
 
 ```yaml
 server:

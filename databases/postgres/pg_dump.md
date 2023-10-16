@@ -30,14 +30,14 @@ apt install postgresql-client-14
 
 ## Options and examples
 
-- `-Fp` = format plain, this is fastest but produces normal sql
-- `-Fc` = format compressed, much smaller result, much slower
+- `-Fp` = format plain, this is fastest but produces normal SQL.
+- `-Fc` = format custom, much smaller result, much slower. Suitable for input into pg_restore.
+- `-Fd` = format directory, this is required for parallel jobs.
+- `--file=NAME OF DUMP` = The file/directory to output to.
 - `-N 'plpsql'` = exclude an extension
 - `--jobs=NUMBER OF CORES` = This allows the dump to run multiple jobs.
-- `--format=d` = This tells pg_dump that you want to use the directory output format. This is required for parallel jobs.
 - `--data-only` = This is the flag to dump only the data from the tables and not the schema information.
-- `--schema=public` = Instructs pg_dump to only dump the public schemas, for most cases this is all you need.
-- `--file=NAME OF DUMP` = The file/directory to output to.
+- `--schema=public` = Dump to only the public schemas, for most cases this is all you need.
 - `--table=NAME OF TABLE` = This flag specifies which table to dump. Multiple --table flag may be used together.
 
 ## Other option
@@ -80,6 +80,19 @@ PGSSLMODE=
 PGHOST=
 PGPORT=
 PGDATABASE=
+MONITOR_URL=
+DESTINATION=
+DATE=`date +%d`
+LIST=$(psql -l | grep UTF8 | awk '{ print $1}' | grep -vE '^-|^List|^Name|template[0|1]')
 
-pg_dump --format=custom --no-privileges --disable-triggers -Fp | pigz > data.pigz
+set -e
+set -x
+
+for d in $LIST
+do
+  pg_dump -Z1 -Fc $d -f $DESTINATION/daily.$DATE.$d.dump || exit 1
+  pg_dump --format=custom --no-privileges --disable-triggers -Fp | pigz > data.pigz
+done
+
+curl -s $MONITOR_URL
 ```

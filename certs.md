@@ -48,7 +48,7 @@ or
 
 1. Altogether is cert, chain, key
 
-For example for Haproxy:
+## Full chain for Haproxy:
 
 ```bash
 export domain=yourdomain.nl
