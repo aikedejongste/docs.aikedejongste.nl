@@ -10,6 +10,9 @@ parent: Self Hosted Apps
 ## Tips
 
 - Chown data dirs to 10001:10001?
+- [Loki Docker driver](https://docs.aikedejongste.nl/logging/loki.md)
+- [Caddy auth config here](https://docs.aikedejongste.nl/webservers/caddy.md)
+- Hash passwords for Caddy with `caddy hash-password`
 
 ## Run with a docker-compose.yaml:
 
@@ -31,6 +34,9 @@ services:
       - /opt/Caddyfile:/etc/caddy/Caddyfile
       - /opt/caddy_data:/data
       - /opt/caddy_config:/config
+    environment:
+      - LOKI_USER=loki
+      - LOKI_PASS= < user double $ to escape $ in password hashes here - create with caddy hash-password >
     networks:
       - loki
   grafana:
@@ -161,6 +167,9 @@ positions:
 
 clients:
   - url: http://loki:3100/loki/api/v1/push
+    #basic_auth:
+    #  username: abc
+    #  password: 123
 
 scrape_configs:
   - job_name: system
@@ -193,5 +202,5 @@ scrape_configs:
     - source_labels:
       - __journal_syslog_identifier
       target_label: syslog_identifier
-
 ```
+

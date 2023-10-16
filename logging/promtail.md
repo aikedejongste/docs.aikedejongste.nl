@@ -22,7 +22,7 @@ services:
       - /opt/promtail/promtail.yml:/etc/promtail/config.yml
       - /var/log/journal/:/var/log/journal/
       - /run/log/journal/:/run/log/journal/
-      - /etc/machine-id:/etc/machine-id 
+      - /etc/machine-id:/etc/machine-id
     command: -config.file=/etc/promtail/config.yml
 ```
 
@@ -38,6 +38,19 @@ positions:
 
 clients:
   - url: https://loki.company.name/loki/api/v1/push
+    basic_auth:
+      username: loki
+      password: 123456789
+
+scrape_configs:
+- job_name: system
+  static_configs:
+  - targets:
+      - localhost
+    labels:
+      job: varlogs
+      __path__: /var/log/*log
+
 
 scrape_configs:
   - job_name: system
