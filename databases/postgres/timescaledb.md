@@ -6,6 +6,13 @@ parent: Databases
 
 # Timescaledb
 
+
+## Notes
+
+- Extensions are per database, not per server
+- The user who runs CREATE EXTENSION becomes the owner of the extension for purposes of later privilege checks, and normally also becomes the owner of any objects created by the extension's script.
+- Only superusers can create the extension or update it to a newer version.
+
 ## Installation
 
 ```bash

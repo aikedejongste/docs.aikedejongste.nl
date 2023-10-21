@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Postgres - users
+title: Postgres - create users
 parent: Databases
 ---
 

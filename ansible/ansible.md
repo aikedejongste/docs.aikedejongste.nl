@@ -19,6 +19,16 @@ apt-get update && \
   pip3 install ansible
 ```
 
+## Install modules/colletions
+
+```bash
+ansible-galaxy collection install kubernetes.core && \
+ansible-galaxy collection install ansible.posix && \
+ansible-galaxy collection install community.general && \
+ansible-galaxy collection install community.sops && \
+ansible-galaxy collection install community.postgresql
+```
+
 ## Display message
 
 ```yaml

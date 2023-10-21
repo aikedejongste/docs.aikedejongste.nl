@@ -75,3 +75,17 @@ networks:
 ```bash
 docker run --rm --entrypoint sh ubuntu:latest -c "sleep infinity"
 ```
+
+## Log rotation
+
+In /etc/docker/daemon.json:
+
+```yaml
+{
+  "log-driver": "json-file",
+  "log-opts": {
+    "max-size": "100m",
+    "max-file": "5"
+  }
+}
+```

@@ -14,4 +14,14 @@ docker run --rm -i hadolint/hadolint < Dockerfile
 docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint
 ```
 
-reviewdog!
+## Markdownlint
+
+For commandline usage and systemwide installation:
+
+```
+npm install -g markdownlint-cli
+```
+
+Use with `markdownlint <filename>`.
+
+## Reviewdog

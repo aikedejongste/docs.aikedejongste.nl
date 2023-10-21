@@ -10,8 +10,8 @@ parent: Self Hosted Apps
 ## Tips
 
 - Chown data dirs to 10001:10001?
-- [Loki Docker driver](https://docs.aikedejongste.nl/logging/loki.md)
-- [Caddy auth config here](https://docs.aikedejongste.nl/webservers/caddy.md)
+- [Loki Docker driver](https://docs.aikedejongste.nl/logging/loki.html)
+- [Caddy auth config here](https://docs.aikedejongste.nl/webservers/caddy.html)
 - Hash passwords for Caddy with `caddy hash-password`
 
 ## Run with a docker-compose.yaml:

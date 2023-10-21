@@ -19,8 +19,13 @@ has_children: false
 
 `\dn`
 
+## 4. List extensions
 
-## Show tables
+Extensions are per database. Not for the whole server.
+
+`\dx`
+
+## 5. Show tables
 
 `\dt or \dt+`
 
