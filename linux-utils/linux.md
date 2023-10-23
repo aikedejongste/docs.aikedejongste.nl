@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Linux Utils
+title: Linux
 has_children: true
 ---
 

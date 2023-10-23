@@ -66,3 +66,12 @@ Available schemas:
 - sleep-inactive-battery-type
 
 But usually Upower takes over, see: `/etc/UPower/UPower.conf`
+
+
+## Show Intel iGPU usuage
+
+```bash
+sudo intel_gpu_top
+```
+
+Alternatives I haven't tried are nvtop and glances.

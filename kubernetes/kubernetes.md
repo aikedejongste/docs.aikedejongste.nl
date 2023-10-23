@@ -59,6 +59,12 @@ kubectl run httpbin --image kennethreitz/httpbin --port 80 && kubectl expose pod
 
 ```
 
+## Quick busybox shell
+
+```bash
+k run -it --rm --restart=Never busybox --image=gcr.io/google-containers/busybox sh
+```
+
 ## Quick Ubuntu pod
 
 ```bash

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Linux Distros
+title: Operating Systems
 has_children: false
 ---
 

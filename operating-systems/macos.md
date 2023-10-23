@@ -1,6 +1,7 @@
 ---
 layout: default
 title: MacOS
+parent: Operating Systems
 ---
 
 # MacOS
