@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Operating Systems
+title: Flatcar
 has_children: false
 ---
 
-# Linux Distributions
-
-## Flatcar Linux
+# Flatcar Linux
 
