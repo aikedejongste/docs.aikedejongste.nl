@@ -6,6 +6,14 @@ parent: Logging
 
 # Elasticsearch
 
+## Check credentials
+
+```bash
+curl -v -u "user:pass" https://elastic.company.com
+```
+
+Should return some json and "You know, for search".
+
 ## Install Filebeat
 
 ```bash

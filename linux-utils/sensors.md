@@ -40,9 +40,11 @@ Related link: [here](https://shallowsky.com/blog/linux/laptop/lenovo-charge-limi
 ```bash
 apt install tlp
 
-echo 90 > /sys/class/power_supply/BAT0/charge_control_start_threshold
+echo 85 > /sys/class/power_supply/BAT0/charge_control_start_threshold
 echo 90 > /sys/class/power_supply/BAT0/charge_control_end_threshold
 ```
+
+Start and End cannot have the same value.
 
 ## Gnome power settings
 
