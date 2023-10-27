@@ -7,6 +7,14 @@ parent: Linux
 
 # Storage
 
+## dd disk to image
+
+TODO: test sparse!
+
+```bash
+dd if=/dev/nvme0n1 of=/media/user/storage-disk/full-disk.img conv=sync bs=512K status=progress
+```
+
 ## Resize partition
 
 ```bash
@@ -20,7 +28,7 @@ resize2fs /dev/sda1
 ## Alert script for disk usage
 
 ```bash
-#!/bin/bash 
+#!/bin/bash
 
 USEDSPACE=$(df -h | awk '{print $5}' | grep -vi use | cut -d'%' -f1)
 for i in $USEDSPACE

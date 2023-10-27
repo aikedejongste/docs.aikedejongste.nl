@@ -7,6 +7,8 @@ parent: Programming
 
 # Ruby code snippets
 
+For installation and dependencies see Rails page.
+
 ## Switch Ruby version
 
 ```bash

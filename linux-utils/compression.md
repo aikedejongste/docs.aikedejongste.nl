@@ -15,10 +15,22 @@ parent: Linux
 apt install pigz
 ```
 
-### Compress single file
+### Compress single file and delete original
 
 ```bash
 pigz filename.txt
+```
+
+### Compress single file and keep the original
+
+```bash
+pigz -k filename.txt
+```
+
+### Pigz check file contents
+
+```bash
+pigz -l file.gz
 ```
 
 ### Compress directory

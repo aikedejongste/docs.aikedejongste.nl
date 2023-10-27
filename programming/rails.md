@@ -23,8 +23,12 @@ apt install curl ufw fail2ban git-core apt-transport-https ca-certificates \
 
 ## New list of dependencies
 
+- libmagic-dev for ruby-filemagic
+- libvips for ..
+
 ```bash
-apt install libmagic-dev # for ruby-filemagic
+apt install libmagic-dev \
+            libvips
 
 pip3 install -U numpy pandas
 ```
