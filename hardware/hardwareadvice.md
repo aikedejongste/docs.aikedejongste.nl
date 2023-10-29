@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Hardware advice
+parent: Hardware
 has_children: false
 ---
 

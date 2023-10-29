@@ -13,6 +13,14 @@ title: Windows
 - [Signal](https://signal.org/download/windows/)
 - [Microsoft Office](https://setup.office.com/)
 
+## Put Windows ISO on USB stick
+
+On Ubuntu umount the file system first with `umount`. But do not eject the disk itself.
+
+```bash
+sudo dd if=Win11_22H2_EnglishInternational_x64v1.iso of=/dev/sdd bs=1M status=progress
+```
+
 ## Disable sleeping when locked
 
 Edit and set attributes = 2

@@ -6,6 +6,12 @@ parent: Networking
 
 # UFW
 
+## UFW without Ansible
+
+```bash
+ufw allow from 1.2.3.4 to any port ssh comment 'Aikes devjump host'
+```
+
 ## UFW disable logging
 
 ```ufw logging off```

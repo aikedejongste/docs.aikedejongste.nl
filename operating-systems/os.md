@@ -6,6 +6,13 @@ has_children: true
 
 # Operating Systems
 
+## Easy way to install OS from USB
+
+You install Ventoy to the usb disk once and later add ISO files. And it
+will create a boot menu for you.
+
+- [Ventoy](https://www.ventoy.net/en/index.html)
+
 ## Linux Distributions
 
 ### Flatcar Linux
@@ -26,4 +33,4 @@ sudo dd if=<file> of=<device> bs=16M status=progress oflag=sync
 
 ### Debian Install USB
 
-
+Use Ventoy!
