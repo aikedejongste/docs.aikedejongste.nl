@@ -25,6 +25,25 @@ e2fsck -f /dev/sda1
 resize2fs /dev/sda1
 ```
 
+## List disk makes and models
+
+```bash
+for dev in /sys/class/scsi_device/*/device/model; do
+  echo -n "Model for device ${dev##*/}: "
+  cat "$dev"
+done
+```
+
+## Format as exFAT
+
+After installing this the Gnome Disk utility also supports exFAT if you choose 'other'.
+
+```bash
+sudo apt install exfat-fuse exfatprogs
+sudo mkfs.exfat /dev/sdX
+```
+
+
 ## Alert script for disk usage
 
 ```bash

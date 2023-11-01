@@ -6,6 +6,10 @@ has_children: true
 
 # Docker
 
+## Related
+
+- [Docker Logging to Loki](https://docs.aikedejongste.nl/logging/loki.html)
+
 ## Install
 
 ```bash

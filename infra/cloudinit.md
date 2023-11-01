@@ -9,24 +9,31 @@ parent: Cloud Infrastructure
 ## Example cloud-init config
 
 ```bash
+#cloud-config
+
+hostname: servertje
+
 package_update: true
 package_upgrade: true
 
 packages:
-- htop
-- vim
-- curl
-- rsync
-- vnstat
-- git
-- ufw
+  - htop
+  - vim
+  - curl
+  - rsync
+  - vnstat
+  - git
+  - ufw
+  - docker.io
+  - docker-compose
+  - prometheus-node-exporter
 
 users:
-  - name: aike
+  - name: aikedejongste
     gecos: Aike de Jongste
     sudo: ALL=(ALL) NOPASSWD:ALL
-    groups: users, admin
-    ssh_import_id: None
+    groups: users, sudo, docker
+    ssh_import_id: null
     shell: /bin/bash
     lock_passwd: true
     ssh_authorized_keys:
