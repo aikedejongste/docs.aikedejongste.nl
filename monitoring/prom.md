@@ -7,6 +7,8 @@ parent: Monitoring
 
 # Prometheus
 
+## Run with docker-compose
+
 ```yaml
 
 version: "3"
@@ -50,3 +52,47 @@ alertmanager:
 ### Predict days until disk full
 
 `(-node_filesystem_free_bytes{mountpoint="/",instance="host.you.app:9100"} / deriv(node_filesystem_free_bytes{mountpoint="/"}[24h])) / 3600 / 24`
+
+
+## Build container with config with Github Actions
+
+```yaml
+name: BuildPrometheusContainer
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - master
+    paths: [ "infra/prometheus/*", ".github/workflows/prometheus.yaml" ]
+
+
+env:
+  REGISTRY: ghcr.io/your-company
+  IMAGE_NAME: prometheus-your-company
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: GitHub Environment Variables Action
+      uses: FranzDiebold/github-env-vars-action@v2
+
+    - name: Log in to the Container registry
+      uses: docker/login-action@65b78e6e13532edd9afa3aa52ac7964289d1a9c1
+      with:
+        registry: ${{ env.REGISTRY }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: promtool check config /etc/prometheus/prometheus.yml
+      run: docker run --rm -t -v "$(pwd)/infra/prometheus/:/etc/prometheus/" --entrypoint "/bin/promtool" prom/prometheus check config /etc/prometheus/prometheus.yml
+
+    - name: Build the Docker image
+      run: cd infra/prometheus && docker build . --label "org.opencontainers.image.source=https://github.com/your-company/${{ env.IMAGE_NAME }}" --tag ghcr.io/your-company/${{ env.IMAGE_NAME }}:latest --file Dockerfile
+
+    - name: Docker push with latest tag
+      run: docker push ghcr.io/your-company/${{ env.IMAGE_NAME }}:latest
+```

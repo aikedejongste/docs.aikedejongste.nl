@@ -12,6 +12,95 @@ Usernames with underscores are preferred over usernames with dashes.
 
 `DROP USER IF EXISTS readonly_user`
 
+## Script that creates one or more read-only users + schema permissions
+
+TODO: script should remove user and recreate if password is set
+
+```bash
+#!/bin/bash
+
+# Credentials for management
+export PGPASSWORD=
+export PGSSLMODE=prefer
+export PGUSER=postgres
+export PGHOST=
+export PGPORT=5432
+
+export PGDATABASE=
+
+# Credentials for read-only user
+#READONLY_PASSWORD=`tr -dc '[:alnum:]' </dev/urandom | head -c 12; echo`
+READONLY_USERNAMES=("grafana" "grafana2")
+READONLY_PASSWORDS=("1234" "4567")
+# Add your schemas in a space-separated list here or leave empty for all
+#SCHEMAS=("public my_schema")
+
+for i in "${!READONLY_USERNAMES[@]}"; do
+  USERNAME=${READONLY_USERNAMES[$i]}
+  PASSWORD=${READONLY_PASSWORDS[$i]}
+
+  # If SCHEMAS is empty, fetch all schema names, otherwise use the specified list
+  SCHEMA_CONDITION=""
+  if [ -z "$SCHEMAS" ]; then
+    echo "Using all schemas."
+    SCHEMA_CONDITION="SELECT schemata.schema_name FROM information_schema.schemata"
+  else
+    SCHEMA_CONDITION="SELECT unnest(string_to_array('$SCHEMAS', ' '))"
+  fi
+
+
+  psql -v ON_ERROR_STOP=1 <<EOF
+
+    -- Create the read-only user with login privileges
+    DO
+    \$\$BEGIN
+      CREATE USER $USERNAME WITH PASSWORD '$PASSWORD' LOGIN;
+    EXCEPTION WHEN DUPLICATE_OBJECT THEN
+      RAISE NOTICE 'User $USERNAME already exists. Skipping creation.';
+    END\$\$;
+
+    -- Revoke all existing privileges for this user
+    REVOKE ALL PRIVILEGES ON DATABASE $PGDATABASE FROM $USERNAME;
+
+    -- Grant connect permission to the database
+    GRANT CONNECT ON DATABASE $PGDATABASE TO $USERNAME;
+
+    -- Connect to the target database
+    \c $PGDATABASE
+
+    -- Grant or revoke privileges on specified or all schemas
+    DO
+    \$$
+    DECLARE
+        schema_name text;
+    BEGIN
+        FOR schema_name IN ($SCHEMA_CONDITION)
+        LOOP
+            -- Execute a test query, e.g., SELECT 1; You can replace the following line with any test query
+            EXECUTE 'SELECT 1;';
+
+            -- Simple test query
+            RAISE NOTICE 'Testing access for schema: %', schema_name;
+
+            -- Revoke existing privileges
+            EXECUTE 'REVOKE ALL PRIVILEGES ON ALL TABLES IN SCHEMA ' || schema_name || ' FROM ' || '$USERNAME';
+            EXECUTE 'REVOKE ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA ' || schema_name || ' FROM ' || '$USERNAME';
+
+            --  -- Grant new privileges
+            EXECUTE 'GRANT USAGE ON SCHEMA ' || schema_name || ' TO ' || '$USERNAME';
+            EXECUTE 'GRANT SELECT ON ALL TABLES IN SCHEMA ' || schema_name || ' TO ' || '$USERNAME';
+            EXECUTE 'ALTER DEFAULT PRIVILEGES IN SCHEMA ' || schema_name || ' GRANT SELECT ON TABLES TO ' || '$USERNAME';
+
+        END LOOP;
+
+    END;
+    \$$;
+EOF
+
+  echo "Read-only user $USERNAME created for database $PGDATABASE with password $PASSWORD."
+done
+```
+
 ## Example script that creates a read-only user
 
 It has read permissions on 1 schema.

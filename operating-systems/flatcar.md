@@ -2,6 +2,7 @@
 layout: default
 title: Flatcar
 has_children: false
+parent: Operating Systems
 ---
 
 # Flatcar Linux
