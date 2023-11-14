@@ -15,3 +15,7 @@ has_children: true
 ## Self hosted tools
 
 * [Healthchecks.io](https://healthchecks.io/)
+
+## Ruby on Rails specific
+
+* Graph the database connection pool (default 5).

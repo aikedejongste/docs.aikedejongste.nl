@@ -69,3 +69,18 @@ export PAT= ...
 export ORG= ...
 curl -s -H "Authorization: token $PAT"   -H "Accept: application/vnd.github.v3+json"   https://api.github.com/orgs/$ORG/teams | jq '.[] | .id,.name'
 ```
+
+## See which user a Github PAT belongs to
+
+```bash
+export PAT=..........
+curl -H "Authorization: token $PAT" https://api.github.com/user
+```
+
+## See user scopes for a Github PAT
+
+```bash
+export PAT=..........
+curl -s -I -H "Authorization: token $PAT" https://api.github.com/users/<YOU>
+```
+

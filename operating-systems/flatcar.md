@@ -12,6 +12,13 @@ cat example.yaml | docker run --rm -i quay.io/coreos/butane:release > /var/lib/l
 
 sudo flatcar-install -d /dev/sda -i fc.json
 
+## Docker buildx
+
+```bash
+mkdir -p ~/.docker/cli-plugins/
+wget -o ~/.docker/cli-plugins/docker-buildx https://github.com/docker/buildx/releases/download/v0.11.2/buildx-v0.11.2.linux-amd64
+chmod +x ~/.docker/cli-plugins/docker-buildx
+```
 
 ## Docker-compose
 

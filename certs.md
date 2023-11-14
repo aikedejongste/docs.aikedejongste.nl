@@ -115,3 +115,21 @@ openssl x509 -in company.com.pem -text | grep Issuer
 ```
 
 To see if this is a CA inspect the Issuer CN.
+
+## TransIP Wildcard
+
+Put the private key as one line in the .env file.
+
+```bash
+#!/bin/bash -e
+docker run -ti \
+        --env-file=.env \
+        --mount type=bind,source="${PWD}"/ssl,target="/etc/letsencrypt" \
+        --mount type=bind,source="${PWD}"/ssl/config,target="/opt/certbot-dns-transip/config" \
+        --mount type=bind,source="${PWD}"/ssl/logs,target="/opt/certbot-dns-transip/logs" \
+        rbongers/certbot-dns-transip \
+        certonly --manual --preferred-challenge=dns  \
+        --manual-auth-hook=/opt/certbot-dns-transip/auth-hook \
+        --manual-cleanup-hook=/opt/certbot-dns-transip/cleanup-hook \
+        -d '*.you.nl'
+```
