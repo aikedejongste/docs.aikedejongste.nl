@@ -8,6 +8,13 @@ parent: Databases
 
 Usernames with underscores are preferred over usernames with dashes.
 
+## Users and roles
+
+In PostgreSQL you can create a new user using the CREATE USER or the CREATE ROLE command.
+The difference between these two options is that CREATE USER sets the LOGIN privilege
+directly while CREATE ROLE will set this attribute to NOLOGIN.
+
+
 ## Delete a user
 
 `DROP USER IF EXISTS readonly_user`

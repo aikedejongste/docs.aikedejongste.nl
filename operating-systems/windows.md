@@ -12,6 +12,9 @@ title: Windows
 - [Firefox](https://www.microsoft.com/store/productId/9NZVDKPMR9RD)
 - [Signal](https://signal.org/download/windows/)
 - [Microsoft Office](https://setup.office.com/)
+- [TailScale](https://pkgs.tailscale.com/stable/tailscale-setup-latest.exe)
+- [VS Code](https://code.visualstudio.com/Download)
+- [Git](https://git-scm.com/download/win)
 
 ## Put Windows ISO on USB stick
 

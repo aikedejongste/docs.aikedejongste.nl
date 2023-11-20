@@ -133,3 +133,16 @@ docker run -ti \
         --manual-cleanup-hook=/opt/certbot-dns-transip/cleanup-hook \
         -d '*.you.nl'
 ```
+
+## TransIP Wildcard renew
+
+```bash
+#!/bin/bash -e
+cd /opt && /usr/bin/docker run -t \
+        --env-file=/opt/.env \
+        --mount type=bind,source="${PWD}"/ssl,target="/etc/letsencrypt" \
+        --mount type=bind,source="${PWD}"/ssl/config,target="/opt/certbot-dns-transip/config" \
+        --mount type=bind,source="${PWD}"/ssl/logs,target="/opt/certbot-dns-transip/logs" \
+        rbongers/certbot-dns-transip \
+        renew
+```
