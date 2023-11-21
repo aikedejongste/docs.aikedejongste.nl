@@ -10,6 +10,21 @@ has_children: false
 
 [SSLs.com](https://ssls.sjv.io/vNzVeW)
 
+## Favorite generator
+
+[mkcert](https://github.com/FiloSottile/mkcert)
+
+
+## Self signed cert on Windows
+
+```bash
+$cert = New-SelfSignedCertificate -DnsName "dev-feuerfest.app" -CertStoreLocation "cert:\LocalMachine\My"
+$pwd = ConvertTo-SecureString -String "wachtwoord" -Force -AsPlainText
+Export-PfxCertificate -Cert "cert:\LocalMachine\My\$($cert.Thumbprint)" -FilePath "certificate.pfx" -Password $pwd
+```
+
+Add it to Windows key store [link](https://community.spiceworks.com/how_to/1839-installing-self-signed-ca-certificate-in-windows).
+
 ## Cloudflare PKI and TLS toolkit
 
 [CloudFlare cfssl](https://github.com/cloudflare/cfssl)

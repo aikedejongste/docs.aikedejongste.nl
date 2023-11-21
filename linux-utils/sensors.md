@@ -7,6 +7,14 @@ parent: Linux
 
 # Hardware and sensors
 
+## Best battery info
+
+```bash
+sudo tlp-stat
+```
+
+short output with `-s`.
+
 ## Get current power consumption in watt
 
 ```bash
