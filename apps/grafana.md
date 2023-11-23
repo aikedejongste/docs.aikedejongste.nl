@@ -7,6 +7,15 @@ parent: Self Hosted Apps
 
 # Grafana Docker
 
+## Reset admin password
+
+```bash
+docker exec -it grafana bash
+grafana cli admin reset-admin-password 1234567890
+```
+
+## Run in Docker
+
 With a docker-compose.yaml:
 
 ```yaml

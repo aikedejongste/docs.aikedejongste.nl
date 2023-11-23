@@ -18,3 +18,32 @@ parent: Webservers
         return 200 "Contact: mailto:security@ you .nl";
   }
 ```
+
+## Simple hello world config
+
+```
+worker_processes 1;
+error_log stderr notice;
+events {
+    worker_connections 1024;
+}
+
+http {
+    variables_hash_max_size 1024;
+    access_log off;
+    real_ip_header X-Real-IP;
+    charset utf-8;
+
+    server {
+        listen 80;
+
+        location / {
+            return 200 "hello web1";
+        }
+
+        location /static/ {
+            alias static/;
+        }
+    }
+}
+```
