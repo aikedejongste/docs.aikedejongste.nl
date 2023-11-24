@@ -42,4 +42,3 @@ Host backup-storagebox
   HostName u12345.your-storagebox.de
   Port 23
 ```
-

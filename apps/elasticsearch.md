@@ -21,7 +21,6 @@ Execute these queries in the dev console `app/dev_tools#/console`
 
 `GET /.ds-logs-generic-default-2023.10.29-000004/_settings`
 
-
 ### Oldest index
 
 `GET _cat/indices?v&h=index,creation.date.string`

@@ -74,5 +74,3 @@ qm set $VM_ID --net0 e1000="$MAC_ADDRESS",bridge=vmbr0
 
 echo "VM setup complete."
 ```
-
-

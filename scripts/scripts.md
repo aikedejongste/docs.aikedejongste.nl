@@ -13,4 +13,3 @@ Useful and not useful scripts.
 ```bash
 curl -i -X POST -H 'Content-Type: application/json' -d '{"channel": "off-topic", "text": "@all happy weekend! 🎉"}' https://chat.company.com/hooks/......
 ```
-
