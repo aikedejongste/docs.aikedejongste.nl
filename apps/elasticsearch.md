@@ -7,6 +7,29 @@ parent: Self Hosted Apps
 
 # Elasticsearch
 
+## Cleanup and data usage in Elastic
+
+Execute these queries in the dev console `app/dev_tools#/console`
+
+### Sort indexes by size
+
+`GET _cat/indices?v&s=store.size:desc&h=index,store.size`
+
+### Settings and ILM for index
+
+`GET /.ds-logs-generic-default-2023.10.29-000004/_ilm/explain`
+
+`GET /.ds-logs-generic-default-2023.10.29-000004/_settings`
+
+
+### Oldest index
+
+`GET _cat/indices?v&h=index,creation.date.string`
+
+### See ILM policy for policy named test
+
+`GET /_ilm/policy/test`
+
 ## 2 installation methods
 
 * Helm Chart (<https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-install-helm.html>)

@@ -25,9 +25,13 @@ on:
   workflow_dispatch:
 ```
 
+or
+
+```yaml
 name: ansible-lint
 on:
  workflow_dispatch:
  push:
    branches: ["*"]
    paths: "ansible/**"
+```
