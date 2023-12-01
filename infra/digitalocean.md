@@ -8,7 +8,7 @@ parent: Cloud Infrastructure
 
 ## Links
 
-Firewall: [here](https://docs.aikedejongste.nl/linux/webhook.html#firewall-on-digital-ocean)
+Firewall: [here](https://docs.aikedejongste.nl/linux-utils/webhook.html#firewall-on-digital-ocean)
 
 ## doctl installation
 

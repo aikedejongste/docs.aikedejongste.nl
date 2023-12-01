@@ -2,7 +2,7 @@
 layout: default
 title: Headscale
 has_children: false
-parent: Self Hosted Apps
+parent: Networking
 ---
 
 # Headscale
@@ -31,6 +31,6 @@ You can get an overview of the current nodes in the webinterface and in the cont
 root@headscale1:~# docker exec -it headscale /bin/sh
 / # headscale node list
 ID | Hostname  | Name             | NodeKey | Namespace      | IP addresses | Online | Expired
-1  | node1     | aike-work-laptop | [abcde] | company-name   | 100.64.0.1   | online | no     
-2  | node2     | node2            | [edcba] | company-name   | 100.64.0.2   | online | no     
+1  | node1     | aike-work-laptop | [abcde] | company-name   | 100.64.0.1   | online | no
+2  | node2     | node2            | [edcba] | company-name   | 100.64.0.2   | online | no
 ```

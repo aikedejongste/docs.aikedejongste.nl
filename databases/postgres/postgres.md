@@ -116,3 +116,12 @@ psql -U $DB_USER -d $DB_NAME -a -f $SQL_FILE
 
 The -a option in the psql command prints all input lines to the standard output,
 so you'll see the SQL statements as they're executed. The -f option specifies the file to execute.
+
+## Create schema
+
+To execute the CREATE SCHEMA statement, you must have the CREATE privilege in the current database.
+
+```bash
+CREATE SCHEMA IF NOT EXISTS mlops;
+```
+TODO: SET OWNER

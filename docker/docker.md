@@ -27,6 +27,12 @@ RUN ssh-agent sh -c 'echo "$SSH_KEY" | ssh-add - ; npm install --force'
 docker rm -f $(docker ps -qa)
 ```
 
+## Remove all volumes from a host
+
+```bash
+docker volume rm $(docker volume ls -q)
+```
+
 ## Login with PAT
 
 Create a new Personal Access Token [here](https://github.com/settings/tokens/new).
