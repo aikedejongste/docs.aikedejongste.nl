@@ -29,3 +29,9 @@ sudo tailscale up --exit-node=100...... --exit-node-allow-lan-access --accept-ro
 sudo tailscale up --reset
 ```
 
+## Config
+
+```bash
+sudo tailscale set --auto-update
+```
+

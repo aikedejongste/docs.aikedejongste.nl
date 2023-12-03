@@ -43,6 +43,7 @@ or use one of my referral links to support me:
 | [Dropbox](https://www.dropbox.com/referrals/AAAc1Ay24GYAfmsQUpFrBztSknXBkS1fWCc?src=global9) | storage and a password manager|
 | [SSLs.com](https://ssls.sjv.io/vNzVeW) | Easiest SSL cert provider |
 | [Carrd.co](https://try.carrd.co/c1rk5rh4) | Simple website builder |
+| [Outsite.co](https://app.outsite.co/c/WVQos7UND) | Coliving spaces around the world |
 | [Moneybird](https://www.moneybird.nl/aanmelden?referrer=3d9a9f00bc) | 2 extra months free |
 
 ## Useful tools
@@ -72,3 +73,4 @@ Providers I use or want to try:
 | [Patchkastwinkel](https://patchkastwinkel.nl/19-inch-patchkast/wall-mount-bracket/) | Wall mount brackets for networking stuff |
 | Airbyte | ETL tool |
 | [Darling](https://www.darlinghq.org/) | run macOS software on Linux |
+| [iVentoy](https://www.iventoy.com/en/index.html) | PXE server for any OS installation |

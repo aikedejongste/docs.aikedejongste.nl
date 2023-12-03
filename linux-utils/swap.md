@@ -18,3 +18,9 @@ dd if=/dev/zero of=/swapfile1 bs=1024 count=5242880 && chown root:root /swapfile
 ```bash
 echo "/swapfile1 swap swap defaults 0 0" >> /etc/fstab
 ```
+
+TODO: add nofail
+
+## Raspberry Pi OS
+
+Edit the file /etc/dphys-swapfile and modify the variable CONF_SWAPSIZE to 0.
