@@ -38,11 +38,21 @@ process: drop and create. Or only use --clean and don't add --create.
 ## Good options for migrations/bi/development
 
 * `--clean` - Used to drop database objects before recreating them.
+* `--if-exists` - suppresses “does not exist” errors when using --clean.
 * `--create` - Used to create a database before restoring it.
 * `--no-privileges` - Prevent restoration of access privileges (ACLs aka grant/revoke commands).
 * `--exclude-schema` - Prevent restoration of a schema
 * `--no-owner` - makes whatever you put after -U the new owner
 * `-j4` - speed things up if using directory format (4 = number cores)
+* `--single-transaction` - probably useful when you have failing foreign key constraints
+* `--role=aike` - Use role if you cannot login with the role you want to use (is like sudo).
+
+## Troubleshooting
+
+If you don't have permissions to import an extension you can try not to restore it.
+Create a list of the contents of your dump with: `pg_restore -l /tmp/daily.dump > dump_list.txt`
+edit that list and then restore with `-l dump_list.txt` and it will only restore what
+is in the list.
 
 ## Example restore script
 
@@ -59,9 +69,10 @@ export PGDATABASE=my_company_db
 psql -c "CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;"
 
 # Restore without caring about permissions and the original data:
-pg_restore --clean --no-privileges --no-owner -Fc -d $PGDATABASE < prod.dump
+pg_restore --clean --no-privileges --no-owner --single-transaction -Fc -d $PGDATABASE < prod.dump
 
 # Restore and map all ownership and permissions to a new role and delete old data:
+# Use role if you cannot login with the role you want to use (is like sudo).
 # pg_restore --clean --role=$PGUSER -Fc -d $PGDATABASE < prod.dump
 ```
 

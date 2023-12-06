@@ -14,6 +14,13 @@ has_children: false
 
 [mkcert](https://github.com/FiloSottile/mkcert)
 
+## Notes
+
+- PKCS#7 does not include the private (key) part of a certificate/private-key pair.
+- PKCS#12 is a more universal container - it is intended to store both the private key and public certificate parts together.
+- PFX was the predecessor of PKCS#12.
+
+
 
 ## Self signed cert on Windows
 
@@ -121,7 +128,7 @@ openssl pkcs12 -in filename.pfx -clcerts -nokeys -out cert.pem
 
 ## See PEM file contents
 
-```bah
+```bash
 openssl x509 -in company.com.pem -text
 
 OR
@@ -130,6 +137,21 @@ openssl x509 -in company.com.pem -text | grep Issuer
 ```
 
 To see if this is a CA inspect the Issuer CN.
+
+## See if .key and .pem/.crt match
+
+The 2 mdsums should match:
+
+```bash
+openssl rsa -modulus -noout -in ../private/star.you.nl.key | openssl md5
+openssl x509 -modulus -noout -in star.you.nl.pem | openssl md5
+```
+
+And this should give "RSA Key is ok".
+
+```bash
+openssl rsa -check -noout -in ../private/star.you.nl.key
+```
 
 ## TransIP Wildcard
 

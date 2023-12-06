@@ -7,6 +7,17 @@ parent: Linux
 
 # Compression
 
+## zip
+
+Useful when compressing for Windows. Might need 7zip on Windows to
+extract password protected archives.
+
+Do not use `-p`, use `-e` instead.
+
+```bash
+zip -r -e archive-name.zip dir-to-be-compressed/
+```
+
 ## pigz
 
 ### Install
