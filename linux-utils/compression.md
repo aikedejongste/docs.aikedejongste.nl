@@ -7,6 +7,13 @@ parent: Linux
 
 # Compression
 
+## rar
+
+```bash
+apt install unrar-free
+```
+
+
 ## zip
 
 Useful when compressing for Windows. Might need 7zip on Windows to
@@ -15,7 +22,7 @@ extract password protected archives.
 Do not use `-p`, use `-e` instead.
 
 ```bash
-zip -r -e archive-name.zip dir-to-be-compressed/
+zip -r -e -P password archive-name.zip dir-to-be-compressed/
 ```
 
 ## pigz

@@ -6,12 +6,30 @@ parent: Cloud Infrastructure
 
 # cloud-init
 
+## Links
+
+- [More examples here](https://cloudinit.readthedocs.io/en/latest/reference/examples.html#)
+
 ## Example cloud-init config
 
 ```bash
 #cloud-config
 
 hostname: servertje
+
+groups:
+  - docker
+
+users:
+  - name: aikedejongste
+    gecos: Aike de Jongste
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, sudo, docker
+    ssh_import_id: null
+    shell: /bin/bash
+    lock_passwd: true
+    ssh_authorized_keys:
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMJZhBxjBZgaU5JQWaS2smXC9IFS46jR5jVdDYHyq8DS
 
 package_update: true
 package_upgrade: true
@@ -28,16 +46,6 @@ packages:
   - docker-compose
   - prometheus-node-exporter
 
-users:
-  - name: aikedejongste
-    gecos: Aike de Jongste
-    sudo: ALL=(ALL) NOPASSWD:ALL
-    groups: users, sudo, docker
-    ssh_import_id: null
-    shell: /bin/bash
-    lock_passwd: true
-    ssh_authorized_keys:
-      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMJZhBxjBZgaU5JQWaS2smXC9IFS46jR5jVdDYHyq8DS
 
 bootcmd:
   - swapoff -a
