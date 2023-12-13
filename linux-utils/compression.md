@@ -65,6 +65,10 @@ pigz -dc data.pigz > data.out
 
 ### Decompress directory
 
+```bash
+tar -I pigz -xvf compressed_file.tar.gz
+```
+
 ## gzip
 
 ```bash

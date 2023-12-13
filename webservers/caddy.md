@@ -36,6 +36,20 @@ tls /config/cert.pem /config/cert.key
 
 ## Caddyfile with auth
 
+### Hash password
+
+```bash
+docker exec -it caddy caddy hash-password
+Enter password:
+Confirm password:
+$2a$14$6KvVECx7VWkAwFMxtbaXwu/3cfBH9BLTvDFTfWETqKXmuG5wq8x1y
+````
+
+If you want to use this hash directly in Docker Compose then you have to preface
+every `$` with another `$`.
+
+TODO: add regex to automate this.
+
 ```
 mon.aike.be {
   log {

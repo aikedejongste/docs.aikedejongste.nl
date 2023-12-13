@@ -9,7 +9,7 @@ parent: Networking
 ## Install dependencies
 
 ```bash
-apt install ca-certificates-java java-common
+apt install ca-certificates-java java-common default-jre
 ```
 
 ## Install the client
