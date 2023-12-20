@@ -53,6 +53,12 @@ Windows Registry Editor Version 5.00
 "Scancode Map"=hex:00,00,00,00,00,00,00,00,03,00,00,00,3a,00,46,00,01,00,3a,00,00,00,00,00
 ```
 
+## Make a directory cAsE SeNsItive
+
+```bash
+fsutil.exe file SetCaseSensitiveInfo C:\folder\path enable
+```
+
 ## Mount LUKS encrypted ext4 drive
 
 In Powershell:

@@ -18,3 +18,9 @@ nmap -p 22 192.168.1.0/24 -oG - | grep 22/open
 ```bash
 nmap -sP -R 192.168.1.1-254
 ```
+
+## Scan all ports
+
+```bash
+nmap -p- 192.168.1.1
+```

@@ -66,3 +66,15 @@ mon.aike.be {
   }
 }
 ```
+
+## With IP allow list
+
+```yaml
+test.you.nl {
+
+  @denied not remote_ip 84.83.123.123
+  respond @denied "Access denied - Go play somewhere else." 403
+
+  reverse_proxy http://app:3000
+}
+```
