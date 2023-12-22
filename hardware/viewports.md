@@ -20,6 +20,6 @@ in the repository.
 
 | Year | Device | Viewport| Proof |
 |:-----|:--------|:-------|:-----------|
-| 2023 | MacBook Air 13 | 1710 x 937 | [proof](https://dump.aikedejongste.nl/viewports/20231008_150512.jpg) |
-| 2023 | MacBook Air 15 | 1920 x 1063 | [proof](https://dump.aikedejongste.nl/viewports/20231008_150413.jpg) |
+| 2023 | MacBook Air M2 13 | 1710 x 937 | [proof](https://dump.aikedejongste.nl/viewports/20231008_150512.jpg) |
+| 2023 | MacBook Air M2 15 | 1920 x 1063 | [proof](https://dump.aikedejongste.nl/viewports/20231008_150413.jpg) |
 
