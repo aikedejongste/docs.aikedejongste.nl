@@ -20,7 +20,11 @@ has_children: false
 - PKCS#12 is a more universal container - it is intended to store both the private key and public certificate parts together.
 - PFX was the predecessor of PKCS#12.
 
+## Check Letsencrypt/Certbot TXT record
 
+```bash
+Check if the txt record has been processed: `host -t txt _acme-challenge.example.com`
+```
 
 ## Self signed cert on Windows
 

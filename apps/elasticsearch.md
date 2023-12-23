@@ -7,6 +7,13 @@ parent: Self Hosted Apps
 
 # Elasticsearch
 
+## Notes
+
+Avoid having very large shards as this can negatively affect the cluster's ability to recover from failure. There is no fixed limit on how large shards can be, but a shard size of 50GB is often quoted as a limit that has been seen to work for a variety of use-cases.
+
+A good rule-of-thumb is to ensure you keep the number of shards per node below 20 per GB heap it has configured. A node with a 30GB heap should therefore have a maximum of 600 shards, but the further below this limit you can keep it the better.
+
+
 ## Cleanup and data usage in Elastic
 
 Execute these queries in the dev console `app/dev_tools#/console`

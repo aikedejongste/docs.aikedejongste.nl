@@ -99,3 +99,38 @@ In /etc/docker/daemon.json:
   }
 }
 ```
+
+or use Logrotate!
+
+```yaml
+/var/lib/docker/containers/*/*.log {
+  rotate 7
+  daily
+  compress
+  missingok
+  delaycompress
+  copytruncate
+}
+```
+
+## Show log file sizes
+
+```bash
+sudo find /var/lib/docker/containers/ -name *-json.log -exec ls -lh {} \;
+```
+
+## Check log rotation status for container
+
+```bash
+docker inspect -f '{{.HostConfig.LogConfig}}' your_container
+```
+
+## Truncate logfile manually
+
+If you don't want to recreate the container.
+
+```bash
+truncate -s 0 /var/lib/docker/containers/<container-id>/<container-id>-json.log
+```
+
+

@@ -32,6 +32,12 @@ curl -sfL https://get.k3s.io | K3S_TOKEN=SECRET sh -s - server --server https://
 k3s kubectl get node
 ```
 
+## Cluster certificate
+
+```bash
+kubectl config view --raw -o=jsonpath='{.clusters[0].cluster.certificate-authority-data}' | base64 --decode
+```
+
 ## Copy file from local to pod
 
 ```bash
