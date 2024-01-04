@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Nmap
+title: Portscanning (Nmap)
 parent: Linux
 has_children: false
 ---
@@ -24,3 +24,12 @@ nmap -sP -R 192.168.1.1-254
 ```bash
 nmap -p- 192.168.1.1
 ```
+
+# Naabu
+
+## Scan range
+
+```bash
+docker run --rm -it projectdiscovery/naabu -host 192.168.1.0/24 -top-ports 1000
+```
+

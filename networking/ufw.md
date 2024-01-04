@@ -6,6 +6,21 @@ parent: Networking
 
 # UFW
 
+## UFW show rules when inactive
+
+```bash
+ufw show added
+```
+
+## UFW allow APP Profile from IP
+
+Put quotes around app profiles with spaces.
+
+```bash
+ufw allow from 1.2.3.4/24 to any app <profile name>
+```
+
+
 ## UFW without Ansible
 
 ```bash

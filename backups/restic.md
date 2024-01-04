@@ -6,9 +6,7 @@ parent: Backups
 
 # Restic
 
-## Mount repository
-
-For example when it is on Backblaze B2.
+## Variables
 
 ```bash
 #!/bin/bash
@@ -18,6 +16,19 @@ export RESTIC_PASSWORD="aaaaa"
 export B2_ACCOUNT_ID="bbbbb"
 export B2_ACCOUNT_KEY="ccccc"
 
+restic .....
+```
+
+## Init new repository
+
+
+```bash
+restic init
+```
+
+## Mount repository
+
+```bash
 restic mount /mnt/restic
 ```
 

@@ -95,3 +95,10 @@ git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream
 ```bash
 git clone https://$GLUSER:$GLPASS@gitlab.com/org/repo.git --branch staging --single-branch
 ```
+
+## Download release as zipfile
+
+```bash
+curl -v -L -H "Authorization: token ghp_UaTjh0A........" https://github.com/yourcompany/yourcompany.templates/archive/refs/tags/v0.0.1.zip -o spefic-version.zip
+curl -v -L -H "Authorization: token ghp_UaTjh0A........" https://github.com/yourcompany/yourcompany.templates/zipball/main -o latest-commit.zip
+```

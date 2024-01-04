@@ -22,8 +22,10 @@ has_children: false
 
 ## Check Letsencrypt/Certbot TXT record
 
+Check if the txt record has been processed:
+
 ```bash
-Check if the txt record has been processed: `host -t txt _acme-challenge.example.com`
+host -t txt _acme-challenge.example.com
 ```
 
 ## Self signed cert on Windows

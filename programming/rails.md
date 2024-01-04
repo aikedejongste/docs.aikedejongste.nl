@@ -62,3 +62,17 @@ EDITOR="vim" bin/rails credentials:edit --environment staging
 
 Check the result with:
 `Rails.configuration.database_configuration` on the Rails console.
+
+## Generate Master Key
+
+```bash
+bundle exec rails secret | cut -c-32
+```
+
+## Secret_key_base
+
+You need to set one for production environments. Just do this and it will be created.
+
+```bash
+EDITOR=vim bundle exec rails edit:credentials
+```

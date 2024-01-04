@@ -81,3 +81,7 @@ would use `gqap`.
 ## Slash at end of every line
 
 `:%s/$/ \\/`
+
+## When you forgot to use sudo
+
+`:w !sudo tee %`

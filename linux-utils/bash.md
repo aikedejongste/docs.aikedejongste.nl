@@ -19,6 +19,12 @@ set -eu -o pipefail
 set +x
 ```
 
+## Find and delete empty files
+
+```bash
+find . -type f -empty -print -delete
+```
+
 ## Find and delete old files
 
 ```bash

@@ -36,6 +36,41 @@ Execute these queries in the dev console `app/dev_tools#/console`
 
 `GET /_ilm/policy/test`
 
+
+### Enable automatic deletion of data for logs policy
+
+```
+PUT _ilm/policy/logs
+{
+  "policy": {
+    "phases": {
+      "hot": {
+        "min_age": "0ms",
+        "actions": {
+          "rollover": {
+            "max_age": "30d",
+            "max_primary_shard_size": "50gb"
+          }
+        }
+      },
+      "delete": {
+        "min_age": "120d",
+        "actions": {
+          "delete": {}
+        }
+      }
+    },
+    "_meta": {
+      "managed": true,
+      "description": "default policy for the logs index template installed by x-pack"
+    }
+  }
+}
+```
+
+
+
+
 ## 2 installation methods
 
 * Helm Chart (<https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-install-helm.html>)

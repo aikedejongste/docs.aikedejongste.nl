@@ -37,8 +37,11 @@ Use `\040` for a space.
 
 Systemd service called `samba` and `smb` are not the same.
 
+- samba = Active Directory service
+- smb = file sharing
 
-### Set password for smb user
+
+### Don't set password for smb user
 
 These are useless if you don't disable guest logins. And you're probably
 better of setting passwords for the system users. They will sync automatically

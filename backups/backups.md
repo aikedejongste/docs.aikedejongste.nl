@@ -17,3 +17,14 @@ for d in */; do zip -r "${d%/}.zip" "$d" && rm -r "$d"; done
 ```bash
  .............
 ```
+
+## Simple daily zip script
+
+```
+#!/bin/bash
+DATE=`date +%d`
+DIR=/Users/aike/Dropbox/Backups
+cd /Users/aike/code/ && for i in */; do
+  zip -r "$DIR/$DATE.${i%/}.zip" "$i";
+done
+```
