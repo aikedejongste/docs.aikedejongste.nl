@@ -7,6 +7,20 @@ parent: Programming
 
 # Ruby on Rails
 
+## Links
+
+- [LiteStack](https://blog.appsignal.com/2023/09/27/an-introduction-to-litestack-for-ruby-on-rails.html) - hosting with SQLite
+- [LiteStack on HN](https://news.ycombinator.com/item?id=37672692)
+
+
+## Good_job Postgres Threads
+
+In database.yaml
+```
+  pool: <%= $PROGRAM_NAME.include?("good_job") ? ENV.fetch("GOOD_JOB_MAX_THREADS", 5).to_i + 3 : ENV.fetch("RAILS_MAX_THREADS", 5).to_i %>
+```
+
+
 ## Dependencies on Ubuntu with MySQL
 
 ```bash

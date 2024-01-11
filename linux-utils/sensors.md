@@ -7,6 +7,14 @@ parent: Linux
 
 # Hardware and sensors
 
+## Tools for power management and saving
+
+```bash
+apt install powertop powerstat lm-sensors
+
+systemctl enable powertop; systemctl start powertop
+```
+
 ## Best battery info
 
 ```bash

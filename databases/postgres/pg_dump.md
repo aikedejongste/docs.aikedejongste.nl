@@ -10,6 +10,9 @@ parent: Databases
 ## Related
 
 - [pghoard backups](https://github.com/Aiven-Open/pghoard)
+- [script from Postgres itself](https://wiki.postgresql.org/wiki/Automated_Backup_on_Linux)
+- [PGbackrest](https://pgbackrest.org/)
+- [postgres-backup-s3 container](https://github.com/eeshugerman/postgres-backup-s3)
 
 ## Step by step
 

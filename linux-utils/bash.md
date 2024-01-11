@@ -19,6 +19,12 @@ set -eu -o pipefail
 set +x
 ```
 
+## Find duplicate files
+
+```bash
+fdupes -r dir123/
+```
+
 ## Find and delete empty files
 
 ```bash
@@ -29,6 +35,12 @@ find . -type f -empty -print -delete
 
 ```bash
 /usr/bin/find /var/backups/* -mtime +100 -name starts-with-* -type f -prune -exec rm -rf {} \;
+```
+
+## Sort files in directory by size
+
+```bash
+ls -lhS
 ```
 
 ## Find oldest directory (-d) or file (-f)
@@ -175,4 +187,10 @@ echo -n "Enter Password: " && head -1 </dev/stdin | tr -d '\n' | sha256sum | cut
 while f=$(inotifywait -e create --format "%f" /var/www/company/htdocs/ ) ; do
         chmod 664 '/var/www/company/htdocs/'$f
 done
+```
+
+## SCP over IPv6
+
+```bash
+scp -6 some_linux_binary  root@\[2a01:4f9:c010:9755::1\]:/root/
 ```

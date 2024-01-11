@@ -46,6 +46,7 @@ or use one of my referral links to support me:
 | [Outsite.co](https://app.outsite.co/c/WVQos7UND) | Coliving spaces around the world |
 | [Moneybird](https://www.moneybird.nl/aanmelden?referrer=3d9a9f00bc) | 2 extra months free |
 | [Mintos](https://www.mintos.com/en/l/ref/476S1C) | 50 EUR bonus |
+| [Brain.fm](https://my.brain.fm/payment?extended_promo=30&utm_source=referafriend)| 30 days free for you |
 
 ## Useful tools
 

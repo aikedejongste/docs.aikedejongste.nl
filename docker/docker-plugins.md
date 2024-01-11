@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Docker Plugins
-has_children: true
+parent: Docker
+has_children: false
 ---
 
 # Docker Plugins

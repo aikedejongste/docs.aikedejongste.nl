@@ -19,8 +19,24 @@ export B2_ACCOUNT_KEY="ccccc"
 restic .....
 ```
 
-## Init new repository
+## Show hosts in repository
 
+```bash
+restic ...
+```
+
+## Remove all snapshots for a host from repository
+
+Run without prune first! You cannot delete all snapshots at once. You have to specify a keep policy.
+
+```bash
+restic forget --host 'your_host_name' --keep-last 1 --path /opt
+restic forget <id>
+restic prune
+restic check
+```
+
+## Init new repository
 
 ```bash
 restic init

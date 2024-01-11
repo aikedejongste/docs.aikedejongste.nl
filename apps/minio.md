@@ -1,10 +1,9 @@
 ---
 layout: default
-title: Zot
+title: Minio
 has_children: false
 parent: Self Hosted Apps
 ---
 
-# Zot Registry
+# Minio
 
-[link](https://zotregistry.io)
