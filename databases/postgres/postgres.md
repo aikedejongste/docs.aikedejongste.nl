@@ -7,6 +7,10 @@ has_children: false
 
 # Postgres
 
+## Links:
+
+- [CheatSheet](https://wiki.postgresql.org/wiki/Operations_cheat_sheet)
+
 ## 1. Show databases
 
 `\l`

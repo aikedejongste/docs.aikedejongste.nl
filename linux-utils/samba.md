@@ -12,7 +12,18 @@ parent: Linux
 ### Install dependencies
 
 ```bash
-sudo apt-get install cifs-utils samba-common
+apt-get install cifs-utils samba-common
+
+or
+
+apt install cifs-utils psmisc
+```
+
+### Mount temporariy
+
+
+```bash
+mount -t cifs //192.0.2.17/SharedFiles /mnt/smb_share
 ```
 
 ### Mount with credentials

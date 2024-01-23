@@ -14,10 +14,17 @@ In PostgreSQL you can create a new user using the CREATE USER or the CREATE ROLE
 The difference between these two options is that CREATE USER sets the LOGIN privilege
 directly while CREATE ROLE will set this attribute to NOLOGIN.
 
-
 ## Delete a user
 
 `DROP USER IF EXISTS readonly_user`
+
+## Create readonly user without a script
+
+```bash
+CREATE USER grafana WITH PASSWORD '1234567890';
+GRANT USAGE ON SCHEMA public TO grafana;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO grafana;
+```
 
 ## Script that creates one or more read-only users + schema permissions
 

@@ -67,3 +67,11 @@ resource "hcloud_floating_ip" "dev-aike" {
   type      = "ipv4"
 }
 ```
+
+## Use Gitlab state backend
+
+```
+terraform {
+  backend "http" {}
+}
+```

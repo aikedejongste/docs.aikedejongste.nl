@@ -7,11 +7,23 @@ parent: Self Hosted Apps
 
 # Sentry
 
+## Limit memory usage in Redis
+
+The policy might cause data loss.
+
+```
+docker exec -i sentry-self-hosted_redis_1 redis-cli info
+docker exec -i sentry-self-hosted_redis_1 redis-cli CONFIG SET maxmemory 4G
+docker exec -i sentry-self-hosted_redis_1 redis-cli CONFIG SET maxmemory-policy volatile-ttl
+```
+
 ## Cleanup
 
 ```bash
 /usr/bin/docker-compose --file /path/to/docker-compose.yml exec worker sentry cleanup --days 30
 ```
+
+Set `SENTRY_EVENT_RETENTION_DAYS` in `.env` and/or in `docker-compose.yaml`.
 
 And maybe do a VACUUM in Postgres as well:
 

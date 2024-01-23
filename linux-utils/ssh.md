@@ -7,6 +7,10 @@ parent: Linux
 
 # SSH
 
+## Links
+
+- [SSHSnake](https://joshua.hu/ssh-snake-ssh-network-traversal-discover-ssh-private-keys-network-graph)
+
 ## Add public key to server from Github
 
 ```bash
