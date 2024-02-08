@@ -6,6 +6,12 @@ parent: Docker
 
 # Docker Compose
 
+## force restart
+
+```bash
+docker-compose pull && docker-compose up -d --no-deps --force-recreate app
+```
+
 ## Very simple
 
 ```yaml

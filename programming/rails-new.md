@@ -20,8 +20,11 @@ parent: Programming
   host: localhost
   username: me
   password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
-7.
+7. [Install Devise](https://docs.aikedejongste.nl/programming/rails-devise.html)
+8. bundle add administrate
 
+- rails g scaffold Address user:references ip:string name:string
+- rails g scaffold Result address:references port:integer status:string scanned_at:datetime protocol:string tls:boolean
 
 
 ## Kamal deploy

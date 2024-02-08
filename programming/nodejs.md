@@ -11,19 +11,19 @@ parent: Programming
 
 ```bash
 export NODE_MAJOR=20
-sudo apt-get update && sudo apt-get install -y ca-certificates curl gnupg
-sudo mkdir -p /etc/apt/keyrings && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt-get update && sudo apt-get install nodejs -y
+apt-get update &&  apt-get install -y ca-certificates curl gnupg
+mkdir -p /etc/apt/keyrings && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key |  gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" |  tee /etc/apt/sources.list.d/nodesource.list
+apt-get update &&  apt-get install nodejs -y
 ```
 
 ## Yarn installation
 
 ```bash
-curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg |  apt-key add -
 
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+echo "deb https://dl.yarnpkg.com/debian/ stable main" |  tee /etc/apt/sources.list.d/yarn.list
 
-sudo apt update && sudo apt install yarn
+apt update && apt install yarn
 ```
 

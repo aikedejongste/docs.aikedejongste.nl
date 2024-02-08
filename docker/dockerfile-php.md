@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Dockerfile PHP
-has_children: true
+has_children: false
 parent: Docker
 ---
 

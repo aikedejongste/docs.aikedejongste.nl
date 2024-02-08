@@ -26,5 +26,27 @@ export GLPASS=tokentokentoken
 git clone https://$GLUSER:GLPASS@gitlab.com/org/project/repo.git
 ```
 
+## Simple buildx Docker build
+
+```yaml
+docker-build-main:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - docker info
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - docker buildx create --use --name=buildkit-builder
+  script: |
+    docker buildx build \
+        --tag "$CI_REGISTRY_IMAGE" \
+        --cache-from type=registry,ref=$CI_REGISTRY_IMAGE:cache \
+        --cache-to type=registry,ref=$CI_REGISTRY_IMAGE:cache \
+        --push \
+        .
+  only:
+    - main
+```
 
 

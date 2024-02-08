@@ -24,6 +24,30 @@ parent: Webservers
 
 ```
 
+## Caddy with manual certs compose file
+
+```yaml
+version: "3.7"
+services:
+  caddy:
+    image: caddy:latest
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - proxy
+    volumes:
+      - /etc/ssl/certs/star.company.app.pem:/config/cert.pem
+      - /etc/ssl/private/star.company.app.key:/config/cert.key
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy_data:/data
+    restart: unless-stopped
+
+networks:
+  proxy:
+    external: true
+```
+
 ## Caddyfile
 
 ```

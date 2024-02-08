@@ -7,7 +7,54 @@ has_children: false
 
 # Neovim
 
-## Config file
+## Installation on Debian with CoPilot
+
+### Install Neovim and nodejs
+
+```bash
+apt install nodejs git-core
+
+# Neovim from Github because version in apt is too old
+wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage -O /usr/bin/nvim
+chmod +x /usr/bin/nvim
+
+```
+
+### Install plugin manager
+```
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+### Neovim config
+
+```bash
+mkdir -p .config/nvim/ && vim .config/nvim/init.vim
+```
+
+Contents:
+```
+call plug#begin()
+Plug 'github/copilot.vim'
+call plug#end()
+```
+
+### Install plugins
+
+Start nvim and `:PlugInstall`.
+
+`:Copilot setup`
+
+Visit [https://github.com/login/device](https://github.com/login/device) and type the code.
+
+
+
+
+
+
+## Old setup
+
+### Config file
 
 Stored in `cat ~/.config/nvim/init.vim`
 

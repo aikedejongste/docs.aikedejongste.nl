@@ -26,16 +26,16 @@ terraform {
       source = "hashicorp/http"
       version = "~>3"
     }
-    hcloud = {                                                                     
-      source = "hetznercloud/hcloud"           
-      version = "1.41.0"                                 
-    }                                                                           
-    hetznerdns = {                                                              
-      source = "timohirt/hetznerdns"                                            
-      version = "2.2.0"                                                         
-    }                                                                           
-  }                                                                             
-  required_version = ">= 0.13"                                                  
+    hcloud = {
+      source = "hetznercloud/hcloud"
+      version = "1.41.0"
+    }
+    hetznerdns = {
+      source = "timohirt/hetznerdns"
+      version = "2.2.0"
+    }
+  }
+  required_version = ">= 0.13"
 }
 
 variable "hetzner_token" {
@@ -69,7 +69,7 @@ resource "hcloud_firewall" "camunda1_firewall" {
       "1.1.1.1/32"
     ]
   }
-  
+
   rule {
     direction = "in"
     protocol  = "tcp"
@@ -92,12 +92,12 @@ resource "hcloud_firewall" "camunda1_firewall" {
 
 }
 
-resource "local_file" "inventory" {                                             
-  filename = "./inventory.ini"                                                  
-  content  = templatefile("inventory.tpl", {                                    
+resource "local_file" "inventory" {
+  filename = "./inventory.ini"
+  content  = templatefile("inventory.tpl", {
     camunda1 = hcloud_server.camunda1.ipv4_address
-  })                                                                            
-}  
+  })
+}
 
 ```
 
@@ -126,6 +126,7 @@ packages:
   - docker-compose
   - htop
   - screen
+  - apparmor-utils
 ```
 
 

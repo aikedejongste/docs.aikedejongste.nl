@@ -40,6 +40,8 @@ Create a new Personal Access Token [here](https://github.com/settings/tokens/new
 ```bash
 export PAT=.....
 echo $PAT | docker login ghcr.io --username doesnt@matter.com --password-stdin
+
+echo $PAT | docker login registry.gitlab.com -u aiketestuser1 --password-stdin
 ```
 
 or
