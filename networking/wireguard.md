@@ -6,6 +6,10 @@ parent: Networking
 
 # Wireguard VPN
 
+## Wireguard in a container:
+
+[gluetun](https://github.com/qdm12/gluetun)
+
 ## Install with CLI interface
 
 - [Wireguard-install.sh](https://github.com/Nyr/wireguard-install)

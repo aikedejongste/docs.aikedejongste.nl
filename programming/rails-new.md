@@ -14,6 +14,12 @@ parent: Programming
 3. rails new fwcheck --database=postgresql
 4. apt install postgresql postgresql-contrib libpq-dev
 5. sudo -u postgres createuser -s fwcheck -P
+
+OR
+
+- `CREATE USER aike WITH PASSWORD '123';`
+- `ALTER ROLE aike CREATEUSER SUPERUSER CREATEDB;`
+
 4. echo 'export APPNAME_DATABASE_PASSWORD="PostgreSQL_Role_Password"' >> ~/.bashrc
 5. source ~/.bashrc
 6. configure username and password for dev in config/database.yaml

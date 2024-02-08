@@ -9,4 +9,5 @@ has_children: false
 ## Links
 
 [Chatbot leaderboard](https://chat.lmsys.org/?leaderboard)
+[WhisperFusion](https://github.com/collabora/WhisperFusion) - for realtime conversations with AI.
 
