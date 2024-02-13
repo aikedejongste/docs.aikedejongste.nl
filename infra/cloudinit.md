@@ -45,6 +45,7 @@ packages:
   - docker.io
   - docker-compose
   - prometheus-node-exporter
+  - apparmor-utils
 
 
 bootcmd:

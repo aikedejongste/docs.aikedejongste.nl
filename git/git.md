@@ -30,6 +30,12 @@ or just
 git reset -- README
 ```
 
+## Undo changes and delete untracked files
+
+```bash
+git reset --hard && git clean -fdx
+```
+
 ## Set my git config
 
 ```bash

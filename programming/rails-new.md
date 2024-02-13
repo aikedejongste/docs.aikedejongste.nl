@@ -13,12 +13,34 @@ parent: Programming
 2. Install Rails gem (or check if you have the latest version)
 3. rails new fwcheck --database=postgresql
 4. apt install postgresql postgresql-contrib libpq-dev
+
+5. Postgres in Docker:
+
+set username and password in docker-compose
+
+run 'export DATABASE_URL=postgres://user:pass@127.0.0.1/'
+
+version: '3.7'
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    ports:
+      - 0.0.0.0:5432:5432
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - ./_PGDATA:/var/lib/postgresql/data
+
+
+
 5. sudo -u postgres createuser -s fwcheck -P
 
 OR
 
 - `CREATE USER aike WITH PASSWORD '123';`
-- `ALTER ROLE aike CREATEUSER SUPERUSER CREATEDB;`
+- `ALTER ROLE aike CREATEROLE SUPERUSER CREATEDB;`
 
 4. echo 'export APPNAME_DATABASE_PASSWORD="PostgreSQL_Role_Password"' >> ~/.bashrc
 5. source ~/.bashrc

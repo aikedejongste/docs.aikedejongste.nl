@@ -13,6 +13,12 @@ parent: Programming
 bundle add devise
 ```
 
+## Install Devise
+
+```bash
+rails generate devise:install
+```
+
 ## Generate views
 
 ```bash

@@ -11,6 +11,7 @@ parent: Programming
 
 - [LiteStack](https://blog.appsignal.com/2023/09/27/an-introduction-to-litestack-for-ruby-on-rails.html) - hosting with SQLite
 - [LiteStack on HN](https://news.ycombinator.com/item?id=37672692)
+- [Navigate back](https://dev.to/notapatch/rails-going-backwards-56h5)
 
 
 ## Good_job Postgres Threads
