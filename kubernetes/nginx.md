@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Traefik on k3s
+title: Nginx on k3s
 has_children: false
 parent: Kubernetes
 ---

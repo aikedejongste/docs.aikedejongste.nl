@@ -60,9 +60,8 @@ k3sup join --user ubuntu --server-ip server_ip --ip agent_ip
 
 ## Run something simple
 
-``bash
+```bash
 kubectl run httpbin --image kennethreitz/httpbin --port 80 && kubectl expose pod httpbin --port 80
-
 ```
 
 ## Quick busybox shell
