@@ -52,6 +52,8 @@ Klik hier voor uitleg over het bewaren: [VPN config in Password Manager](/sops/w
 ## 8. Optioneel: geef toegang tot lokale apparaten
 
 Als je problemen hebt met printen of het delen van je scherm met een televisie kun je het vinkje
-voor de killswitch aanzetten. Hiermee sta je verkeer naar het interne netwerk wel toe.
+voor de killswitch aanzetten. Hiermee sta je verkeer naar het interne netwerk wel toe. Klik hiervoor
+rechts onderin het Wireguard-venster op "Edit". Daarna zet je een vinkje bij "Block untunneled traffic".
+Klik vervolgens op "Save" en activeer je VPN opnieuw.
 
 ![Wireguard Killswitch](/docs/assets/images/wireguard-killswitch.png)
