@@ -48,3 +48,10 @@ beveiligingsmaatregelen nemen.
 
 Klik hier voor uitleg over het bewaren: [VPN config in Password Manager](/sops/wireguard-pm-nl.html).
 <!-- markdown-link-check-enable -->
+
+## 8. Optioneel: geef toegang tot lokale apparaten
+
+Als je problemen hebt met printen of het delen van je scherm met een televisie kun je het vinkje
+voor de killswitch aanzetten. Hiermee sta je verkeer naar het interne netwerk wel toe.
+
+![Wireguard Killswitch](/docs/assets/images/wireguard-killswitch.png)
