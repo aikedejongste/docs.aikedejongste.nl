@@ -7,11 +7,22 @@ parent: Programming
 
 # Ruby on Rails Livereload
 
+## Add Gems
 
-guard init livereload
+```bash
+bundle add guard
+bundle add rack-livereload
+```
 
-Guardfile:
+## Init Guard
 
+```bash
+bundle exec guard init livereload
+```
+
+## Check or create Guardfile
+
+```yaml
 group :livereload do
   guard 'livereload' do
     watch(things)
@@ -26,15 +37,19 @@ guard 'livereload' do
   # Rails Assets Pipeline
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
 end
+```
 
+## Enable Guard in Procfile.dev
 
-Procfile.dev
+```bash
 guard: bundle exec guard
+```
 
-gem "rack-livereload", group: :development
+## Update development env
 
+In `config/environments/development.rb`
 
-in config/environments/development.rb
+```ruby
   # Add Rack::LiveReload to the bottom of the middleware stack with the default options:
   config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
-
+```

@@ -85,6 +85,10 @@ class UserInfoController < ApplicationController
 end
 ```
 
+## Rails - Grafana config
+
+Let Rails redirect to `/login/generic_oauth`
+
 ## Grafana config
 
 Grafana will still have local users.
