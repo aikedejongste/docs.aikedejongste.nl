@@ -1,22 +1,24 @@
 ---
 layout: default
-title: Rails - Livereload
+title: Rails - Guard
 has_children: false
 parent: Programming
 ---
 
-# Ruby on Rails Livereload
+# Ruby on Rails - Guard Livereload
 
 ## Add Gems
 
 ```bash
-bundle add guard
-bundle add rack-livereload
+bundle add guard --group development
+bundle add rack-livereload --group development
+bundle add guard-shell --group development
 ```
 
 ## Init Guard
 
 ```bash
+bundle exec guard init
 bundle exec guard init livereload
 ```
 
@@ -37,6 +39,16 @@ guard 'livereload' do
   # Rails Assets Pipeline
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html|png|jpg))).*}) { |m| "/assets/#{m[3]}" }
 end
+
+guard :shell do
+  watch('Gemfile.lock') { `touch tmp/restart.txt` }
+  watch(%r{^(config|lib)/.*}) { `touch tmp/restart.txt` }
+  watch('app/controllers/application_controller.rb') { `touch tmp/restart.txt` }
+  watch(%r{^Procfile.dev}) { `touch tmp/restart.txt` }
+  watch(%r{^Guardfile}) { `touch tmp/restart.txt` }
+  watch(%r{config/initializers/.+\.rb}) { `touch tmp/restart.txt` }
+end
+
 ```
 
 ## Enable Guard in Procfile.dev

@@ -17,11 +17,14 @@ bundle add omniauth_openid_connect
 
 optional: `bundle add omniauth-rails_csrf_protection`
 
-## Install Devise
+## Configure Devise
 
-```bash
-rails generate devise:install
+```ruby
+config.omniauth :google_oauth2, Rails.application.credentials.google&.dig("oauth_client_id"), Rails.application.credentials.google&.dig("oauth_client_secret"), {}
 ```
+
+DO NOT CONFIGURE the omni_auth initializer
+ONLY use it for the post or get request setting.
 
 ## Generate views
 
@@ -63,3 +66,29 @@ In `app/controllers/users/omniauth_callbacks_controller.rb`
     redirect_to root_path
   end
 ```
+
+## User model
+
+```ruby
+...
+:omniauthable, omniauth_providers: [:google_oauth2]
+
+  def self.from_omniauth(access_token)
+    data = access_token.info
+    user = User.where(email: data['email']).first
+
+    return user if user
+
+    User.create(name: data['name'],
+                email: data['email'],
+                admin: data['email'].split("@").last.downcase == 'domain.nl',
+                password: Devise.friendly_token[0, 30])
+  end
+```
+
+
+## Redirect_url and Redirect_uri
+
+- it is better to use 127.0.0.1 than localhost as a redirect url
+- it is better to use https in development for the redirect url
+
