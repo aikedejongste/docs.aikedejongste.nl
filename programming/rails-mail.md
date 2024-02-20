@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Mail - smtp2go
+title: Rails - Mail with smtp2go
 has_children: true
 parent: Programming
 ---

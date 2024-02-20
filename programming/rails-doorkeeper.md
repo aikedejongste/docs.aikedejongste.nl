@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Rails - Doorkeeper
-has_children: true
+has_children: false
 parent: Programming
 ---
 

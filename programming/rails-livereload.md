@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rails Livereload
+title: Rails - Livereload
 has_children: false
 parent: Programming
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rails new app
+title: Rails - New app
 has_children: false
 parent: Programming
 ---

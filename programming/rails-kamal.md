@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Rails Kamal
+title: Rails - Kamal
 has_children: false
 parent: Programming
 ---
