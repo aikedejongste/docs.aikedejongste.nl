@@ -67,9 +67,9 @@ rpcinfo -p | awk '{print $3" "$4}' | sort -k2n | uniq
 This changed with Ubuntu 22. It used to be configured in /etc/defaults/ now edit `/etc/nfs.conf`
 
 ```
-[mountd]                                                                  
-manage-gids=y                                                              
-port=2000 
+[mountd]
+manage-gids=y
+port=2000
 ```
 
 On old Ubuntu versions:
@@ -130,3 +130,7 @@ firewall-cmd --permanent --add-service=rpcbind
 firewall-cmd --permanent --add-service=mountd
 firewall-cmd --reload
 ```
+
+## Troubleshooting
+
+- nfsiostat 5

@@ -13,6 +13,13 @@ parent: Programming
 - [LiteStack on HN](https://news.ycombinator.com/item?id=37672692)
 - [Navigate back](https://dev.to/notapatch/rails-going-backwards-56h5)
 
+## Execute SQL on Rails console
+
+```bash
+result = ActiveRecord::Base.connection.execute("SELECT * FROM users")
+```
+
+
 
 ## Good_job Postgres Threads
 
@@ -91,3 +98,7 @@ You need to set one for production environments. Just do this and it will be cre
 ```bash
 EDITOR=vim bundle exec rails edit:credentials
 ```
+
+## constants.rb
+
+

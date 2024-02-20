@@ -32,6 +32,8 @@ git reset -- README
 
 ## Undo changes and delete untracked files
 
+THIS WILL DELETE .env and other files that are not committed.
+
 ```bash
 git reset --hard && git clean -fdx
 ```
