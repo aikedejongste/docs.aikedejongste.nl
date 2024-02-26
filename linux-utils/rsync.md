@@ -21,3 +21,15 @@ parent: Linux
 ```bash
 rsync -aP /opt/source/ /opt/destination
 ```
+
+## From remote to local
+
+```bash
+rsync -vuar --progress user@remote:/source /opt/destination
+```
+
+## From local to remote
+
+...
+
+

@@ -86,6 +86,14 @@ In `app/controllers/users/omniauth_callbacks_controller.rb`
   end
 ```
 
+## Login view
+
+```ruby
+<%= form_tag user_google_oauth2_omniauth_authorize_path, method: :post do %>
+  <%= button_tag "Sign in with Google", type: "submit", data: { turbo: "false" }, class: "hoi" %>
+<% end %>
+```
+
 
 ## Redirect_url and Redirect_uri
 

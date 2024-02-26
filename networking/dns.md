@@ -12,6 +12,11 @@ parent: Networking
 host -t txt _acme-challenge.example.com
 ```
 
+## Show SOA records
+
+```bash
+host -t soa domain.com
+```
 
 ## DNS on Debian Bookworm
 
@@ -20,8 +25,6 @@ Ubuntu differs from Debian!
 ```bash
 apt install systemd-resolved
 ```
-
-
 
 ## DNS on Ubuntu using netplan
 

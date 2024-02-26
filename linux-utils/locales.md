@@ -21,3 +21,4 @@ LC_ALL="en_US.UTF-8"
 ```bash
 /usr/sbin/locale-gen -a
 ```
+Sometimes you need to: `apt-get install locales-all`

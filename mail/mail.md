@@ -28,6 +28,8 @@ Link: <https://www.courier.com/guides/dmarc-vs-spf-vs-dkim/>
 * Policy = (p=quarantine): sends the message to the spam/junk/quarantine folder
 * Policy = (p=reject): sends the message back
 
+Check your DMARC record [here](https://mxtoolbox.com/SuperTool.aspx?action=dmarc).
+
 ### SPF
 
 Decide how you want to enforce SPF failures:
@@ -39,3 +41,7 @@ Decide how you want to enforce SPF failures:
 ```
 
 Check your SPF record [here](https://mxtoolbox.com/SuperTool.aspx?action=spf).
+
+## MTA-STS
+
+- [info here](https://powerdmarc.com/what-is-mta-sts-and-why-do-you-need-it/)
