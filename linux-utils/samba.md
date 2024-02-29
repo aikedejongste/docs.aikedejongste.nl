@@ -19,6 +19,14 @@ or
 apt install cifs-utils psmisc
 ```
 
+### UTF-8
+
+It is recommended to mount shares with `iocharset=utf8`.
+
+For that you probably need to `apt install linux-modules-extra-$(unane -r)`.
+
+Don't forget to reboot before installing the linux-modules-extra or type the correct uname manually.
+
 ### Mount temporariy
 
 
