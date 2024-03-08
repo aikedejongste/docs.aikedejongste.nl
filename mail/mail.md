@@ -30,6 +30,10 @@ Link: <https://www.courier.com/guides/dmarc-vs-spf-vs-dkim/>
 
 Check your DMARC record [here](https://mxtoolbox.com/SuperTool.aspx?action=dmarc).
 
+Example:
+
+`_dmarc.aike.nl TXT v=DMARC1; p=none;"
+
 ### SPF
 
 Decide how you want to enforce SPF failures:

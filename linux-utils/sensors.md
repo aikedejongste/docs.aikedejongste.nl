@@ -93,3 +93,13 @@ sudo intel_gpu_top
 ```
 
 Alternatives I haven't tried are nvtop and glances.
+
+## Blank console
+
+Edit `/etc/defaul/grub`
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet consoleblank=300"
+```
+
+Run `update-grub` and reboot. Use `cat /proc/cmdline` to see if it is applied.
