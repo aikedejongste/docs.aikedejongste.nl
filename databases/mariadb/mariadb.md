@@ -11,6 +11,10 @@ parent: Databases
 
 ```bash
 apt install mariadb-client
+
+or
+
+apt install default-mysql-client
 ```
 
 ## Access MariaDB console when installed with Bitnami Helm Chart

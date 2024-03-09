@@ -88,3 +88,18 @@ or
   - path_regex: .*\.dev\.json$
     encrypted_regex: '^(data|stringData)$'
 ```
+
+## in Ansible
+
+```
+privatekey_content: "{{ lookup('community.sops.sops', 'keys/key.sops') }}"
+```
+
+or
+```
+- name: Load encrypted credentials
+  community.sops.load_vars:
+    file: ym-files-backup-credentials.sops.yaml
+```
+
+

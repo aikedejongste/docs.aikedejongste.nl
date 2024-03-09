@@ -69,3 +69,33 @@ Host backup-storagebox
   HostName u12345.your-storagebox.de
   Port 23
 ```
+
+## Backblaze keys without deleteFiles:
+
+`b2 create-key --bucket <bucketName> <keyName> listBuckets,readFiles,writeFiles,listFiles`
+
+
+## First run
+First run `rclone serve restic --append-only` to receive backups via http from the production cluster.
+
+## Second run
+Second, run `restic forget --prune` using read/write file access methods, such as SFTP or locally mounted files.
+
+`rclone serve restic --append-only`
+
+`restic forget --keep-last 1 --prune`
+restic stats --mode raw-data
+restic snapshots --path="/home"
+
+restic forget --keep-daily 7 --keep-weekly 5 --keep-monthly 12 --keep-yearly 2
+
+`apt install restic && restic self-update`
+
+
+
+## GUI's
+* [Restic Backup GX](https://gitlab.com/stormking/resticguigx/-/blob/master/README.md)
+	* nice for Windows users, use "Repository Input" to use remote targets
+* [NPBackup](https://github.com/netinvent/npbackup)
+* [Restic Browser](https://github.com/emuell/restic-browser)
+

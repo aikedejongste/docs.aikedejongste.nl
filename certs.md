@@ -189,3 +189,7 @@ cd /opt && /usr/bin/docker run -t \
         rbongers/certbot-dns-transip \
         renew
 ```
+
+## Generate self-signed cert without user input
+
+`openssl req -x509 -newkey rsa:4096 -keyout /etc/ssl/key.pem -out cert.pem -days 365 -nodes -subj '/CN=localhost'`

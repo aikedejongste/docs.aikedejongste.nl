@@ -33,3 +33,15 @@ rsync -vuar --progress user@remote:/source /opt/destination
 ...
 
 
+## In a script with locking
+
+```bash
+#!/bin/bash
+
+LOCKFILE="/var/run/something.lock"
+
+SOURCE_DIR="/opt/source"
+DEST="-e \"ssh -q -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null\" username@hostname:/opt/dest"
+RSYNC_CMD="rsync -v -a --delete -O --chmod=u=rw,go=r,D+x $SOURCE_DIR/ $DEST"
+flock -x -n $LOCKFILE -c "${RSYNC_CMD}"
+```

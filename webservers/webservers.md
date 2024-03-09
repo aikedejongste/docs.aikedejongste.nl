@@ -19,3 +19,9 @@ has_children: true
 4. A frame is the smallest unit of communication within an HTTP/2 connection, consisting of a header and a variable-length sequence of octets structured according to the frame type.
 5. A stream is a bidirectional flow of frames within the HTTP/2 connection. The correspondent concept in HTTP 1.1 is a request/response message exchange.
 6. HTTP/2 is able to run multiple streams of data over the same TCP connection, avoiding the classic HTTP 1.1 head of blocking slow request and avoiding to re-instantiate TCP connections for each request/response (KeepAlive patched the problem in HTTP 1.1 but did not fully solve it).
+
+## To debug websockets
+
+Try: [https://github.com/websockets/wscat](https://github.com/websockets/wscat)
+
+

@@ -62,6 +62,7 @@ I keep forgetting about them and putting them here will hopefully remind me to u
 | [Markdownlint](https://dlaa.me/markdownlint/) | Web based markdown linter |
 | [PDFtool](https://www.pdftool.org/en) |  Online pdf editor |
 | [MicTests](https://mictests.com/) | test your microphone online |
+| [ThinLinc / Cendio](https://www.cendio.com/what/features/) | Cross platform remote desktop |
 
 ## Useful providers and services
 
