@@ -7,6 +7,16 @@ parent: Linux
 
 # Bash
 
+## Check if variable is set
+
+```bash
+if [ -z ${PGLIST+x}  ]; then
+  not set
+else
+  echo "is set to $PGLIST"
+fi
+```
+
 ## Ask for yes or no
 
 ```bash
