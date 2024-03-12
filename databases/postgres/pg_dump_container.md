@@ -64,18 +64,38 @@ And add something like this:
 ```yaml
   dbbackup:
     image: aikedejongste/db-dumper
+    host: <kamal managed server where this runs>
     env:
       clear:
-        PGUSER: '....'
-        PGHOST: '....'
-        PGLIST: '....'
-        PGLIST: '....'
-        MONITORURL: 'www.uptimerobot.com/asdfasdfsadf'
+        PGUSER: 'username'
+        PGHOST: 'postgres container name or hostname'
+        PGLIST: 'app_production'
+        MONITORURL: 'ifconfig.me'
       secret:
         - PGPASSWORD
     directories:
       - /var/backups/:/mnt/target
     network: "private"
+```
+
+Don't forget to add `PGPASSWORD` to .env.
+
+### Step 2: Run
+
+```bash
+kamal env push
+kamal accessory boot dbbackup
+```
+
+### Step 3: change settings
+
+Start and stop really seem to do only that. SO if you want to change the
+settings, you need to remove the accessory and boot it again.
+
+```bash
+kamal accessory remove dbbackup
+kamal env push
+kamal accessory boot dbbackup
 ```
 
 

@@ -10,10 +10,23 @@ has_children: true
 
 - [Docker Logging to Loki](https://docs.aikedejongste.nl/logging/loki.html)
 
-## Install
+## Install from distro APT
 
 ```bash
 apt install -y apparmor-utils docker.io docker-compose docker-compose-plugin
+```
+
+## Install from Docker APT
+
+```bash
+sudo apt-get update && sudo apt-get install ca-certificates curl && sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc && sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
 ```
 
 ## SSH in Dockerfile (ugly!)

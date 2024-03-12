@@ -25,6 +25,13 @@ set +x
 ls -lhS
 ```
 
+## Sort directories by size
+
+```bash
+du -sh -- *  | sort -rh  # Files and directories, or
+du -sh -- */ | sort -rh  # Directories only
+```
+
 ## Generate a password
 
 ```bash

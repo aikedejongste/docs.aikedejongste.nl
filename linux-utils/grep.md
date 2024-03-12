@@ -12,3 +12,9 @@ has_children: false
 ```bash
 grep 'pattern1\|pattern2' fileName_or_filePath
 ```
+
+## Filter out comments and blank lines
+
+```bash
+grep -Ev "^#|^$" filename
+```

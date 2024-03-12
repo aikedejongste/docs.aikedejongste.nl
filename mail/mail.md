@@ -49,3 +49,20 @@ Check your SPF record [here](https://mxtoolbox.com/SuperTool.aspx?action=spf).
 ## MTA-STS
 
 - [info here](https://powerdmarc.com/what-is-mta-sts-and-why-do-you-need-it/)
+
+## Send with Telnet
+
+```bash
+telnet <HOST> 25
+
+EHLO aike.com
+MAIL FROM:<test@source.com>
+RCPT TO:<aap@destination.com>
+DATA
+Subject: Test1
+
+
+Body verhaaltje
+
+.
+```
