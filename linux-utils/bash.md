@@ -7,6 +7,12 @@ parent: Linux
 
 # Bash
 
+## Enable bash history timestamp
+
+```bash
+echo 'HISTTIMEFORMAT="%F %T "' >> ~/.bashrc
+```
+
 ## Every bash script
 
 * e -> exit on error

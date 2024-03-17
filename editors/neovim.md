@@ -116,6 +116,20 @@ Or in Normal mode, you can use gq followed by a motion command to reformat a
 specific part of the text. For example, to reformat the current paragraph, you
 would use `gqap`.
 
+## Line length 2 options:
+
+Let vim format (i.e.change) your text to have shorter lines, by inserting linebreaks or Leave lines as they are, but display them wrapped
+
+Option 1 would be achieved by setting textwidth (for example :set textwidth=30
+
+Then you can reformat your text by highlighting it (in visual mode) and typing gq. (textwidth can be abbreviated as tw, thus :set tw=30.)
+
+Option 2 can be toggled by running :set wrap / :set nowrap. This will wrap lines which are too long for the window.
+
+Both are independent.
+
+
+
 ## Delete trailing whitespaces
 
 `:%s/\s\+$//e`

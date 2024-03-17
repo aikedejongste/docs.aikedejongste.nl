@@ -7,6 +7,31 @@ parent: Databases
 
 # Mariadb replication
 
+## Status checks
+
+```sql
+SHOW SLAVE STATUS\G
+```
+
+```sql
+SHOW MASTER STATUS\G
+```
+
+```sql
+# should be on on the master/main/source/primary
+SHOW VARIABLES LIKE 'log_bin';
+or
+SHOW GLOBAL VARIABLES LIKE 'gtid_mode';
+```
+
+```sql
+SHOW BINARY LOGS;
+```
+
+
+
+
+
 ## docker-compose primary
 
 ## docker-compose secondary
