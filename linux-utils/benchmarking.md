@@ -47,3 +47,7 @@ fio --name=read_iops --directory=$TEST_DIR --size=10G \
 --iodepth_batch_submit=256  --iodepth_batch_complete_max=256
 ```
 
+|  Device | Result |
+|:-------------|:------------------|
+| X1 Carbon 10th gen | read: IOPS=357k, BW=1395MiB/s (1463MB/s)(81.7GiB/60001msec) |
+
