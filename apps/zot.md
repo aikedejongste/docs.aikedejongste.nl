@@ -17,6 +17,12 @@ apt install apache2-utils
 htpasswd -bBn aike 123456789 >> htpasswd
 ```
 
+or
+
+```bash
+htpasswd -n username
+```
+
 ## Config
 
 ```yaml
@@ -35,6 +41,14 @@ htpasswd -bBn aike 123456789 >> htpasswd
   },
   "log": {
       "level": "debug"
+  },
+  "extensions": {
+      "metrics": {
+          "enable": true,
+          "prometheus": {
+              "path": "/metrics"
+          }
+      }
   }
 }
 ```
@@ -67,3 +81,36 @@ services:
       caddy: zot.aike.be
       caddy.reverse_proxy: "{{upstreams 5000}}"
 ```
+
+## With Kamal
+
+```
+  zotregistry:
+    image: ghcr.io/project-zot/zot-linux-amd64:latest
+    host: server1
+    port: 5000
+    container_name: zotregistry
+    directories:
+      - /opt/zot/data:/var/lib/zot
+    files:
+      - infra/zot-config.json:/etc/zot/config.json
+      - infra/htpasswd:/etc/zot/passwd
+    env:
+      clear:
+        ZOT_LOG_LEVEL: DEBUG
+    labels:
+      traefik.enable: true
+      traefik.http.routers.zot_secure.service: .....-zotregistry@docker
+      traefik.http.routers.zot_secure.entrypoints: websecure
+      traefik.http.routers.zot_secure.rule: Host(`zot.company.com`)
+      traefik.http.routers.zot_secure.tls: true
+      traefik.http.routers.zot_secure.tls.certresolver: letsencrypt
+    options:
+      network: "private"
+```
+
+The zot-config.json file is the same as the one above.
+
+The htpasswd file is the same as the one above.
+
+You can put both in the infra directory and Kamal will copy them to the right place.
