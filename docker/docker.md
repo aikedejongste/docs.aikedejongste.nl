@@ -13,7 +13,7 @@ has_children: true
 ## Install from distro APT
 
 ```bash
-apt install -y apparmor-utils docker.io docker-compose docker-compose-plugin
+apt install -y gnupg2 pass apparmor-utils docker.io docker-compose docker-compose-plugin
 ```
 
 ## Install from Docker APT

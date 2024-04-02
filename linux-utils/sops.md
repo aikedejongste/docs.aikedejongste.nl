@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Sops and Age
+title: Encryption - Sops and Age
 parent: Linux
 has_children: false
 ---

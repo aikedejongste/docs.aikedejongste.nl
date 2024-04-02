@@ -85,3 +85,18 @@ tar -cvzf my_directory.tgz my_directory
 | zip	| 955 MB|	2:05|	zip -9 -r AOM.zip AOM/|
 | rar	| 876 MB|	6:31|	rar a -m5 AOM.rar AOM/*|
 | zstd	| 873 MB|	22:19|	tar -I 'zstd --ultra -22' -cf AOM.tar.zst AOM/ |
+
+## lz4
+
+Compress with:
+
+```bash
+lz4 file
+```
+
+Decompress with:
+
+```bash
+lz4 -d file.lz4
+
+```

@@ -39,3 +39,17 @@ done
 echo -e "Sending SUCCESS signal to HealhChecks.io\n"
 curl -s https://hc-ping.com/fd9340f1-8a0f-448e..........
 ```
+
+## Useful options for mysqldump
+
+- `--no-tablespaces` - don't include tablespace information in the dump
+- `--single-transaction` - dump consistent snapshot without locking tables
+- `--routines` - include stored routines
+- `--triggers` - include triggers
+- `--events` - include events
+- `--comments` - include comments in the dump
+- `--dump-date` - include dump date in comments
+- `--hex-blob` - dump binary columns in hexadecimal format
+- `--skip-lock-tables` - don't lock tables for read
+- `--opt` - shorthand for `--add-drop-table --add-locks --create-options --disable-keys --extended-insert --lock-tables --quick --set-charset`
+

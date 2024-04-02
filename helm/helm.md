@@ -59,12 +59,16 @@ helm repo add jetstack https://charts.jetstack.io  # for cert-manager
 helm show values bitnami/matomo
 ```
 
+```bash
+helm show values bitnami/matomo | yq e
+```
+
 ## Rollout deployment with MultiAttach error fix
 
 ```yaml
-updateStrategy:                                                                 
-  type: RollingUpdate                                                           
-  rollingUpdate:                                                                
-    maxSurge: 0                                                                 
-    maxUnavailable: 1 
+updateStrategy:
+  type: RollingUpdate
+  rollingUpdate:
+    maxSurge: 0
+    maxUnavailable: 1
 ```
