@@ -46,3 +46,25 @@ Make sure that /etc/resolv.conf is a symlink to /run/resolvconf/resolv.conf
 ```bash
 ln -s /run/resolvconf/resolv.conf /etc/resolv.conf
 ```
+
+## Check CAA record
+
+```bash
+dig CAA yourdomain.com +noall +answer
+```
+
+## Verify DNSSEC
+
+Check the DNSKEY record:
+
+```bash
+dig DNSKEY you.com +dnssec +noall +answer
+```
+
+And test an A record
+
+```bash
+dig A host1.you.com +dnssec +noall +answer
+```
+
+Or go to [DNSViz](https://dnsviz.net/) or [DNSSEC Analyzer](https://dnssec-debugger.verisignlabs.com/).

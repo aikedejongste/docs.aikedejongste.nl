@@ -7,14 +7,47 @@ parent: Linux
 
 # Bash
 
-## Check if variable is set
+## Check if variable is set and not empty
+
+Usually best way?
 
 ```bash
-if [ -z ${PGLIST+x}  ]; then
+if [ -v $MYVAR  ]; then
   not set
 else
-  echo "is set to $PGLIST"
+  echo "is set to $MYVAR"
 fi
+```
+
+Other ways:
+
+```bash
+# -z operator that checks if the variable is empty.
+if [ -z "${myvar}" ]; then
+
+# -z operator that checks if the variable is
+if [ -z "${myvar+x}" ]; then
+
+#
+if [ -z "${myvar+set}" ]; then
+
+#
+if [ -z "${myvar-unset}" ]; then
+
+# -n operator that checks if the variable is not empty. So opposite of -z.
+if [ -n "$myvar" ]; then
+
+# -v operator that checks the variable’s existence regardless of whether the variable is empty or not.
+# only in newer versions of bash
+if [ -v "$myvar" ]; then
+
+# using isset function
+isset() {
+    [ -n "${!1}" ]
+}
+myvar="Hello"
+if isset myvar; then
+
 ```
 
 ## Ask for yes or no

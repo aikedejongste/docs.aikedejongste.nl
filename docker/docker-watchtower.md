@@ -7,6 +7,16 @@ has_children: false
 
 # Watchtower deploys
 
+## Schedule
+
+On weekdays between 9:00 and 22:00 every 15 minutes.
+
+```yaml
+environment:
+  - WATCHTOWER_SCHEDULE=0 */15 9-22 * * 1-5
+```
+
+
 ## Manually trigger deploy
 
 ```bash
