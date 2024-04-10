@@ -34,7 +34,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\238C9FA8
 
 ## Avoid space for quote
 
-Go to language settings and remove "US international" keyboard map and add "US Qwerty".
+Go to "Time and Language" settings, click "Language options" on the installed language (the 3rd bar). And remove "US international" keyboard map and add "US Qwerty".
 
 ## Enable WSL
 

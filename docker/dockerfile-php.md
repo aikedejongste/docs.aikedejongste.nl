@@ -11,8 +11,7 @@ parent: Docker
 
 ```bash
 FROM php:8.1-apache
-
-ENV APACHE_SERVER_NAME website
+RUN echo "ServerName localhost" | tee /etc/apache2/conf-available/fqdn.conf && a2enconf fqdn
 
 RUN sed -i 's!/var/www/html!/var/www/public!g' /etc/apache2/sites-available/000-default.conf
 

@@ -71,3 +71,11 @@ so you can ssh to remote.box:2222.
   loop:
     - 10.10.1.2
 ```
+
+## Enable root login with password (bad idea)
+
+```bash
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/sshd_config
+sudo sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sudo systemctl restart sshd
+```
