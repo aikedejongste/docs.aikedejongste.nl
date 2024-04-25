@@ -7,6 +7,12 @@ parent: Linux
 
 # Bash
 
+## Avoid duplicate proces
+
+```bash
+pgrep certbot_watch >/dev/null || certbot_watch
+```
+
 ## Enable bash history timestamp
 
 ```bash
@@ -121,7 +127,11 @@ YESTERDAY=`date -d "yesterday 13:00" '+%Y-%m-%d'`
 ## SWAPPINESS
 
 ```bash
-"echo 'vm.swappiness = 15' >> /etc/sysctl.conf"
+echo 'vm.swappiness = 15' >> /etc/sysctl.conf
+
+or
+
+sysctl vm.swappiness=15
 ```
 
 ## SYSADMIN USER WITH SUDO

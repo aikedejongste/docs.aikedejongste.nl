@@ -28,3 +28,7 @@ APT::Periodic::AutocleanInterval "1";
 APT::Periodic::Unattended-Upgrade "1";
 EOF
 ```
+
+## Ionotify
+
+[https://github.com/mikesart/inotify-info](https://github.com/mikesart/inotify-info)

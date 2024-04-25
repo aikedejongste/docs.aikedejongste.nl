@@ -7,6 +7,13 @@ parent: Self Hosted Apps
 
 # Sentry
 
+## Installation
+
+```bash
+./install.sh --no-report-self-hosted-issues
+
+
+
 ## Limit memory usage in Redis
 
 The policy might cause data loss.
@@ -49,7 +56,13 @@ Reset every group to latest:
 docker-compose run --rm kafka kafka-consumer-groups --bootstrap-server kafka:9092 --all-groups --all-topics --reset-offsets --to-latest --execute
 ```
 
-Stop all consumers:
+You need to stop all consumers before running this. The easiest way to do this is to stop all services and then only start Kafka and Zookeeper:
+
+```bash
+docker-compose down && docker-compose up -d zookeeper kafka
+```
+
+Stop all consumers manually:
 
 ```bash
 stop-snuba.sh
