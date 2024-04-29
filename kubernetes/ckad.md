@@ -132,31 +132,39 @@ Env vars do not need a volumeMount
 
 ```bash
 k -n moon create secret generic secret1 --from-literal user=test --from-literal pass=pwd
+```
 
+```yaml
+- name: secret2-volume              # add
+  secret:                           # add
+    secretName: secret2             # add
 
-  - name: secret2-volume              # add
-    secret:                           # add
-      secretName: secret2             # add
+  - name: secret2-volume            # add
+    mountPath: /tmp/secret2         # add
 
-    - name: secret2-volume            # add
-      mountPath: /tmp/secret2         # add
-
-    - name: SECRET1_USER              # add
-      valueFrom:                      # add
-        secretKeyRef:                 # add
-          name: secret1               # add
-          key: user                   # add
+  - name: SECRET1_USER              # add
+    valueFrom:                      # add
+      secretKeyRef:                 # add
+        name: secret1               # add
+        key: user                   # add
 
 ```
 
 
+```bash
 k -f /opt/course/14/secret-handler.yaml delete --force --grace-period=0
 k -f /opt/course/14/secret-handler-new.yaml replace --force --grace-period=0
+```
 
-
+``bash
 k -n moon create configmap name-ofi-it --from-file=index.html=/opt/course/14/index.html
+```
 
+```bash
 k -n moon run tmp-name --restart=Never --rm --image=nginx:alpine -i -- curl -s name-ofi-it
+```
 
+```bash
 k -n moon rollout restart deploy my-deployment
+```
 
