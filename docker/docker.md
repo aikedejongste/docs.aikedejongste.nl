@@ -20,6 +20,14 @@ has_children: true
 apt install -y gnupg2 pass apparmor-utils docker.io docker-compose docker-compose-plugin
 ```
 
+## Manually cleanup old logs
+
+As root, not with sudo!
+
+```bash
+truncate -s 0 /var/lib/docker/containers/**/*-json.log
+```
+
 ## Install from Docker APT
 
 ```bash

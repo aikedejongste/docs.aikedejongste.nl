@@ -22,3 +22,9 @@ systemctl list-units --state=failed
 ``bash
 systemctl reset-failed
 ```
+
+## List services
+
+```bash
+systemctl list-unit-files --type service --all
+```

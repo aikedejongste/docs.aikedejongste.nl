@@ -11,6 +11,7 @@ parent: Self Hosted Apps
 
 ```bash
 ./install.sh --no-report-self-hosted-issues
+```
 
 
 
@@ -18,7 +19,7 @@ parent: Self Hosted Apps
 
 The policy might cause data loss.
 
-```
+```bash
 docker exec -i sentry-self-hosted_redis_1 redis-cli info
 docker exec -i sentry-self-hosted_redis_1 redis-cli CONFIG SET maxmemory 4G
 docker exec -i sentry-self-hosted_redis_1 redis-cli CONFIG SET maxmemory-policy volatile-ttl
@@ -104,4 +105,16 @@ The first one only exports 1 metric.
       SENTRY_AUTH_TOKEN: "...."
       SENTRY_EXPORTER_ORG: "you"
       SENTRY_EXPORTER_PROJECTS: "you"
+```
+
+## Kafka log cleanup
+
+These may be too strict:
+
+```bash
+KAFKA_LOG_RETENTION_HOURS: 24
+KAFKA_LOG_RETENTION_BYTES: 53687091200
+KAFKA_LOG_SEGMENT_BYTES: 1073741824
+KAFKA_LOG_RETENTION_CHECK_INTERVAL_MS: 300000
+KAFKA_LOG_SEGMENT_DELETE_DELAY_MS: 60000
 ```
