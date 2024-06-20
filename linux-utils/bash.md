@@ -7,6 +7,12 @@ parent: Linux
 
 # Bash
 
+## Output in columns
+
+```bash
+ls -l | column -t
+```
+
 ## Avoid duplicate proces
 
 ```bash
@@ -104,6 +110,12 @@ HISTSIZE=11000
 HISTFILESIZE=11000
 HISTTIMEFORMAT="%F %T "
 PROMPT_COMMAND='history -a'
+```
+
+## History without line numbers
+
+```bash
+history -w /dev/stdout
 ```
 
 ## Convert heif/heic to jpg

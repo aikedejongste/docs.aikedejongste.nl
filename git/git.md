@@ -41,7 +41,7 @@ git reset --hard && git clean -fdx
 ## Set my git config
 
 ```bash
-git config --global user.email "aikedejongste@gmail.com" && git config --global user.name "Aike de Jongste"
+git config --global user.email "aikedejongste@gmail.com" && git config --global user.name "Aike de Jongste" && git config --global init.defaultBranch main
 ```
 
 ## Get a zip with a release from a private repo

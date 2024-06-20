@@ -17,6 +17,7 @@ probably add some monitoring to it.
 ```python
 import requests
 import os
+import time
 
 ACCESS_TOKEN = os.getenv('DIGITALOCEAN_ACCESS_TOKEN')
 API_URL = "https://api.digitalocean.com/v2"
@@ -46,19 +47,25 @@ def list_repositories(registry_name):
         print(f"Failed to list repositories, status code: {response.status_code}")
         return []
 
-def list_untagged_manifests(registry_name, repo_name):
-    """List all untagged manifests for a given repository."""
+def list_all_manifests(registry_name, repo_name):
+    """List all manifests for a given repository."""
     url = f"{API_URL}/registry/{registry_name}/repositories/{repo_name}/digests"
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         manifests = response.json().get('manifests', [])
-        return [manifest['digest'] for manifest in manifests if len(manifest.get('tags', [])) == 0]
+        return [(manifest['digest'], manifest.get('tags', [])) for manifest in manifests]
     else:
-        print(f"Failed to list untagged manifests, status code: {response.status_code}")
+        print(f"Failed to list manifests, status code: {response.status_code}")
         return []
+
+def get_latest_digest(manifests):
+    """Get the latest digest from the list of manifests."""
+    latest_manifest = max(manifests, key=lambda x: x[1] if x[1] else [''])
+    return latest_manifest[0] if latest_manifest else None
 
 def delete_manifest(registry_name, repo_name, digest):
     """Delete a specific manifest from a repository."""
+    time.sleep(1)
     url = f"{API_URL}/registry/{registry_name}/repositories/{repo_name}/digests/{digest}"
     response = requests.delete(url, headers=headers)
     if response.status_code == 204:
@@ -81,9 +88,14 @@ def main():
         print(f"Registry Name: {registry_name}")
         repositories = list_repositories(registry_name)
         for repo_name in repositories:
-            untagged_manifests = list_untagged_manifests(registry_name, repo_name)
-            for digest in untagged_manifests:
-                delete_manifest(registry_name, repo_name, digest)
+            all_manifests = list_all_manifests(registry_name, repo_name)
+            if all_manifests:
+                latest_digest = get_latest_digest(all_manifests)
+                for digest, tags in all_manifests:
+                    if digest != latest_digest:
+                        delete_manifest(registry_name, repo_name, digest)
+            else:
+                print(f"No manifests found for repository {repo_name}")
         start_garbage_collection(registry_name)
     else:
         print("Could not retrieve the registry name or no repositories found.")

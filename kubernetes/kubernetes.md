@@ -136,3 +136,8 @@ Ansible
 kubectl get events -n <namespace> --sort-by=.metadata.creationTimestamp
 ```
 
+## Patch a deployment with a new pull secret
+
+```bash
+kubectl patch deployment <deployment-name> -p '{"spec": {"template": {"spec": {"imagePullSecrets": [{"name": "my-pull-secret"}]}}}}'
+```

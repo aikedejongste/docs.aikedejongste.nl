@@ -7,6 +7,12 @@ has_children: false
 
 # Grep, awk and sed
 
+## Stop after 1 match
+
+```bash
+grep -m 1 'pattern' filename
+```
+
 ## Grep for 2 things
 
 ```bash
@@ -27,3 +33,8 @@ grep -B 5 'pattern' filename # Display 5 lines before the result
 grep -C 5 'pattern' filename # Display 5 lines before and after the result
 ```
 
+## Less can also highlight
+
+```bash
+k -n project-c13 describe pod | less -p Requests # describe all pods and highlight Requests
+```
