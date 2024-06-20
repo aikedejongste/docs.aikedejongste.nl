@@ -19,7 +19,7 @@ journalctl --vacuum-time=1d
 systemctl list-units --state=failed
 ```
 
-``bash
+```bash
 systemctl reset-failed
 ```
 

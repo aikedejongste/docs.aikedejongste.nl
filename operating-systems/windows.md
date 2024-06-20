@@ -44,6 +44,14 @@ Open a PowerShell terminal with Administrator rights and paste this:
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
+## WSL ctrl-v in vim
+
+Use `ctrl+shift+,` to open the WSL settings. And comment this line:
+
+```json
+    // { "command": {"action": "paste", ...}, "keys": "ctrl+v" }, <------ THIS LINE
+```
+
 ## Map CapssLock to ESC on Windows 7,8 and 10
 
 ```bash

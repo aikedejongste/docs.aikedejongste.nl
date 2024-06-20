@@ -79,3 +79,10 @@ sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/s
 sudo sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 sudo systemctl restart sshd
 ```
+
+## Check forwarded and available keys
+
+```bash
+ssh-add -l
+```
+

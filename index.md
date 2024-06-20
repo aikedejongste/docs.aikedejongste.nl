@@ -47,6 +47,7 @@ or use one of my referral links to support me:
 | [Moneybird](https://www.moneybird.nl/aanmelden?referrer=3d9a9f00bc) | 2 extra months free |
 | [Mintos](https://www.mintos.com/en/l/ref/476S1C) | 50 EUR bonus |
 | [Brain.fm](https://my.brain.fm/payment?extended_promo=30&utm_source=referafriend)| 30 days free for you |
+| [Huel](https://huel.mention-me.com/m/ol/hc4cp-e57c9b9a4c)| 10 euro discount |
 
 ## Useful tools
 

@@ -13,7 +13,11 @@ has_children: true
 ```bash
 apt-get update && \
   apt-get install -y gcc python3-dev libkrb5-dev && \
-  apt-get install python3-pip -y && \
+  apt-get install python3-pip python3-full -y
+```
+
+```bash
+python -m venv . && source bin/activate && \
   pip3 install --upgrade pip && \
   pip3 install --upgrade virtualenv && \
   pip3 install ansible && \
@@ -21,6 +25,8 @@ apt-get update && \
 ```
 
 ## Install modules/colletions
+
+Probably not required anymore. These are installed by default.
 
 ```bash
 ansible-galaxy collection install kubernetes.core && \

@@ -6,6 +6,10 @@ parent: Networking
 
 # DNS
 
+## Links
+
+- [DNSinspect](https://www.dnsinspect.com/)
+
 ## Check if the txt record has been processed
 
 ```bash
