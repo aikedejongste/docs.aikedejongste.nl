@@ -14,11 +14,28 @@ has_children: true
 
 - [Docker Logging to Loki](https://docs.aikedejongste.nl/logging/loki.html)
 
+## Cleanup cronjob
+
+```bash
+0 4 * * * /usr/bin/docker container prune -f && /usr/bin/docker image prune -f
+```
+
 ## Install from distro APT
 
 ```bash
 apt install -y gnupg2 pass apparmor-utils docker.io docker-compose docker-compose-plugin
 ```
+
+## Docker stop all
+
+```bash
+docker stop $(docker ps -a -q)
+
+or
+
+docker ps -q | % { docker stop $_ }
+```
+
 
 ## Manually cleanup old logs
 
@@ -129,6 +146,12 @@ If you don't want to recreate the container.
 
 ```bash
 truncate -s 0 /var/lib/docker/containers/<container-id>/<container-id>-json.log
+```
+
+## Docker prune
+
+```bash
+docker image prune -af --filter "until=24h"
 ```
 
 
