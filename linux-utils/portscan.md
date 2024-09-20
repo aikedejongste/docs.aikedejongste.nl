@@ -25,6 +25,12 @@ nmap -sP -R 192.168.1.1-254
 nmap -p- 192.168.1.1
 ```
 
+## Check cyphers
+
+```bash
+nmap --script ssl-enum-ciphers -p 443 <host>
+```
+
 # Naabu
 
 ## Scan range

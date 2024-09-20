@@ -34,3 +34,13 @@ sudo dd if=<file> of=<device> bs=16M status=progress oflag=sync
 ### Debian Install USB
 
 Use Ventoy!
+
+### CentOS / RHEL / AlmaLinux
+
+Undo package update:
+
+```bash
+yum history list
+yum history undo <id>
+```
+

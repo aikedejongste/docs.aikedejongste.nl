@@ -9,6 +9,12 @@ parent: Kubernetes
 
 Check the pods in the kube-system namespace to see if the scheduler is running.
 
+## Create pod with command!!
+
+```bash
+k run tmp-api-contact --image=curlimages/curl:7.65.3 --dry-run=client -oyaml --command > e2.yaml -- sh -c 'sleep 1d'
+```
+
 ## Roles and role bindings
 
 There are 4 different RBAC combinations and 3 valid ones:

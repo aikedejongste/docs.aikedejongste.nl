@@ -15,6 +15,13 @@ apt install powertop powerstat lm-sensors
 systemctl enable powertop; systemctl start powertop
 ```
 
+## Battery recalibration
+
+```bash
+    sudo tlp recalibrate BAT0
+    sudo tlp-stat -b
+```
+
 ## Best battery info
 
 ```bash

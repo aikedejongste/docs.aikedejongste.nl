@@ -192,3 +192,9 @@ done
 ```bash
 scp -6 some_linux_binary  root@\[2a01:4f9:c010:9755::1\]:/root/
 ```
+
+## Run commands parallel
+
+```bash
+parallel --tag --linebuffer "ssh {} -- 'uptime'" ::: server-{1,2,3,4}
+```
