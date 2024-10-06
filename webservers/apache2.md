@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Apache
-parent: Webservers
+parent: Webservers and load balancing
 ---
 
 # Apache2

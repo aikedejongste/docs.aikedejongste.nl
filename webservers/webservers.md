@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Webservers and load balacing
+title: Webservers and load balancing
 has_children: true
 ---
 

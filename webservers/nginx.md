@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Nginx
-parent: Webservers
+parent: Webservers and load balancing
 ---
 
 # Nginx

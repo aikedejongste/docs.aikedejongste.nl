@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Headers
-parent: Webservers
+parent: Webservers and load balancing
 ---
 
 # Headers

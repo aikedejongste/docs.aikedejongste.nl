@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Caddy
-parent: Webservers
+parent: Webservers and load balancing
 ---
 
 # Caddy

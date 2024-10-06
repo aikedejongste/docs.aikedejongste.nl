@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Haproxy
-parent: Webservers
+parent: Webservers and load balancing
 ---
 
 # Haproxy

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Nginx ProxyPass
-parent: Webservers
+parent: Webservers and load balancing
 ---
 
 # Nginx ProxyPass examples
@@ -18,7 +18,7 @@ server {
     proxy_set_header Host $http_host;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
   }
-  
+
   location /api/ {
     proxy_pass http://backend:3001/api/;
     proxy_set_header Host $http_host;
@@ -34,7 +34,7 @@ server {
   location = /50x.html {
     root /usr/share/nginx/html;
   }
-} 
+}
 ```
 
 ## Nginx ProxyPass Grafana with Websockets
