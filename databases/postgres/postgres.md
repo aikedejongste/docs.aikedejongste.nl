@@ -81,6 +81,12 @@ and this should do the same:
 select 'create database mydb' WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'mydb')\gexec
 ```
 
+## Add apt repo
+
+```bash
+apt install -y postgresql-common && /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh
+```
+
 ## Install only the client to test a connection
 
 ```bash

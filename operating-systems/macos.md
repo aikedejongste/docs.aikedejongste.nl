@@ -10,6 +10,10 @@ parent: Operating Systems
 
 - [Wireguard](https://apps.apple.com/us/app/wireguard/id1451685025?ls=1&mt=12)
 
+## Useful link
+
+- [Built in Commands](https://weiyen.net/articles/useful-macos-cmd-line-utilities)
+
 ## Set lost & found hint on lock screen
 
 ```bash
