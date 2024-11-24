@@ -13,6 +13,12 @@ has_children: false
 echo "set ts=2 sts=2 sw=2 et ai si number cursorline showcmd incsearch ignorecase" >> ~/.vimrc
 ```
 
+## Write with sudo when readonly
+
+```bash
+:w !sudo tee %
+```
+
 ## Indent 4 spaces
 
 ```bash

@@ -35,6 +35,11 @@ or
 
 docker ps -q | % { docker stop $_ }
 ```
+## Search trough logs
+
+```bash
+docker logs --since "$(date -d 'today 13:30' +'%Y-%m-%dT%H:%M:%S')" --until "$(date -d 'today 13:40' +'%Y-%m-%dT%H:%M:%S')" prodapp
+```
 
 
 ## Manually cleanup old logs

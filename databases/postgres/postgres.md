@@ -47,6 +47,15 @@ Extensions are per database. Not for the whole server.
 
 ## Check if role can access a view
 
+
+## Gotchas
+
+Case-Insensitive Matching: When you don't use quotes, PostgreSQL assumes lowercase. So myadmin is searched as myadmin.
+
+Case-Sensitive Matching: When you use quotes, PostgreSQL respects the case. So "MyAdmin" matches exactly MyAdmin.
+
+
+
 ## Change user password
 
 You can use double quotes for the role name but this is not required. You
