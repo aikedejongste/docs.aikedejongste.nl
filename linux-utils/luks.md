@@ -25,6 +25,12 @@ cryptsetup luksOpen /dev/sdc1 sandisk-1tb
 mount /dev/mapper/sandisk-1tb /mnt/sandisk-1tb
 ```
 
+## Encrypt
+
+```bash
+cryptsetup luksFormat /dev/sdc1
+```
+
 ## With Ansible
 
 ```yaml
