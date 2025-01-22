@@ -31,6 +31,34 @@ mount /dev/mapper/sandisk-1tb /mnt/sandisk-1tb
 cryptsetup luksFormat /dev/sdc1
 ```
 
+## Mount partition in image
+
+```bash
+losetup -fP full_disk.img
+cryptsetup luksOpen /dev/loop0p1 naamvanjekeuze
+mkdir /mnt/naamvanjekeuze
+mount /dev/mapper/naamvanjekeuze /mnt/naamvanjekeuze
+```
+
+And when there is LVM in the image:
+
+```bash
+vgscan
+vgchange -ay
+mount /dev/mapper/vgname-lvname /mnt/naamvanjekeuze
+```
+
+
+## Umount:
+
+```bash
+umount /mnt/naamvanjekeuze
+cryptsetup luksClose naamvanjekeuze
+losetup -d /dev/loop0
+```
+
+
+
 ## With Ansible
 
 ```yaml

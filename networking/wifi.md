@@ -10,6 +10,13 @@ parent: Networking
 nmcli
 ```
 
+## Get saved passwords in Ubuntu
+
+```bash
+cd /etc/NetworkManager/system-connections
+sudo grep -r '^psk=' .
+```
+
 ## DFS
 
 Daarbij bevindt een deel van de frequentiegebieden waar de eerder genoemde 19 kanalen te vinden zijn zich in een niet-exclusief deel van het spectrum. Dit gebied wordt bijvoorbeeld ook gebruikt door radarsystemen, die voorrang hebben op wifi-netwerken van thuisgebruikers. Deze zogenaamde dynamic frequency selection (dfs) kanalen mag je gebruiken, zolang ze niet gebruikt worden voor andere zaken. Zodra je router anders detecteert, moet hij onmiddellijk het desbetreffende kanaal verlaten. Dat betekent dat als je in de eerste plaats een betrouwbaar netwerk moet hebben, je zonder de dfs-kanalen nog maar 4 kanalen van 20 MHz, 2 van 40 MHz of slechts 1 van 80 MHz overhoudt.

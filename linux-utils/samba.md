@@ -19,6 +19,14 @@ or
 apt install cifs-utils psmisc
 ```
 
+## Linux Server
+
+### Install dependencies
+
+```bash
+apt install samba
+```
+
 ### UTF-8
 
 It is recommended to mount shares with `iocharset=utf8`.

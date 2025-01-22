@@ -31,6 +31,12 @@ parent: Virtualization
 
 You can add `conv=sparse` to dd command on the receiving machine.
 
+## Copy disk from remote to local and compress to file
+
+```bash
+ssh root@1.2.3.4 "dd if=/dev/vda" | 7z a -si -pSECRET -mx=9 -mhe=on full-disk.7z
+```
+
 ## Make a backup of a filesytem over ssh
 
 ```bash

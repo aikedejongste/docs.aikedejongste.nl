@@ -51,6 +51,12 @@ iptables -S
 iptables -F; iptables -t nat -F; iptables -t mangle -F
 ```
 
+## Give access to a port
+
+```bash
+iptables -I INPUT 1 -s 1.2.3.4/32 -p tcp --dport 22 -j ACCEPT
+```
+
 ## Route/NAT/Masquerade
 
 Just this should do it. But it is insecure.

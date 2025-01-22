@@ -7,6 +7,15 @@ parent: Kubernetes
 
 # CKS
 
+```bash
+k create sa pvviewer
+k create clusterrole pvviewer-role --verb=list --resource=PersistentVolumes
+k create clusterrolebinding pvviewer-role-binding --clusterrole=pvviewer-role --serviceaccount=default:pvviewer
+```
+
+That default: part is the namespace for the service account. In Kubernetes, when you bind a ClusterRole to a service account, you specify it as <namespace>:<serviceaccount_name>. So here, default:pvviewer means it’s the pvviewer service account in the default namespace.
+
+
 ## Audit logs
 
 Are configured in the kube-apiserver.yaml file.

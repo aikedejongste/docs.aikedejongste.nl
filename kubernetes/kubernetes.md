@@ -6,6 +6,12 @@ has_children: true
 
 # Kubernetes
 
+## Debug pod
+
+```bash
+kubectl run debug-tools --image=nicolaka/netshoot  --restart=Never -it -- /bin/bash
+```
+
 ## Install kubectl
 
 ```bash
