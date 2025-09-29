@@ -23,6 +23,7 @@ tar --use-compress-program="pigz -k " -cf 652b55529f538b.....pigz 652b55529f538b
 ```
 
 ### Extract on target host
+
 ```bash
 cd /var/lib/docker/plugins
 tar -I pigz -xvf 652b55529f538b.....pigz
@@ -33,4 +34,3 @@ tar -I pigz -xvf 652b55529f538b.....pigz
 ```bash
 systemctl restart docker && docker plugin ls
 ```
-

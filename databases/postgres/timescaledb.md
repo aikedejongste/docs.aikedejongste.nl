@@ -6,7 +6,6 @@ parent: Databases
 
 # Timescaledb
 
-
 ## Notes
 
 - Extensions are per database, not per server

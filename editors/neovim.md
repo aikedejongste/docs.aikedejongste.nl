@@ -21,6 +21,7 @@ chmod +x /usr/bin/nvim
 ```
 
 ### Install plugin manager
+
 ```
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
@@ -32,6 +33,7 @@ mkdir -p .config/nvim/ && vim .config/nvim/init.vim
 ```
 
 Contents:
+
 ```
 call plug#begin()
 Plug 'github/copilot.vim'
@@ -45,11 +47,6 @@ Start nvim and `:PlugInstall`.
 `:Copilot setup`
 
 Visit [https://github.com/login/device](https://github.com/login/device) and type the code.
-
-
-
-
-
 
 ## Old setup
 
@@ -116,7 +113,7 @@ Or in Normal mode, you can use gq followed by a motion command to reformat a
 specific part of the text. For example, to reformat the current paragraph, you
 would use `gqap`.
 
-## Line length 2 options:
+## Line length 2 options
 
 Let vim format (i.e.change) your text to have shorter lines, by inserting linebreaks or Leave lines as they are, but display them wrapped
 
@@ -127,8 +124,6 @@ Then you can reformat your text by highlighting it (in visual mode) and typing g
 Option 2 can be toggled by running :set wrap / :set nowrap. This will wrap lines which are too long for the window.
 
 Both are independent.
-
-
 
 ## Delete trailing whitespaces
 

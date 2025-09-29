@@ -11,7 +11,6 @@ has_children: false
 [Chatbot leaderboard](https://chat.lmsys.org/?leaderboard)
 [WhisperFusion](https://github.com/collabora/WhisperFusion) - for realtime conversations with AI.
 
-
 ## Using a GPU at Vultr
 
 Check if you have a GPU:
@@ -69,11 +68,3 @@ services:
           devices:
           - capabilities: ["gpu"]
 ```
-
-
-
-
-
-
-
-

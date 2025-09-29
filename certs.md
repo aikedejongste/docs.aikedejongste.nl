@@ -76,7 +76,7 @@ or
 
 1. Altogether is cert, chain, key
 
-## Full chain for Haproxy:
+## Full chain for Haproxy
 
 ```bash
 export domain=yourdomain.nl
@@ -84,7 +84,6 @@ cat /etc/letsencrypt/live/$domain/fullchain.pem /etc/letsencrypt/live/$domain/pr
 
 cat /etc/letsencrypt/live/$domain/fullchain.pem /etc/letsencrypt/live/$domain/privkey.pem | base64 -w 0 > fullchainkey.pem
 ```
-
 
 ## Check k3s cert expiration date
 

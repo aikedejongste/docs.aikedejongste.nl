@@ -29,15 +29,8 @@ sudo mount /dev/loop0p1 /mnt/partition1
 ```
 
 And unmount when you’re done:
+
 ```bash
 sudo umount /mnt/partition1
 sudo losetup -d /dev/loop0
 ```
-
-
-
-
-
-
-
-

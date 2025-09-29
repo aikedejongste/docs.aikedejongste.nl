@@ -24,6 +24,7 @@ echo "set ts=2 sts=2 sw=2 et ai si number cursorline showcmd incsearch ignorecas
 ```bash
     :%normal! I
 ```
+
 Here's a step-by-step breakdown:
  • :%: Select all lines.
  • normal!: Execute the following command in normal mode.

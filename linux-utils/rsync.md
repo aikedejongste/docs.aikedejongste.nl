@@ -32,7 +32,6 @@ rsync -vuar --progress user@remote:/source /opt/destination
 
 ...
 
-
 ## In a script with locking
 
 ```bash

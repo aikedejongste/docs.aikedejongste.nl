@@ -45,5 +45,3 @@ networks:
   internal:
     external: true
 ```
-
-

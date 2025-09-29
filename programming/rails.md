@@ -19,15 +19,13 @@ parent: Programming
 result = ActiveRecord::Base.connection.execute("SELECT * FROM users")
 ```
 
-
-
 ## Good_job Postgres Threads
 
 In database.yaml
+
 ```
   pool: <%= $PROGRAM_NAME.include?("good_job") ? ENV.fetch("GOOD_JOB_MAX_THREADS", 5).to_i + 3 : ENV.fetch("RAILS_MAX_THREADS", 5).to_i %>
 ```
-
 
 ## Dependencies on Ubuntu with MySQL
 
@@ -54,6 +52,7 @@ apt install libmagic-dev \
 
 pip3 install -U numpy pandas
 ```
+
 ## For PG gem
 
 ```bash
@@ -100,5 +99,3 @@ EDITOR=vim bundle exec rails edit:credentials
 ```
 
 ## constants.rb
-
-

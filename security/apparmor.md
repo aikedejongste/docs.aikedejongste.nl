@@ -16,4 +16,3 @@ has_children: false
 
 - `grep apparmor /var/log/syslog`
 - `dmesg -T | grep -i apparmor`
-

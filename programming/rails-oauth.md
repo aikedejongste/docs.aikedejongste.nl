@@ -94,9 +94,7 @@ In `app/controllers/users/omniauth_callbacks_controller.rb`
 <% end %>
 ```
 
-
 ## Redirect_url and Redirect_uri
 
 - it is better to use 127.0.0.1 than localhost as a redirect url
 - it is better to use https in development for the redirect url
-

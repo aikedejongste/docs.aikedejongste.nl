@@ -62,11 +62,11 @@ root_url = %(protocol)s://%(domain)s:%(http_port)s/
 ## OAuth / OIDC troubleshooting
 
 ### redirect_uri
+
 If you get an error about the redirect url when redirect from Grafana to Keycloak it is probably
 the root_url that is not set in Grafana.
 
 ### newtransportwithcode
+
 `login.OAuthLogin (NewTransportWithCode) after OAuth login` -> it cannot connect to the authentication
 server, so maybe a DNS or a firewall problem?
-
-

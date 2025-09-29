@@ -19,9 +19,7 @@ leading here.
 - [DoorKeeper OpenID](https://github.com/doorkeeper-gem/doorkeeper-openid_connect)
 - [Grafana Generic Oauth](https://grafana.com/docs/grafana/latest/setup-grafana/configure-security/configure-authentication/generic-oauth/)
 
-
 ## Rails
-
 
 In config/routes.rb
 
@@ -126,4 +124,3 @@ allow_assign_grafana_admin = false
 
 - Grafana has organisation id's.
 - You can use ${__user.email} in Grafana dashboard queries to get the users email.
-

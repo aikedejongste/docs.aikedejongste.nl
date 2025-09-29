@@ -51,8 +51,6 @@ In application controller:
     end
 ```
 
-
 ## Add flash messages
 
 - Create `_flash.html.erb` partial.
-

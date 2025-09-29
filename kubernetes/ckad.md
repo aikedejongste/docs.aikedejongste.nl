@@ -73,7 +73,6 @@ or
 k -n aap get ep project-aap-svc
 ```
 
-
 ## Expose a deployment or pods by label
 
 ```bash
@@ -95,7 +94,6 @@ spec:
 3. Create a job with completions and paralellism set to 5, that runs the command `echo hello`.
 4. Delete Helm chart
 5. Upgrade a Helm chart
-
 
 ## Snippets
 
@@ -150,7 +148,6 @@ k -n moon create secret generic secret1 --from-literal user=test --from-literal 
 
 ```
 
-
 ```bash
 k -f /opt/course/14/secret-handler.yaml delete --force --grace-period=0
 k -f /opt/course/14/secret-handler-new.yaml replace --force --grace-period=0
@@ -158,6 +155,7 @@ k -f /opt/course/14/secret-handler-new.yaml replace --force --grace-period=0
 
 ``bash
 k -n moon create configmap name-ofi-it --from-file=index.html=/opt/course/14/index.html
+
 ```
 
 ```bash
@@ -167,4 +165,3 @@ k -n moon run tmp-name --restart=Never --rm --image=nginx:alpine -i -- curl -s n
 ```bash
 k -n moon rollout restart deploy my-deployment
 ```
-

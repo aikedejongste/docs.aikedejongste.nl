@@ -11,4 +11,3 @@ parent: Webservers and load balancing
 ```bash
 haproxy -f /etc/haproxy/haproxy.cfg -c
 ```
-

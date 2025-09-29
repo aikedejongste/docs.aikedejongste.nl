@@ -28,4 +28,3 @@ apt-get install libpq-dev
 ```bash
 apt install libmagic-dev
 ```
-

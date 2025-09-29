@@ -14,8 +14,10 @@ has_children: false
 - SMTP2GO: [1000 free per month no CC](https://www.smtp2go.com/pricing/)
 
 Not sure if this still works:
+
 - Mailgun: [1000 free per month with CC](https://help.mailgun.com/hc/en-us/articles/360048661093-How-does-PAYG-billing-work-)
 - TransIP: has free outgoing mail with a VPS
 
 Interesting:
- - MailerSend [link](https://www.mailersend.com/)
+
+- MailerSend [link](https://www.mailersend.com/)

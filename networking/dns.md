@@ -34,7 +34,6 @@ apt install systemd-resolved
 
 Maybe the better approach?
 
-
 ## DNS on Ubuntu using resolvconf
 
 Don't use resolvconf on Debian.

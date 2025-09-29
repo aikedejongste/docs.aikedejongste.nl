@@ -8,11 +8,12 @@ parent: Webservers and load balancing
 
 ## Simple Webdav setup with Auth Digest
 
-### Enable module `auth_digest`:
+### Enable module `auth_digest`
 
 ```bash
 a2enmod auth_digest
 ```
+
 ### Create password file
 
 ```bash

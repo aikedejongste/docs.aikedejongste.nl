@@ -28,10 +28,6 @@ SHOW GLOBAL VARIABLES LIKE 'gtid_mode';
 SHOW BINARY LOGS;
 ```
 
-
-
-
-
 ## docker-compose primary
 
 ## docker-compose secondary

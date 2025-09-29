@@ -33,8 +33,6 @@ services:
     volumes:
       - ./_PGDATA:/var/lib/postgresql/data
 
-
-
 5. sudo -u postgres createuser -s fwcheck -P
 
 OR
@@ -54,7 +52,6 @@ OR
 - rails g scaffold Address user:references ip:string name:string
 - rails g scaffold Result address:references port:integer status:string scanned_at:datetime protocol:string tls:boolean
 
-
 ## Kamal deploy
 
 4. bundle add kamal
@@ -64,5 +61,3 @@ OR
 On target host:
 mkdir -p /opt/letsencrypt && touch /opt/letsencrypt/acme.json && chmod 600 /opt/letsencrypt/acme.json
 docker network create -d bridge private
-
-

@@ -43,4 +43,3 @@ Undo package update:
 yum history list
 yum history undo <id>
 ```
-

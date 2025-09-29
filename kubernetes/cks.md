@@ -15,15 +15,13 @@ k create clusterrolebinding pvviewer-role-binding --clusterrole=pvviewer-role --
 
 That default: part is the namespace for the service account. In Kubernetes, when you bind a ClusterRole to a service account, you specify it as <namespace>:<serviceaccount_name>. So here, default:pvviewer means it’s the pvviewer service account in the default namespace.
 
-
 ## Audit logs
 
 Are configured in the kube-apiserver.yaml file.
 
-
 ## Create key and csr for user aike with common name
 
-Set Common Name = aike@internal.users
+Set Common Name = <aike@internal.users>
 
 ```bash
 openssl genrsa -out aike.key 2048 && openssl req -new -key aike.key -out aike.csr
@@ -37,7 +35,7 @@ This doesn't work because the CA is not a CA for users. It is a CA for the clust
 openssl x509 -req -in aike.csr -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -out aike.crt -days 500
 ```
 
-## Making Namespaces use Pod Security Standards works via labels.
+## Making Namespaces use Pod Security Standards works via labels
 
 `kubectl edit namespace team-red`
 
@@ -50,7 +48,7 @@ metadata:
     pod-security.kubernetes.io/enforce: baseline # add
 ```
 
-## Get secret from within a pod from the API:
+## Get secret from within a pod from the API
 
 ```bash
 curl https://kubernetes.default/api/v1/namespaces/restricted/secrets -H "Authorization: Bearer $(cat /run/secrets/kubernetes.io/serviceaccount/token)" -k
@@ -98,4 +96,3 @@ spec:
             type: Localhost                  # add
             localhostProfile: very-secure    # add
 ```
-

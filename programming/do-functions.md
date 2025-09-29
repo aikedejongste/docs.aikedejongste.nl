@@ -14,6 +14,7 @@ List accounts with: `doctl auth list`
 Switch accounts with: `doctl auth switch --context "my team"`
 
 ## Serverless
+
 1. doctl serverless install
 2. doctl serverless connect
 3. doctl serverless status

@@ -8,8 +8,7 @@ parent: Cloud Infrastructure
 
 ```bash
 aws sns publish --topic-arn arn:aws:sns:eu-central-1......... \
-		--subject "hi" \
-		--message "hi" \
-		--output text
+  --subject "hi" \
+  --message "hi" \
+  --output text
 ```
-

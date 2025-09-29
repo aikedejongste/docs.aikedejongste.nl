@@ -20,7 +20,6 @@ parent: Programming
 
 There is .deliver_now for mailers.
 
-
 ### 1. put the credentials in the correct credentials
 
 ```yaml

@@ -9,7 +9,6 @@ parent: Operating Systems
 
 cat example.yaml | docker run --rm -i quay.io/coreos/butane:release > /var/lib/libvirt/flatcar-linux/flatcar-linux1/provision.ign
 
-
 sudo flatcar-install -d /dev/sda -i fc.json
 
 ## Docker buildx

@@ -46,7 +46,7 @@ SELECT pg_sleep(100); -- triggered by Aike
 SELECT relname, last_vacuum, last_autovacuum FROM pg_stat_user_tables;
 ```
 
-## 4. Show tables with dead rows:
+## 4. Show tables with dead rows
 
 ```sql
 SELECT relname, n_dead_tup FROM pg_stat_user_tables;
@@ -81,5 +81,3 @@ The table_len field shows the total size of the table.
 The dead_tuple_len field shows the size of the dead tuples.
 The free_space field shows the amount of free space already available in the table.
 The space that can potentially be reclaimed by a VACUUM is approximately the sum of dead_tuple_len and free_space.
-
-

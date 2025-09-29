@@ -14,6 +14,7 @@ You need to replace only server.crt and server.key files. No change needed at cl
 I've found this [here](https://forums.openvpn.net/viewtopic.php?t=44009).
 
 ### 1. delete old server.crt key and all files related to it
+
 ```bash
 in my case (debian linux):
 rm /etc/easy-rsa/pki/private/server.key
@@ -53,5 +54,3 @@ cp easy-rsa/pki/privateserver.key /etc/openvpn/server/private
 ```bash
 systemctl restart openvpn
 ```
-
-

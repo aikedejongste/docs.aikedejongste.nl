@@ -46,12 +46,13 @@ apt install postgresql-client-14
 ## Other option
 
 ```bash
-$ pg_dump -Z0 -j 10 -Fd database_name -f dumpdir
-$ tar -cf - dumpdir | pigz > dumpdir.tar.gz
-$ rm dumpdir
+pg_dump -Z0 -j 10 -Fd database_name -f dumpdir
+tar -cf - dumpdir | pigz > dumpdir.tar.gz
+rm dumpdir
 ```
 
 ## Quick dump and restore
+
 ```bash
 pg_dump -Fc -Z 9  --file=file.dump myDb
 pg_restore -Fc -j 8  file.dump

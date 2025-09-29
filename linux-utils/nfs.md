@@ -133,4 +133,4 @@ firewall-cmd --reload
 
 ## Troubleshooting
 
-- nfsiostat 5
+* nfsiostat 5

@@ -48,7 +48,7 @@ Check your SPF record [here](https://mxtoolbox.com/SuperTool.aspx?action=spf).
 
 ## MTA-STS
 
-- [info here](https://powerdmarc.com/what-is-mta-sts-and-why-do-you-need-it/)
+* [info here](https://powerdmarc.com/what-is-mta-sts-and-why-do-you-need-it/)
 
 MTA-STS protocol is deployed by having a DNS record that specifies that a mail
 server can fetch a policy file from a specific subdomain. This policy file is
@@ -57,8 +57,6 @@ names of the recipient’s mail servers. Implementing MTA-STS is easier on the
 recipient’s side in comparison to the sending side as it requires to be
 supported by the mail server software. While some mail servers support MTA-STS,
 such as PostFix, not all do.
-
-
 
 ## Send with Telnet
 

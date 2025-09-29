@@ -28,5 +28,3 @@ curl -g \
 -d '{"query": "query { __schema { types { name kind description fields(includeDeprecated: true) { name description type { name kind } args { name description type { name kind } defaultValue } } } } }"}' \
 https://graphql.tilaa.com/
 ```
-
-
