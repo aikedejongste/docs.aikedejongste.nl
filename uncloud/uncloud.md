@@ -10,13 +10,11 @@ has_children: true
 
 - [Ente](https://ente.io)
 
-
 ## Mentruation trackers
 
-- https://f-droid.org/en/packages/ch.nilsgrob.android.bluemoon/
-- https://f-droid.org/en/packages/com.mensinator.app/
-- https://f-droid.org/en/packages/de.arnowelzel.android.periodical/
-
+- <https://f-droid.org/en/packages/ch.nilsgrob.android.bluemoon/>
+- <https://f-droid.org/en/packages/com.mensinator.app/>
+- <https://f-droid.org/en/packages/de.arnowelzel.android.periodical/>
 
 ## Android keyboard
 

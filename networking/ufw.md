@@ -20,7 +20,6 @@ Put quotes around app profiles with spaces.
 ufw allow from 1.2.3.4/24 to any app <profile name>
 ```
 
-
 ## UFW without Ansible
 
 ```bash

@@ -13,6 +13,7 @@ Grafana Loki needs to store two different types of data: **chunks** and **ind
 The filesystem object store is the easiest to get started with Grafana Loki but there are some pros/cons to this approach.
 
 Very simply it stores all the objects (chunks) in the specified directory:
+
 ```yaml
 storage_config:
   filesystem:
@@ -71,17 +72,17 @@ Looks like you don't want to use the table manager.
 
 See the logs `docker logs -f loki_loki_1 -n 5000 2>&1 | grep compactor`
 
-Useful info: https://github.com/grafana/loki/issues/6300#issuecomment-1431887039
+Useful info: <https://github.com/grafana/loki/issues/6300#issuecomment-1431887039>
 
 Retention through the [Table
 Manager](https://grafana.com/docs/loki/latest/operations/storage/table-manager/) is achieved by
-relying on the object store TTL feature, and will work for both 
+relying on the object store TTL feature, and will work for both
 [boltdb-shipper](https://grafana.com/docs/loki/latest/operations/storage/boltdb-shipper/) store
 and chunk/index store.
 
-However retention through the 
+However retention through the
 [Compactor](https://grafana.com/docs/loki/latest/operations/storage/boltdb-shipper/#compactor) is
-supported only with the 
+supported only with the
 [boltdb-shipper](https://grafana.com/docs/loki/latest/operations/storage/boltdb-shipper/) store.
 
 Set `retention_enabled` to true. Without this, the Compactor will only compact tables.
@@ -118,8 +119,6 @@ storage_config:
         bucket_name: loki
 ```
 
-
-
 ## Install Logging driver for Docker
 
 ```bash
@@ -151,5 +150,3 @@ Add this to the container definition:
       options:
         loki-url: "https://loki.aike.be/loki/api/v1/push"
 ```
-
-

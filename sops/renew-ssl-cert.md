@@ -21,6 +21,7 @@ Considering not using manually created certs first!
 ## Request a cert
 
 ### Create a key
+
 ```bash
 aike@yourcompany-dev ~/repos/certs-and-keys $ openssl ecparam -out star-yourcompany-app.key -name prime256v1 -genkey
 

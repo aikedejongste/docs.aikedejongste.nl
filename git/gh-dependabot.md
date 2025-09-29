@@ -21,4 +21,3 @@ updates:
 #      - dependency-name: "*"
 #        versions: ["*"]
 ```
-

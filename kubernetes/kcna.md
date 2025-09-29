@@ -14,6 +14,7 @@ What is the successor to PodSecurityPolicies? Admission Controller
 A PersistentVolumeClaim (PVC) is a request for storage by a user. It is similar to a Pod. Pods consume node resources and PVCs consume PV resources.
 
 Values:
+
 - Distribution is better than centralization
 - Community over product or company
 - Automation over process
@@ -21,12 +22,12 @@ Values:
 - Evolution is better than stagnation
 
 Layers (OPA PRO):
-* Orchestration & Management
-* Provisioning
-* App definition and development
-* Platform
-* Runtime
-* Observability & analysis
+- Orchestration & Management
+- Provisioning
+- App definition and development
+- Platform
+- Runtime
+- Observability & analysis
 
 The Container Runtime Interface (CRI) is the main protocol for the communication between the kubelet and Container Runtime. The Kubernetes Container Runtime Interface (CRI) defines the main gRPC protocol for the communication between the node components kubelet and container runt
 
@@ -51,11 +52,13 @@ If you want to control traffic flow at the IP address or port level (OSI layer 3
 **Linkerd, Consul and Istio are service meshes.**
 
 Kubernetes has the following opinions about cluster networking:
+
 - all Pods can communicate with all other Pods without using NAT
 - all Nodes can communicate with all Pods without using NAT.
 - the IP that a Pod sees itself as, is the same IP that others see it as
 
 Microservices:
+
 - Multiple apps are each responsible for one thing
 - Functionality is isolated and stateless
 - Highly maintainable and testable
@@ -63,6 +66,7 @@ Microservices:
 - Organized around business capabilities
 
 A service mesh is an infrastructure layer that can provide the following:
+
 - Reliability (Traffic Management, Retries, Load Balancing)
 - Observability (Metrics, Traces)
 - Security (TLS Certifications, Identity)
@@ -95,8 +99,8 @@ Label Selectors define labels as a key value pair under metadata in a Manifest f
 
 6443 + 8080
 
-* kubectl config view  (KCV)
-* kubectl EDIT resource (KER)
+- kubectl config view  (KCV)
+- kubectl EDIT resource (KER)
 
 There are two areas of concern for securing Kubernetes: - Securing the cluster components that are configurable - Securing the applications which run in the cluster
 
@@ -109,5 +113,3 @@ etcd is the primary data source in k8s
 apiVersion determines which api group will be used
 
 Labels are key/value pairs that are attached to objects
-
-

@@ -33,7 +33,6 @@ sudo apt update && sudo apt install signal-desktop
 sudo add-apt-repository universe -y && sudo add-apt-repository ppa:agornostal/ulauncher -y && sudo apt update && sudo apt install ulauncher
 ```
 
-
 ## Gnome Extensions
 
 ### Disable updater notifications
@@ -54,4 +53,3 @@ sudo apt install -y gnome-browser-connector
 open https://chromewebstore.google.com/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep
 open https://extensions.gnome.org/extension/4548/tactile/
 ```
-

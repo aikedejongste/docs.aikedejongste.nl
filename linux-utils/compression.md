@@ -13,7 +13,6 @@ parent: Linux
 apt install unrar-free
 ```
 
-
 ## zip
 
 Useful when compressing for Windows. Might need 7zip on Windows to
@@ -77,14 +76,14 @@ tar -cvzf my_directory.tgz my_directory
 
 ## Benchmarks I found on the internet
 
-| Compression| 	Size | 	Time Elapsed|	Command|
-| gzip	| 954 MB|	2:10|	tar cf - AOM/ \| gzip -9 - > AOM.tar.gz|
-| xz	| 847 MB|	27:32|	tar cf - AOM/ \| xz -9e - > AOM.tar.xz|
-| bzip2	| 943 MB|	5:42|	tar cf - AOM/ \| bzip2 -9 - > AOM.tar.bz2|
-| 7zip	| 845 MB|	16:41|	7z a -mx=9 AOM.7z AOM/|
-| zip	| 955 MB|	2:05|	zip -9 -r AOM.zip AOM/|
-| rar	| 876 MB|	6:31|	rar a -m5 AOM.rar AOM/*|
-| zstd	| 873 MB|	22:19|	tar -I 'zstd --ultra -22' -cf AOM.tar.zst AOM/ |
+| Compression|  Size |  Time Elapsed| Command|
+| gzip | 954 MB| 2:10| tar cf - AOM/ \| gzip -9 - > AOM.tar.gz|
+| xz | 847 MB| 27:32| tar cf - AOM/ \| xz -9e - > AOM.tar.xz|
+| bzip2 | 943 MB| 5:42| tar cf - AOM/ \| bzip2 -9 - > AOM.tar.bz2|
+| 7zip | 845 MB| 16:41| 7z a -mx=9 AOM.7z AOM/|
+| zip | 955 MB| 2:05| zip -9 -r AOM.zip AOM/|
+| rar | 876 MB| 6:31| rar a -m5 AOM.rar AOM/*|
+| zstd | 873 MB| 22:19| tar -I 'zstd --ultra -22' -cf AOM.tar.zst AOM/ |
 
 ## lz4
 

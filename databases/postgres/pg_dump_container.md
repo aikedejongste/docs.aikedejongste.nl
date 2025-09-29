@@ -53,8 +53,6 @@ PGLIST=yourdbname
 docker-compose pull && docker-compose up -d && docker-compose logs -f dbbackup
 ```
 
-
-
 ## With Kamal
 
 ### Step 1: edit config/deploy.yaml
@@ -97,7 +95,3 @@ kamal accessory remove dbbackup
 kamal env push
 kamal accessory boot dbbackup
 ```
-
-
-
-

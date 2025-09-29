@@ -7,7 +7,7 @@ has_children: false
 
 # Postgres
 
-## Links:
+## Links
 
 - [CheatSheet](https://wiki.postgresql.org/wiki/Operations_cheat_sheet)
 
@@ -47,14 +47,11 @@ Extensions are per database. Not for the whole server.
 
 ## Check if role can access a view
 
-
 ## Gotchas
 
 Case-Insensitive Matching: When you don't use quotes, PostgreSQL assumes lowercase. So myadmin is searched as myadmin.
 
 Case-Sensitive Matching: When you use quotes, PostgreSQL respects the case. So "MyAdmin" matches exactly MyAdmin.
-
-
 
 ## Change user password
 
@@ -82,7 +79,7 @@ and this should do the same:
 
 ## Backup options
 
-* [PG-Backup-local-container](https://github.com/prodrigestivill/docker-postgres-backup-local) - have not tried it yet
+- [PG-Backup-local-container](https://github.com/prodrigestivill/docker-postgres-backup-local) - have not tried it yet
 
 ## Create database if not exists
 
@@ -143,4 +140,5 @@ To execute the CREATE SCHEMA statement, you must have the CREATE privilege in th
 ```bash
 CREATE SCHEMA IF NOT EXISTS mlops;
 ```
+
 TODO: SET OWNER

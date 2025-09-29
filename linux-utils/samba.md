@@ -37,7 +37,6 @@ Don't forget to reboot before installing the linux-modules-extra or type the cor
 
 ### Mount temporariy
 
-
 ```bash
 mount -t cifs //192.0.2.17/SharedFiles /mnt/smb_share
 ```
@@ -66,7 +65,6 @@ Systemd service called `samba` and `smb` are not the same.
 
 - samba = Active Directory service
 - smb = file sharing
-
 
 ### Don't set password for smb user
 

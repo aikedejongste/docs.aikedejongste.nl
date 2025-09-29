@@ -6,7 +6,7 @@ parent: Networking
 
 # Wireguard VPN
 
-## Wireguard in a container:
+## Wireguard in a container
 
 [gluetun](https://github.com/qdm12/gluetun)
 

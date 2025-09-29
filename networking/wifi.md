@@ -23,7 +23,7 @@ Daarbij bevindt een deel van de frequentiegebieden waar de eerder genoemde 19 ka
 
  In 5GHz heb je namelijk 4 kanalen die je volledig vrij mag gebruiken en 15 kanalen die mogelijk door radars gebruikt worden en die je alleen mag gebruiken als je DFS gecertificeerd bent. Vervolgens is het zo dat de laagste 8 kanalen in 5GHz een max zendvermogen van 200mW kennen, terwijl je bij de hoogste 11 kanalen met 1000mW mag zenden
 
- - kun je in 5GHz alleen kanalen 36, 40, 44 en 48 selecteren, dan geen DFS support = FOUT
+- kun je in 5GHz alleen kanalen 36, 40, 44 en 48 selecteren, dan geen DFS support = FOUT
 - kun je in 5GHz ook kanalen 52-64 en >100 selecteren, dan wel DFS support = GOED
 
 6GHz fixes this

@@ -25,4 +25,3 @@ parent: Hardware
 ## Repairs and insurance
 
 ## Input devices
-

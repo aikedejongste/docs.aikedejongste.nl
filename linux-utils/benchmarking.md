@@ -37,7 +37,7 @@ fio --name=fiotest --filename=test1 --size=16GB --rw=read --bs=1M --direct=1 --n
 rm test1
 ```
 
-### Test read IOPS by performing random reads, using an I/O block size of 4 KB and an I/O depth of at least 256:
+### Test read IOPS by performing random reads, using an I/O block size of 4 KB and an I/O depth of at least 256
 
 ```bash
 TEST_DIR=/mnt/fiotest

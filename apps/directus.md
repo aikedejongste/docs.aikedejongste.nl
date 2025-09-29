@@ -7,14 +7,14 @@ parent: Self Hosted Apps
 
 # Directus
 
--  docker network create internal
--  put content below in /opt/compose.yaml
--  - set caddy label to your hostname
--  - set email
--  - set password
--  - set secret
--  - set public hostname
--  docker compose up -d
+- docker network create internal
+- put content below in /opt/compose.yaml
+ - set caddy label to your hostname
+ - set email
+ - set password
+ - set secret
+ - set public hostname
+- docker compose up -d
 
 ```yaml
 services:

@@ -69,4 +69,3 @@ FROM
   databaseName.INFORMATION_SCHEMA.TABLES;
 GO
 ````
-

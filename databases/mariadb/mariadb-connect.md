@@ -14,6 +14,7 @@ apt install mariadb-client
 ```
 
 ## Bash console
+
 ```bash
 export MYSQL_HOST='your_mysql_host'
 export MYSQL_USER='your_username'
@@ -30,4 +31,3 @@ mysql
 user=foo
 password=P@55w0rd
 ```
-

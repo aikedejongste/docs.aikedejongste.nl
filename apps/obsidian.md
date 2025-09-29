@@ -15,4 +15,3 @@ to different Vaults. This is the syntax;
 ```bash
 xdg-open obsidian:///home/aike/Obsidian/Vault2/
 ```
-

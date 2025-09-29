@@ -6,4 +6,3 @@ parent: Programming
 ---
 
 # Ruby on Rails - Action Mailbox
-

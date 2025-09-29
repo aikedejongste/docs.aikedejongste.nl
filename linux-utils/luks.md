@@ -48,16 +48,13 @@ vgchange -ay
 mount /dev/mapper/vgname-lvname /mnt/naamvanjekeuze
 ```
 
-
-## Umount:
+## Umount
 
 ```bash
 umount /mnt/naamvanjekeuze
 cryptsetup luksClose naamvanjekeuze
 losetup -d /dev/loop0
 ```
-
-
 
 ## With Ansible
 

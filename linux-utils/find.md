@@ -48,4 +48,3 @@ find . -name "*.yaml" -newermt "2023-09-22" ! -newermt "2023-09-23"
 ```bash
 find / -xdev -printf '%h\n' | sort | uniq -c | sort -k 1 -n
 ```
-

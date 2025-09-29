@@ -7,7 +7,7 @@ parent: Programming
 
 # Rails - Resque
 
-#rails #ruby
+# rails #ruby
 
 List queues: `Resque.queues`
 

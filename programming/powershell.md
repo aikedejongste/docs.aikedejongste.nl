@@ -10,6 +10,7 @@ parent: Programming
 ## Use WSL in PS
 
 Check which subsystems are available:
+
 ```bash
 wsl --list
 Windows Subsystem for Linux Distributions:
@@ -17,6 +18,7 @@ docker-desktop-data (Default)
 Ubuntu
 docker-desktop
 ```
+
 That docker-desktop-data default seemed to be the problem.
 
 Change the default
@@ -24,6 +26,3 @@ Change the default
 ```bash
 > wsl --setdefault Ubuntu
 ```
-
-
-

@@ -101,7 +101,6 @@ resource "local_file" "inventory" {
 
 ```
 
-
 ### Cloud Init file
 
 ```yaml
@@ -128,7 +127,6 @@ packages:
   - screen
   - apparmor-utils
 ```
-
 
 ### TF output template
 

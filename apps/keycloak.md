@@ -8,4 +8,3 @@ parent: Self Hosted Apps
 # Keycloak
 
 ## Run in docker behind reverse proxy
-

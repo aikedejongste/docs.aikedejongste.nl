@@ -19,6 +19,7 @@ application's access to a user's account. Each scope represents a specific
 permission granted by the user to the application.
 
 ## ID Tokens
+
 * come from OIDC ## Access tokens
 * give access to a resource
 * come from OAuth2

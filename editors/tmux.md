@@ -9,7 +9,6 @@ has_children: false
 
 [CheatSheet](https://tmuxcheatsheet.com/)
 
-
 ## TPM - Tmux plugin manager
 
 ```bash
@@ -32,4 +31,3 @@ set -g @plugin 'tmux-plugins/tmux-sensible'
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
 ```
-

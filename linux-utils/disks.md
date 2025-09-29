@@ -43,7 +43,6 @@ sudo apt install exfat-fuse exfatprogs
 sudo mkfs.exfat /dev/sdX
 ```
 
-
 ## Alert script for disk usage
 
 ```bash

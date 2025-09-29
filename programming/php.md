@@ -39,4 +39,3 @@ systemctl restart apache2
 php -v
 apt remove --purge php8.1*
 ```
-

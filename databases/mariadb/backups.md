@@ -52,4 +52,3 @@ curl -s https://hc-ping.com/fd9340f1-8a0f-448e..........
 - `--hex-blob` - dump binary columns in hexadecimal format
 - `--skip-lock-tables` - don't lock tables for read
 - `--opt` - shorthand for `--add-drop-table --add-locks --create-options --disable-keys --extended-insert --lock-tables --quick --set-charset`
-

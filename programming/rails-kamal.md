@@ -22,7 +22,6 @@ cat docker-config.json | jq -r '.auths | to_entries | .[0].value.auth' | base64 
 cat docker-config.json | jq -r '.auths | to_entries | .[0].value.auth' | base64 -d | cut -d ":" -f 2
 ```
 
-
 ## Init Kamal
 
 - bundle add kamal
@@ -34,17 +33,13 @@ host: <%= ENV["DB_HOST"] %>
 
 10. assume ssl! not force
 
-
 mkdir -p /opt/letsencrypt && touch /opt/letsencrypt/acme.json && chmod 600 /opt/letsencrypt/acme.json
 
 docker network create -d bridge private
 
-
 .env has priority over key files in config/credentials
 
 but you need a master.key file?
-
-
 
 ## Publish Traefik dashboard
 

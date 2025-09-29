@@ -10,4 +10,3 @@ parent: SOPs
 Always reboot first before trying any of this.
 
 - [ ] Make sure your Wireguard config is only active on 1 device
-

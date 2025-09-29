@@ -34,4 +34,3 @@ sudo tailscale up --reset
 ```bash
 sudo tailscale set --auto-update
 ```
-

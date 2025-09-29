@@ -13,8 +13,6 @@ parent: Self Hosted Apps
 ./install.sh --no-report-self-hosted-issues
 ```
 
-
-
 ## Limit memory usage in Redis
 
 The policy might cause data loss.

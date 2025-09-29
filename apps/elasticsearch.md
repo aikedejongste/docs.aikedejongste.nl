@@ -13,7 +13,6 @@ Avoid having very large shards as this can negatively affect the cluster's abili
 
 A good rule-of-thumb is to ensure you keep the number of shards per node below 20 per GB heap it has configured. A node with a 30GB heap should therefore have a maximum of 600 shards, but the further below this limit you can keep it the better.
 
-
 ## Cleanup and data usage in Elastic
 
 Execute these queries in the dev console `app/dev_tools#/console`
@@ -35,7 +34,6 @@ Execute these queries in the dev console `app/dev_tools#/console`
 ### See ILM policy for policy named test
 
 `GET /_ilm/policy/test`
-
 
 ### Enable automatic deletion of data for logs policy
 
@@ -67,9 +65,6 @@ PUT _ilm/policy/logs
   }
 }
 ```
-
-
-
 
 ## 2 installation methods
 

@@ -35,12 +35,12 @@ or
 
 docker ps -q | % { docker stop $_ }
 ```
+
 ## Search trough logs
 
 ```bash
 docker logs --since "$(date -d 'today 13:30' +'%Y-%m-%dT%H:%M:%S')" --until "$(date -d 'today 13:40' +'%Y-%m-%dT%H:%M:%S')" prodapp
 ```
-
 
 ## Manually cleanup old logs
 
@@ -158,5 +158,3 @@ truncate -s 0 /var/lib/docker/containers/<container-id>/<container-id>-json.log
 ```bash
 docker image prune -af --filter "until=24h"
 ```
-
-

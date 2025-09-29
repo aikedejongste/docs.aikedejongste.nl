@@ -10,7 +10,6 @@ parent: Databases
 This is a pretty rough script to check if data is still current. It was used to
 check if a BI-import was still current.
 
-
 ```bash
 #!/bin/bash
 

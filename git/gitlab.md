@@ -48,5 +48,3 @@ docker-build-main:
   only:
     - main
 ```
-
-

@@ -7,7 +7,6 @@ parent: Monitoring
 
 # Prometheus Query Language
 
-
 ## Queries
 
 ### Predict days until disk full
@@ -16,9 +15,8 @@ parent: Monitoring
 
 ### Percentage of failed requests for app
 
-`traefik_service_requests_total{service="appname@docker",code="500"} / traefik_service_requests_total{service="appname@docker",code="200"} `
+`traefik_service_requests_total{service="appname@docker",code="500"} / traefik_service_requests_total{service="appname@docker",code="200"}`
 
 ### Percentage of failed requests for everything
 
 `sum(rate(traefik_service_requests_total{code=~"4.*"}[3m])) by (service) / sum(rate(traefik_service_requests_total[3m])) by (service) * 100`
-

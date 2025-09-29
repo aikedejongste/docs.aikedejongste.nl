@@ -11,7 +11,6 @@ parent: Self Hosted Apps
 
 ## With Docker Compose
 
-
 ## With Kamal
 
 ```

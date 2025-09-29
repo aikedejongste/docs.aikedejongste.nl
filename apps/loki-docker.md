@@ -14,7 +14,7 @@ parent: Self Hosted Apps
 - [Caddy auth config here](https://docs.aikedejongste.nl/webservers/caddy.html)
 - Hash passwords for Caddy with `caddy hash-password`
 
-## Run with a docker-compose.yaml:
+## Run with a docker-compose.yaml
 
 ```yaml
 version: "3"
@@ -74,8 +74,7 @@ services:
       - loki
 ```
 
-
-## Very minimal Loki config:
+## Very minimal Loki config
 
 ```yaml
 auth_enabled: false
@@ -110,7 +109,7 @@ storage_config:
     directory: /loki/chunks
 ```
 
-## Other working Loki config:
+## Other working Loki config
 
 ```yaml
 
@@ -155,7 +154,7 @@ limits_config:
   retention_period: 100d
 ```
 
-## The Promtail config:
+## The Promtail config
 
 ```yaml
 server:
@@ -203,4 +202,3 @@ scrape_configs:
       - __journal_syslog_identifier
       target_label: syslog_identifier
 ```
-
