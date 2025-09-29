@@ -7,6 +7,13 @@ has_children: false
 
 # Encryption with Sops and Age
 
+## Encrypt a file to a public key
+
+```bash
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGWdaTdW............" > /tmp/pubkey
+age --encrypt --armor --recipients-file "/tmp/pubkey" --output "output.age" "private_key"
+```
+
 ## Config
 
 You need:

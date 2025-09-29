@@ -15,6 +15,7 @@ title: Windows
 - [TailScale](https://pkgs.tailscale.com/stable/tailscale-setup-latest.exe)
 - [VS Code](https://code.visualstudio.com/Download)
 - [Git](https://git-scm.com/download/win)
+- [SyncThing](https://github.com/Bill-Stewart/SyncthingWindowsSetup/?tab=readme-ov-file#download)
 
 ## Put Windows ISO on USB stick
 

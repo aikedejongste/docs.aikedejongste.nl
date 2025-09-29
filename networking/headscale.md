@@ -7,6 +7,17 @@ parent: Networking
 
 # Headscale
 
+## Create API key for web interface
+
+```bash
+docker exec -it headscale_headscale.1.pzt1l5ugb5rgir6r9aks3qm0z headscale apikeys create --expiration 90d
+```
+
+root@app3:/opt/stacks/headscale# docker exec -it headscale_headscale.1.pzt1l5ugb5rgir6r9aks3qm0z headscale user create infra
+User created
+
+root@app3:/opt/stacks/headscale# docker exec -it headscale_headscale.1.pzt1l5ugb5rgir6r9aks3qm0z headscale preauthkeys create -e 1y --reusable --user=infra
+
 ## Add node on the server
 
 You need to exec into the container to create API keys for the webinterface. And also to add 'users'.

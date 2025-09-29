@@ -12,6 +12,35 @@ has_children: true
 kubectl run debug-tools --image=nicolaka/netshoot  --restart=Never -it -- /bin/bash
 ```
 
+Possibly working yaml for this:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debug-tools
+spec:
+  securityContext:
+    runAsNonRoot: true
+    seccompProfile:
+      type: RuntimeDefault
+  containers:
+  - name: debug-tools
+    image: nicolaka/netshoot
+    tty: true
+    stdin: true
+    securityContext:
+      runAsNonRoot: true
+      runAsUser: 1000             # pick a non-root UID
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+          - ALL
+      seccompProfile:
+        type: RuntimeDefault
+    command: ["/bin/bash"]
+```
+
 ## Install kubectl
 
 ```bash

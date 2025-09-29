@@ -96,3 +96,11 @@ mysqladmin --default-character-set=utf8mb4 create $DB_NAME
 mysql -e "CREATE USER IF NOT EXISTS $DB_USER@APP_HOST IDENTIFIED BY '$DB_PASS';"
 mysql -e "GRANT LOCK TABLES,ALTER,CREATE,DELETE,DROP,INDEX,INSERT,SELECT,UPDATE ON $DB_NAME.* TO $DB_NAME@\"$APP_HOST\" IDENTIFIED BY '$DB_PASS'; FLUSH PRIVILEGES;"
 ```
+
+## Drop all tables
+
+```sql
+SELECT CONCAT('DROP TABLE IF EXISTS `', table_name, '`;')
+FROM information_schema.tables
+WHERE table_schema = 'juicefs';
+```
