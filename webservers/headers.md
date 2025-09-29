@@ -40,7 +40,7 @@ spec:
 
 ## Debug
 
-Als je dan naar https://whoami.company.com/ gaat krijg je dit:
+Als je dan naar <https://whoami.company.com/> gaat krijg je dit:
 
 ```
 X-Forwarded-For: 84.22.102.120, 10.42.0.1
@@ -58,7 +58,6 @@ aikedejongste@tequila ~/repos $ curl -s --header "X-Forwarded-For: 1.2.3.4" http
 X-Forwarded-For: 1.2.3.4, 37.252.127.123, 10.42.0.1
 ```
 
-
 ## Apache Proxy Protocol Module
 
 This is an Apache module that implements the server side of HAProxy's Proxy Protocol.
@@ -73,21 +72,14 @@ Note: as of Apache 2.4.30 this code has been merged into mod_remoteip, with the 
 
 More info: [Apache - Mod RemoteIP](https://httpd.apache.org/docs/2.4/mod/mod_remoteip.html)
 
-
-## Strict-Transport-Security fix:
+## Strict-Transport-Security fix
 
 Header always set Strict-Transport-Security “max-age=31536000; includeSubDomains”
 
-
-## Referrer Policy fix:
+## Referrer Policy fix
 
 Header always set Referrer-Policy "same-origin"
 
-
-
-## X-Frame-Options fix:
+## X-Frame-Options fix
 
 Header always set X-Frame-Options "SAMEORIGIN"
-
-
-

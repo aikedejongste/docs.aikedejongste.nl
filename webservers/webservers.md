@@ -23,5 +23,3 @@ has_children: true
 ## To debug websockets
 
 Try: [https://github.com/websockets/wscat](https://github.com/websockets/wscat)
-
-
