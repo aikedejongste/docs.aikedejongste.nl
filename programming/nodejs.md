@@ -7,7 +7,56 @@ parent: Programming
 
 # Nodejs
 
+## Install with NVM
+
+So it is easier to choose the version you want.
+
+### Install the latest LTS version
+
+```bash
+nvm install --lts
+```
+
+### Install a specific version
+
+```bash
+nvm install 18.17.0
+```
+
+### Install the latest current release
+
+```bash
+nvm install node
+```
+
+### Use a specific version
+
+```bash
+nvm use 18.17.0
+```
+
+### Use the latest LTS
+
+```bash
+nvm use --lts
+```
+
+### List installed versions
+
+```bash
+nvm ls
+```
+
+### List available versions to install
+
+```bash
+nvm ls-remote
+```
+
+
 ## Ubuntu installation
+
+It is better to use NVM to install Nodejs. See above.
 
 ```bash
 export NODE_MAJOR=20
