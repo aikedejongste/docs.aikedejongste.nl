@@ -192,3 +192,19 @@ cd /opt && /usr/bin/docker run -t \
 ## Generate self-signed cert without user input
 
 `openssl req -x509 -newkey rsa:4096 -keyout /etc/ssl/key.pem -out cert.pem -days 365 -nodes -subj '/CN=localhost'`
+
+## Wildcard with certbot
+
+```bash
+# hetzner.ini should contain
+# dns_hetzner_api_token = I49......
+
+certbot certonly --agree-tos --no-eff-email \
+                 -m 'your email address' \
+                 -d '*.domain.nl' \
+                 --authenticator dns-hetzner \
+                 --dns-hetzner-credentials hetzner.ini \
+                 --work-dir . \
+                 --logs-dir .
+
+```

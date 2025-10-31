@@ -18,4 +18,6 @@ has_children: true
 
 ## Android keyboard
 
-- [FUTO](https://keyboard.futo.org/)
+# Browsing
+
+- [PrivacyBadger](http://privacybadger.org/)
