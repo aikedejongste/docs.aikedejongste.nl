@@ -11,6 +11,14 @@ parent: Operating Systems
 
 [Syncthing install instructions](apps/syncthing.md)
 
+## Install Brave
+
+```bash
+sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+sudo apt update && sudo apt install -y brave-browser
+```
+
 ## Install Signal
 
 ```bash
