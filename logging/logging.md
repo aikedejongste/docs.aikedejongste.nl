@@ -7,6 +7,10 @@ has_children: true
 
 # Logging
 
+## Log levels explanation
+
+![Log levels](/images/levels.png)
+
 ## Quick log to Loki
 
 ```bash
