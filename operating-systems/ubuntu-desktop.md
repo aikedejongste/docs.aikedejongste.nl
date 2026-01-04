@@ -29,6 +29,17 @@ sudo tee /etc/apt/sources.list.d/signal-xenial.list
 sudo apt update && sudo apt install signal-desktop
 ```
 
+## Installl AntiGravity
+
+```bash
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://us-central1-apt.pkg.dev/doc/repo-signing-key.gpg | \
+  sudo gpg --dearmor --yes -o /etc/apt/keyrings/antigravity-repo-key.gpg
+echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-central1-apt.pkg.dev/projects/antigravity-auto-updater-dev/ antigravity-debian main" | \
+  sudo tee /etc/apt/sources.list.d/antigravity.list > /dev/null
+sudo apt update && sudo apt install antigravity
+```
+
 ## Install scripts / automation
 
 - [DHH - Ubuntu Desktop Setup](https://gist.github.com/dhh/159b129f511f76db3ae8adb463f70d05)
