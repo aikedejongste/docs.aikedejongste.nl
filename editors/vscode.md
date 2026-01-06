@@ -13,6 +13,24 @@ And editors based on VSCode like Windsurf and Antigravity.
 
 See [operating-systems/ubuntu-desktop.md](operating-systems/ubuntu-desktop.md)
 
+## Extensions
+
+```bash
+#!/bin/bash
+extensions=(
+  ms-kubernetes-tools.vscode-kubernetes-tools
+  hashicorp.terraform
+  redhat.vscode-yaml
+  gitlab.gitlab-workflow
+  ms-azuretools.vscode-docker
+)
+
+for ext in "${extensions[@]}"; do
+  antigravity --install-extension "$ext"
+done
+```
+
+
 ## Set CAPS-LOCK to ESC
 
 ```bash

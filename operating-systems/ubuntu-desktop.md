@@ -40,6 +40,15 @@ echo "deb [signed-by=/etc/apt/keyrings/antigravity-repo-key.gpg] https://us-cent
 sudo apt update && sudo apt install antigravity
 ```
 
+## Install Beeper
+
+Not ideal on Ubuntu, old on NixOS.
+
+```bash
+wget https://api.beeper.com/desktop/download/linux/x64/stable/com.automattic.beeper.desktop -O /usr/local/bin/beeper && sudo chmod +x /usr/local/bin/beeper 
+```
+
+
 ## Install scripts / automation
 
 - [DHH - Ubuntu Desktop Setup](https://gist.github.com/dhh/159b129f511f76db3ae8adb463f70d05)
