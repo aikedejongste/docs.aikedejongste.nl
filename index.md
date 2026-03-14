@@ -49,6 +49,7 @@ or use one of my referral links to support me:
 | [Brain.fm](https://my.brain.fm/payment?extended_promo=30&utm_source=referafriend)| 30 days free for you |
 | [Huel](https://huel.mention-me.com/m/ol/hc4cp-e57c9b9a4c)| 10 euro discount |
 | [Every Foods](https://prz.io/ZLrOPbyh5)| 45% discount on your first order |
+| [TickTick](https://ticktick.com/r?c=u3yfl6ub) | helps me |
 
 ## Useful tools
 
