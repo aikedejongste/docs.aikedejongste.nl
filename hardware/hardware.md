@@ -6,6 +6,20 @@ has_children: true
 
 # Hardware
 
+## Show connected monitor information
+
+### Find your HDMI connector
+
+```bash
+ls /sys/class/drm/
+```
+
+### Then read the EDID for the HDMI card (e.g. card1-HDMI-A-1)
+
+```bash
+cat /sys/class/drm/card1-HDMI-A-1/edid | edid-decode
+```
+
 ## Check USB port speed in Linux
 
 ```bash
